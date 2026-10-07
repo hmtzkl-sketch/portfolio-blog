@@ -10,26 +10,6 @@ export const weaponCategories = [
 export const weaponsList = [
   // --- TÜRK SİLAH SANAYİİ & TÜRKİYE'DE KULLANILANLAR ---
   {
-    id: "sar-56",
-    name: "Sarsılmaz SAR 56 (5.56x45mm Karabin)",
-    category: "Türk Silah Sanayii",
-    subCategory: "Piyade Tüfeği",
-    origin: "Türkiye",
-    originFlag: "🇹🇷",
-    manufacturer: "Sarsılmaz Silah Sanayi (SAR)",
-    caliber: "5.56x45mm NATO",
-    usedBy: "TSK Özel Kuvvetleri, Deniz Piyadeleri, Polis Özel Harekat (PÖH)",
-    specs: {
-      range: "450 m etkili menzil",
-      fireRate: "750 - 850 atım/dk",
-      weight: "3.2 kg (Boş)",
-      barrel: "11 inç / 14.5 inç seçenekleri"
-    },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/SAR_56_Assault_Rifle_IDEF_2021.jpg/1280px-SAR_56_Assault_Rifle_IDEF_2021.jpg",
-    description: "Kısa stroklu gaz piston sistemi ve döner başlı kilit mekanizmasıyla donatılmış, meskun mahal ve özel operasyonlar için optimize edilmiş modern taarruz tüfeğidir. M-LOK el kundağı, çift taraflı şarjör mandalı ve ayarlanabilir teleskopik dipçiğiyle yüksek ergonomi sağlar.",
-    highlight: "TSK ve Özel Harekât birimlerinin modern meskun mahal karabini."
-  },
-  {
     id: "mpt-76",
     name: "MKE MPT-76 (Milli Piyade Tüfeği)",
     category: "Türk Silah Sanayii",
@@ -45,9 +25,49 @@ export const weaponsList = [
       weight: "4.1 kg (Boş)",
       barrel: "406 mm (16 inç)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/95/MPT-76_Assault_Rifle_noBG.png",
+    image: "/weapons/mpt-76.png",
     description: "NATO'nun 42 zorlu dayanıklılık testinin tamamını sıfır hata ile geçen dünyadaki nadir tüfeklerdendir. Çamur, toz, aşırı soğuk (-40°C) ve yüksek ısı (+60°C) testlerini başarıyla tamamlamıştır. Kısa vuruşlu gaz piston çalışma prensibiyle 7.62mm'nin yüksek durdurucu gücünü modern ergonomiyle buluşturur.",
     highlight: "NATO standart testlerinin tamamını geçen tek piyade tüfeği."
+  },
+  {
+    id: "mpt-55",
+    name: "MKE MPT-55 (5.56mm Taarruz Tüfeği)",
+    category: "Türk Silah Sanayii",
+    subCategory: "Piyade Tüfeği",
+    origin: "Türkiye",
+    originFlag: "🇹🇷",
+    manufacturer: "MKE A.Ş.",
+    caliber: "5.56x45mm NATO",
+    usedBy: "Cumhurbaşkanlığı Koruma, TSK Özel Kuvvetleri, Emniyet",
+    specs: {
+      range: "400 m etkili menzil",
+      fireRate: "750 atım/dk",
+      weight: "3.3 kg",
+      barrel: "368 mm / 279 mm (K Kısa Namlu)"
+    },
+    image: "/weapons/mpt-55.png",
+    description: "Yakın muharebe ve meskun mahal görevleri için MPT-76'nın 5.56mm hafifletilmiş versiyonudur. Döner başlı kilitlemeli gaz piston sistemi, polimer şarjörü ve 4 yönde Picatinny rayları ile yüksek modülerlik sunar.",
+    highlight: "TSK ve Özel Harekâtın hafif ve seri milli 5.56mm taarruz tüfeği."
+  },
+  {
+    id: "kcr-556",
+    name: "Kale KCR556 Taktik Taarruz Tüfeği",
+    category: "Türk Silah Sanayii",
+    subCategory: "Piyade Tüfeği",
+    origin: "Türkiye",
+    originFlag: "🇹🇷",
+    manufacturer: "Kale Savunma / Kale Kalıp",
+    caliber: "5.56x45mm NATO",
+    usedBy: "Jandarma Komando, Deniz Kuvvetleri SAT/SAS, Polis Özel Harekat",
+    specs: {
+      range: "500 m",
+      fireRate: "750 - 900 atım/dk",
+      weight: "3.2 kg",
+      barrel: "11 inç / 14.5 inç soğuk dövme"
+    },
+    image: "/weapons/kcr-556.jpg",
+    description: "Özel Kuvvetlerin zorlu arazi ve meskun mahal şartlarında kullandığı, aşırı güvenilir kısa vuruşlu gaz piston tüfeğidir. Çamurda ve suda bekletildikten sonra takılmadan seri atış yapabilen üstün toleranslı mekanizmaya sahiptir.",
+    highlight: "Özel operasyon birliklerinin sahada kanıtlanmış milli karabini."
   },
   {
     id: "knt-76",
@@ -65,7 +85,7 @@ export const weaponsList = [
       weight: "4.7 kg",
       barrel: "508 mm (20 inç Ağır Namlu)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Turkish_Gendarmerie_KNT-76_Teknofest_2025.jpg",
+    image: "/weapons/knt-76.jpg",
     description: "Milli Piyade Tüfeği projesinden türetilen, piyade mangalarının 800 metreye kadar olan hedefleri cerrahi hassasiyetle imha etmesi için geliştirilen manga tipi keskin nişancı tüfeğidir. Ayarlanabilir yanaklıklı dipçiği, iki ayaklı çatal ayağı (bipod) ve Schmidt & Bender / yerli optikleriyle görev yapar.",
     highlight: "TSK ve Jandarma mangalarının yarı otomatik keskin nişancı tüfeği."
   },
@@ -85,7 +105,7 @@ export const weaponsList = [
       weight: "830 g",
       barrel: "132 mm (Match-grade)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Canik-TP9-SFx.jpg",
+    image: "/weapons/canik-tp9.jpg",
     description: "Türk savunma sanayiinin dünyaya ihraç ettiği en başarılı hafif silahlardandır. ABD'de 'Yılın Tabancası' (ICA) ödülünü defalarca kazanmıştır. Optik montaj yuvası (Optic-Ready), hafifletilmiş polimer gövdesi ve düz tetik mekanizmasıyla hızlı ve hassas mükerrer atış sağlar.",
     highlight: "ABD pazarında en çok satan ve ödüllü Türk tabancası."
   },
@@ -105,7 +125,7 @@ export const weaponsList = [
       weight: "790 g",
       barrel: "113 mm"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/34/SAR9_Black_Right.png",
+    image: "/weapons/sar-9.png",
     description: "Türkiye'nin 'Özgün Yerli Tabanca Projesi' kapsamında birinci seçilerek Türk Silahlı Kuvvetleri ve Emniyet'in standart görev tabancası olmuştur. 50.000 atım ömrü testini sıfır arızayla geçerek polimer gövdeli iğne vuruşlu (striker-fired) tabancalar arasında üstün güvenilirlik kanıtlamıştır.",
     highlight: "TSK ve Emniyet'in ana hizmet tabancası; 50.000 atım dayanıklılığı."
   },
@@ -125,7 +145,7 @@ export const weaponsList = [
       weight: "6.4 kg",
       barrel: "660 mm (Serbest Salınımlı)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/00/Bora-12_%28MKEK_JNG-90%29.jpg",
+    image: "/weapons/bora-12.jpg",
     description: "Milli imkanlarla geliştirilen ilk keskin nişancı tüfeğidir. Uluslararası keskin nişancı yarışmalarında birinci gelerek doğruluğunu kanıtlamıştır. Serbest salınımlı namlusu ve ayarlanabilir kundağıyla 1000+ metrede cerrahi isabet sağlar.",
     highlight: "0.3 MOA hassasiyet ile dünya çapında yarışma şampiyonu."
   },
@@ -145,7 +165,7 @@ export const weaponsList = [
       weight: "38 kg",
       barrel: "1143 mm (Hızlı Değiştirilebilir - QCB)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/M2_Browning_01.jpg/1280px-M2_Browning_01.jpg",
+    image: "/weapons/canik-m2.jpg",
     description: "Türkiye'nin ilk yerli 12.7mm ağır makineli tüfeğidir. Namlusu hızla değiştirilebilir (Quick Change Barrel) yapısı sayesinde çatışma anında alet gerektirmeden saniyeler içinde namlu değişimi yapılır. Zırhlı araç kulelerinde ve deniz platformlarında uçaksavar ve zırh delici mermilerle görev yapar.",
     highlight: "Milli 12.7mm platformu, zırhlı ve deniz araçlarının ana ateş gücü."
   },
@@ -167,7 +187,7 @@ export const weaponsList = [
       weight: "3.8 kg (Susturucu ile)",
       barrel: "330 mm (13 inç)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/XM7_Rifle.jpg/1280px-XM7_Rifle.jpg",
+    image: "/weapons/sig-xm7.png",
     description: "ABD ordusunun 50 yıllık M4/M16 çağını kapatan yeni standart tüfeğidir. 80.000 PSI namlu içi basınca sahip hibrit kovanlı mühimmatı sayesinde, düşman vücut zırhlarını yüzlerce metre uzaktan delip geçmek üzere geliştirilmiştir. Standart SLX susturucu ve akıllı XM157 atış kontrol bilgisayarıyla birlikte gelir.",
     highlight: "M4'lerin yerini alan ABD Ordusu'nun 6.8mm yeni tüfeği."
   },
@@ -187,7 +207,7 @@ export const weaponsList = [
       weight: "3.5 kg",
       barrel: "279 - 419 mm"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/HK416_noBG.png/1280px-HK416_noBG.png",
+    image: "/weapons/hk-416.png",
     description: "M4 platformunun ergonomisini G36'nın güvenilir gaz piston sistemiyle birleştirerek efsaneleşen muharebe tüfeğidir. Sudan çıkar çıkmaz ateş edebilme (Over-the-Beach) yeteneği ve tutukluk yapmayan dayanıklılığıyla NATO müttefiklerinin ana tercihi olmuştur.",
     highlight: "Dünyanın en güvenilir kısa vuruşlu gaz piston tüfeklerinden biri."
   },
@@ -207,7 +227,7 @@ export const weaponsList = [
       weight: "3.5 kg",
       barrel: "415 mm"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/AK-12_rifle.jpg/1280px-AK-12_rifle.jpg",
+    image: "/weapons/ak-12.jpg",
     description: "Klasik AK-74M mimarisinin 21. yüzyıl ergonomisiyle modernize edilmiş halidir. Entegre Picatinny rayları, serbest salınımlı el kundağı ve katlanabilir teleskopik dipçik ile gece görüş ve kırmızı nokta (red dot) optik kullanımına uyarlanmıştır.",
     highlight: "Modern Rus piyadesinin Ratnik teçhizat projesindeki ana tüfeği."
   },
@@ -229,7 +249,7 @@ export const weaponsList = [
       weight: "3.58 kg",
       barrel: "406 mm (Değiştirilebilir)"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/ScarSandiaPix.png",
+    image: "/weapons/scar-h.png",
     description: "Özel Kuvvetler Komutanlıklarının zorlu dağ ve uzun menzil operasyonlarında en çok tercih ettiği 7.62mm modüler taarruz tüfeğidir. Düşük geri tepmesi, monolitik üst gövdesi ve saniyeler içinde namlu boyunun değiştirilebilmesi operasyonel esneklik sağlar.",
     highlight: "Küresel Özel Kuvvetlerin (SOCOM/ÖKK) uzun menzilli taarruz tercihi."
   },
@@ -249,7 +269,7 @@ export const weaponsList = [
       weight: "1.9 kg",
       barrel: "180 mm"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/HK_MP7A1.jpg/1280px-HK_MP7A1.jpg",
+    image: "/weapons/hk-mp7.png",
     description: "CRISAT zırh delme standardına göre üretilmiştir. 1.6 mm titanyum ve 20 kat Kevlar zırhı 200 metreden delebilen özel 4.6mm çelik çekirdekli mermi kullanır. Sıfır geri tepme hissi ile tek elle bile seri atış kontrolü mükemmeldir.",
     highlight: "200 metreden vücut zırhını delen ultra kompakt PDW."
   },
@@ -271,7 +291,7 @@ export const weaponsList = [
       weight: "670 g (Boş)",
       barrel: "102 mm"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Glock_19_Gen_4.JPG/1280px-Glock_19_Gen_4.JPG",
+    image: "/weapons/glock-19.jpg",
     description: "Modern kolluk kuvvetlerinin altın standardı kabul edilen polimer gövdeli tabancadır. Az sayıda hareketli parçası sayesinde çamurda, suda ve karda takılmaksızın çalışır. Gen5 ile gelen 'Marksman' yiv-setli namlu ve MOS (optik yuvası) sistemiyle refleks atışlarda mükemmeldir.",
     highlight: "Dünya kolluk ve özel kuvvetlerinin en yaygın kullandığı tabanca."
   },
@@ -291,7 +311,7 @@ export const weaponsList = [
       weight: "833 g",
       barrel: "119 mm"
     },
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/SIG_Sauer_M17.jpg/1280px-SIG_Sauer_M17.jpg",
+    image: "/weapons/sig-m17.jpg",
     description: "ABD Savunma Bakanlığı'nın 'Modüler Tabanca Sistemi (MHS)' ihalesini kazanarak 30 yıllık Beretta M9 dönemini sonlandırmıştır. Çelik iç şasisi polimer gövdeden bağımsız olarak sökülebilir ve farklı kabze boyutlarına saniyeler içinde aktarılabilir.",
     highlight: "ABD Silahlı Kuvvetleri'nin yeni resmi hizmet tabancası."
   }
