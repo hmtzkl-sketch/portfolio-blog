@@ -41,6 +41,20 @@ export const categories = [
 // Dünyada aktif olarak devam eden savaşlar, silahlı çatışmalar ve sıcak kriz bölgeleri
 export const globalConflicts = [
   {
+    id: "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
+    title: "İran - İsrail Doğrudan Balistik Füze & Hava Savunma Muharebesi",
+    region: "Orta Doğu / Basra Körfezi",
+    location: "Tahran, İsfahan, Tel Aviv, Negev Çölü (Nevatim Hava Üssü)",
+    startDate: "Nisan 2024 (Ekim 2024 - 2026 Tırmanışı)",
+    duration: "Doğrudan Devletler Arası Balistik Füze Düellosu",
+    threatLevel: "KRİTİK BÖLGESEL BALİSTİK & HAVA HARBİ",
+    levelColor: "rose",
+    parties: "İsrail Savunma Kuvvetleri (IDF) & ABD Merkez Komutanlığı (CENTCOM) vs. İran Devrim Muhafızları (IRGC)",
+    summary: "Hipersonik ve balistik füzeler (Fettah, Hayber Şeken) ile çok katmanlı hava savunma kalkanları (Arrow 3, David's Sling, THAAD) arasında tarihin ilk büyük çaplı kıtalararası füze savaşı.",
+    currentSituation: "İran'ın hipersonik manevra başlıklı katı yakıtlı balistik füzeleri ve yüzlerce Şahid-136 kamikaze İHA'sı ile İsrail'in askeri hava üsleri ve istihbarat merkezlerine yönelik gerçekleştirdiği dalga taarruzları, modern hava savunma doktrinlerini baştan yazmıştır. ABD'nin İsrail'e konuşlandırdığı THAAD bataryaları ile İsrail'in Arrow 3 ve David's Sling sistemleri atmosfer dışı önleme manevraları gerçekleştirmiştir. İsrail ise F-35I Adir hayalet jetleri ve RAMPAGE füzeleriyle İran'ın S-300 hava savunma radarlarına nokta vuruşlar yapmaktadır.",
+    keyTech: ["THAAD & Arrow-3 Atmosfer Dışı Füze Önleme", "Fettah Hipersonik Kayma Başlığı", "F-35I Adir Gizli Taarruz Jeti", "Elektronik GNSS Karartma & Erken İhbar Radarları"]
+  },
+  {
     id: "rusya-ukrayna-savasi",
     title: "Rusya - Ukrayna Savaşı (Topyekûn Cephe Taarruzları)",
     region: "Doğu Avrupa",
@@ -210,6 +224,62 @@ TUSAŞ (Türk Havacılık ve Uzay Sanayii) tarafından geliştirilen Milli Muhar
 
 3. **Süpersonik Seyir (Supercruise):**
    * Art yakıcı (Afterburner) kullanmaksızın ses hızının üzerinde uçabilme, bu sayede yakıt tüketimini düşürüp harekat yarıçapını maksimuma çıkarma.
+    `
+  },
+  {
+    id: "kizilelma-insansiz-savas-ucagi-it-dalasi",
+    title: "Bayraktar KIZILELMA: İnsansız Savaş Uçağı Doktrini ve Görüş Ötesi Hava Muharebesi",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "11 dk okuma",
+    date: "07 Ekim 2026",
+    excerpt: "KIZILELMA'nın süpersonik motor testleri, AESA radar güdümlü GÖKDOĞAN ve BOZDOĞAN füzeleriyle otonom it dalaşı (dogfight) algoritması ve düşük radar izi analizi.",
+    tags: ["KIZILELMA", "İnsansız Savaş Uçağı", "Baykar", "AESA Radar", "GÖKDOĞAN"],
+    featured: true,
+    likes: 684,
+    content: `
+### İNSANSIZ HAVA MUHAREBESİNDE DÖNÜM NOKTASI: KIZILELMA
+
+Baykar tarafından öz kaynaklarla geliştirilen **Bayraktar KIZILELMA (MİUS)**, havacılık tarihinde jet motorlu insansız savaş uçağı konseptini somut bir muharebe platformuna dönüştüren öncü projedir.
+
+### TEKNİK VE OPERASYONEL MİMARİ
+
+1. **Yüksek Manevra Kabiliyeti & Otonom Karar Mekanizması:**
+   * İnsan pilotun maruz kaldığı fizyolojik G-kuvveti sınırlarını (9G sınırı) aşabilen aerodinamik gövde tasarımı ve kanart (canard) kontrol yüzeyleri.
+   * Yapay zekâ destekli otonom kol uçuşu (Manned-Unmanned Teaming / MUM-T) ile KAAN ve F-16 filolarına sadık kanat adamı (Loyal Wingman) olarak eşlik edebilme.
+
+2. **Dahili Silah İstasyonu ve Hava-Hava Angajmanı:**
+   * TÜBİTAK SAGE üretimi Görüş Ötesi (BVR) GÖKDOĞAN ve Görüş İçi BOZDOĞAN füzelerini gövde içinde taşıyarak radar kesit alanını asgari düzeyde tutma.
+   * ASELSAN MURAD AESA radarı entegrasyonu sayesinde yüzlerce kilometre menzildeki hava hedeflerini pasif ve aktif modda izleyebilme.
+
+3. **Kısa Pistli Gemilere İniş-Kalkış:**
+   * TCG Anadolu gibi LHD sınıfı kısa pistli amfibi hücum gemilerinden katapultsuz kalkış ve yakalama kancasıyla emniyetli iniş yapabilme doktrini.
+    `
+  },
+  {
+    id: "bayraktar-tb3-tcg-anadolu-naval-uav",
+    title: "Bayraktar TB3 ve Deniz Havacılığı: TCG Anadolu'da Katlanan Kanat Devrimi",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "8 dk okuma",
+    date: "06 Ekim 2026",
+    excerpt: "Katlanabilir kanat yapısına sahip Bayraktar TB3'ün TCG Anadolu rampasından başarılı otonom iniş-kalkış testleri ve Mavi Vatan deniz karakol görevleri.",
+    tags: ["Bayraktar TB3", "TCG Anadolu", "Deniz Havacılığı", "Mavi Vatan", "TEI PD170"],
+    featured: true,
+    likes: 541,
+    content: `
+### DÜNYADA BİR İLK: KISA PİSTLİ GEMİDEN SİHA OPERASYONU
+
+Bayraktar TB3, TCG Anadolu gibi amfibi hücum gemilerinden hiçbir mancınık veya fırlatma sistemi kullanmaksızın, kendi motor gücü ve özel rampa geometrisiyle havalanabilen dünyanın ilk silahlı insansız deniz hava aracıdır.
+
+### DENİZ HAVACILIĞI TEKNİK DETAYLARI
+
+1. **Katlanabilir Kanat ve Hangar Optimizasyonu:**
+   * Gemi güvertesinde ve hangar katında minimum yer kaplayacak şekilde tasarlanan elektro-mekanik katlanır kanat mimarisi sayesinde TCG Anadolu'da onlarca TB3 aynı anda konuşlanabilmektedir.
+
+2. **Yerli PD170 Turbodizel Motor:**
+   * TEI tarafından geliştirilen çift turboşarjlı PD170 motoru; düşük yakıt sarfiyatı ve deniz seviyesindeki tuzlu korozif neme dayanıklı alaşımlarıyla 30 saati aşan havada kalış süresi sunmaktadır.
+
+3. **Denizaltı Savunma ve Gemisavar Görevleri:**
+   * Sonar şamandırası (sonobuoy) dinleme kabiliyeti, hafif torpido ve ROKETSAN ÇAKIR seyir füzesi atış yeteneğiyle açık denizlerde yüzlerce millik koruma kalkanı oluşturmaktadır.
     `
   },
   {

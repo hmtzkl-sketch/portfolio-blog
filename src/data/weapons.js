@@ -10,6 +10,26 @@ export const weaponCategories = [
 export const weaponsList = [
   // --- TÜRK SİLAH SANAYİİ & TÜRKİYE'DE KULLANILANLAR ---
   {
+    id: "sar-56",
+    name: "Sarsılmaz SAR 56 (5.56x45mm Karabin)",
+    category: "Türk Silah Sanayii",
+    subCategory: "Piyade Tüfeği",
+    origin: "Türkiye",
+    originFlag: "🇹🇷",
+    manufacturer: "Sarsılmaz Silah Sanayi (SAR)",
+    caliber: "5.56x45mm NATO",
+    usedBy: "TSK Özel Kuvvetleri, Deniz Piyadeleri, Polis Özel Harekat (PÖH)",
+    specs: {
+      range: "450 m etkili menzil",
+      fireRate: "750 - 850 atım/dk",
+      weight: "3.2 kg (Boş)",
+      barrel: "11 inç / 14.5 inç seçenekleri"
+    },
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/SAR_56_Assault_Rifle_IDEF_2021.jpg/1280px-SAR_56_Assault_Rifle_IDEF_2021.jpg",
+    description: "Kısa stroklu gaz piston sistemi ve döner başlı kilit mekanizmasıyla donatılmış, meskun mahal ve özel operasyonlar için optimize edilmiş modern taarruz tüfeğidir. M-LOK el kundağı, çift taraflı şarjör mandalı ve ayarlanabilir teleskopik dipçiğiyle yüksek ergonomi sağlar.",
+    highlight: "TSK ve Özel Harekât birimlerinin modern meskun mahal karabini."
+  },
+  {
     id: "mpt-76",
     name: "MKE MPT-76 (Milli Piyade Tüfeği)",
     category: "Türk Silah Sanayii",
