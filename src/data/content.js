@@ -65,22 +65,22 @@ export const globalConflicts = [
     levelColor: "rose",
     parties: "Ukrayna Silahlı Kuvvetleri vs. Rusya Federasyonu Silahlı Kuvvetleri",
     summary: "Donbas cephesi boyunca Pokrovsk, Toretsk ve Kurahove yönlerindeki yıpratma taarruzları, Kursk sınır bölgesi çatışmaları, derin altyapı füze/İHA vuruşları ve fiber-optik FPV dronların sahada yaygınlaşması.",
-    currentSituation: "Donbas hattında Pokrovsk, Toretsk, Çasiv Yar ve Kurahove istikametlerinde Rus kuvvetlerinin yoğun piyade ve zırhlı sızma taarruzları devam etmektedir. Ukrayna kuvvetleri Kursk bölgesindeki sınır ceplerini tutarken, her iki taraf karşılıklı olarak kritik lojistik, petrol rafinerileri ve enerji şebekelerine uzun menzilli seyir/balistik füzeler ve kamikaze İHA'lar fırlatmaktadır. Elektronik harbin (Jammer) zirveye çıktığı cephede, sinyal kesicilerden etkilenmeyen makaralı fiber-optik kablolu FPV kamikaze dronlar ve KAB/FAB süzülen ağır güdümlü mühimmatlar belirleyici taktik unsurlar haline gelmiştir.",
-    keyTech: ["Fiber-Optik Güdümlü FPV Dron", "FAB/KAB Süzülen Bombalar", "Elektronik Harp & Jammer Kalkanları", "Patriot / S-400 Çok Katmanlı Hava Savunma"]
+    currentSituation: "Ekim 2026 itibarıyla Pokrovsk ve Kupyansk lojistik kavşaklarında yoğun kentsel kuşatma ve taarruz harekatları kilitlenmiştir. Ukrayna kuvvetleri Batı menşeili F-16 filolarıyla seyir füzesi avcılığı ve Patriot bataryalarıyla hava sahası savunmasını sürdürürken; Rusya güdümlü UMPK kitli FAB-3000 ağır hava bombaları ve fiber-optik kablolu FPV kamikaze dron akınlarıyla istihkam hatlarını dövmektedir. Karşılıklı derin vuruşlarda Ukrayna'nın yerli Palianytsia jet motorlu kamikaze dronları ve Rusya'nın Oreshnik / İskender-M balistik füze altyapı salvosu cephe gerisinde stratejik yıpratma savaşı yürütmektedir.",
+    keyTech: ["Fiber-Optik Güdümlü FPV Dron", "FAB-3000 Süzülen Ağır Bombalar", "Palianytsia Jet İHA & ATACMS", "Patriot PAC-3 & S-400 Çok Katmanlı Savunma"]
   },
   {
     id: "israil-gazze-lubnan-catismasi",
     title: "İsrail - Gazze & Lübnan Çatışmaları (Çok Cepheli Orta Doğu Krizi)",
     region: "Orta Doğu",
-    location: "Gazze Şeridi, Güney Lübnan, Batı Şeria & Golan Tepeleri",
+    location: "Güney Lübnan (Litani Hattı), Beyrut, Gazze Şeridi & Golan Tepeleri",
     startDate: "7 Ekim 2023",
-    duration: "2.5+ Yıldır Devam Ediyor",
+    duration: "3. Yılına Giren Çok Cepheli Kriz",
     threatLevel: "YÜKSEK ŞİDDETLİ ASİMETRİK VE BÖLGESEL HARP",
     levelColor: "rose",
-    parties: "İsrail Savunma Kuvvetleri (IDF) vs. Hamas, Hizbullah & Direniş Ekseni",
-    summary: "Gazze'de meskun mahal/tünel operasyonları; Güney Lübnan sınırında Hizbullah ile yoğun sınır ötesi kara harekatı, hava taarruzları, roket-İHA bombardımanları ve bölgesel balistik füze gerilimi.",
-    currentSituation: "Gazze Şeridi genelinde meskun mahal temizlik operasyonları, tünel ağlarının imhası ve asimetrik gerilla pusuları devam ederken büyük bir insani kriz sürmektedir. İsrail-Lübnan sınır hattında İsrail ordusunun Güney Lübnan'a yönelik kara ve hava operasyonları ile Hizbullah'ın Hayfa ve Tel Aviv yönündeki roket ve intihar İHA akınları devam etmektedir. Ayrıca İran ve müttefik unsurlar ile karşılıklı doğrudan balistik füze ve hava savunma angajmanları bölgeyi geniş çaplı bir bölgesel savaş eşiğinde tutmaktadır.",
-    keyTech: ["Demir Kubbe (Iron Dome) & Arrow 3", "Meskun Mahal Tünel Harbi & Yeraltı Taraması", "Hassas Güdümlü Seyir ve Balistik Füzeler", "Termal Optikli Kamikaze İHA'lar"]
+    parties: "İsrail Savunma Kuvvetleri (IDF) vs. Hizbullah, Hamas & Direniş Ekseni",
+    summary: "Güney Lübnan Litani Nehri güneyinde şiddetli kara çatışmaları, Beyrut güney banliyöleri hava taarruzları, Hayfa ve Tel Aviv'e yönelik yoğun roket/İHA saldırıları.",
+    currentSituation: "İsrail ordusu Güney Lübnan sınırında Litani Nehri hattını temizlemeye yönelik mekanize tugaylarla sınır ötesi kara operasyonlarını sürdürürken, Hizbullah güçleri Kornet-EM tanksavar pusuları ve İHA akınlarıyla karşılık vermektedir. Hayfa limanı ve askeri üslerine her gün yüzlerce Katyuşa ve Fadi füzesi fırlatılmaktadır. Gazze'de ise Cebaliye ve Han Yunus ceplerinde meskun mahal gerilla çatışmaları devam etmektedir.",
+    keyTech: ["Demir Kubbe & David's Sling (Davud Sapanı)", "Kornet-EM & Almas Tanksavar Füzeleri", "Trophy Aktif Koruma Sistemi (APS)", "Termal Optikli Kamikaze İHA'lar"]
   },
   {
     id: "sudan-ic-savasi",
@@ -197,6 +197,62 @@ export const globalConflicts = [
 ];
 
 export const articles = [
+  {
+    id: "siper-urun-2-balistik-onleme-testi",
+    title: "SİPER Ürün-2 Uzun Menzilli Bölge Hava Savunma Sistemi: Balistik Önleme Başarısı",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "10 dk okuma",
+    date: "10 Ekim 2026",
+    excerpt: "ROKETSAN ve ASELSAN ortaklığıyla geliştirilen SİPER Ürün-2 füzesinin Sinop atış alanında 150+ km menzilde yüksek irtifa ve süpersonik hedefi doğrudan vuruşla (Hit-to-Kill) imha testi.",
+    tags: ["SİPER", "Hava Savunma", "Çelik Kubbe", "ROKETSAN", "ASELSAN", "Hit-to-Kill"],
+    featured: true,
+    likes: 728,
+    content: `
+### SİPER ÜRÜN-2 İLE TÜRKİYE'NİN STRATEJİK HAVA SAVUNMA KALKANI
+
+Türk savunma sanayiinin 'Çelik Kubbe' vizyonunun en kritik uzun menzilli ayağını oluşturan **SİPER Ürün-2**, Sinop Atış Alanı'nda gerçekleştirilen en kapsamlı harp başlıklı atış testinde hedefi tam isabetle imha etmiştir.
+
+### TEKNİK KABİLİYETLER VE GELİŞMİŞ RADAR ENTEGRASYONU
+
+1. **Gelişmiş Çift Kademeli İtki:**
+   * SİPER Ürün-1'e kıyasla daha kalın çaplı katı yakıtlı roket motoru ve manevra kabiliyetini artıran itki vektör kontrol (TVC) sistemi.
+   * 150 kilometreyi aşan önleme menzili ve 30.000+ metre irtifa tavanı ile düşman avcı jetleri, seyir füzeleri ve taktik balistik füzelere karşı tam koruma.
+
+2. **Aktif Radar Arayıcı Başlık (RF Seeker):**
+   * Son yaklaşma fazında hedefi milimetrik hassasiyetle kilitleyen yerli RF arayıcı başlık.
+   * ASELSAN EİRS (Erken İhbar Radar Sistemi) ve Filo Seviyesi Atış Kontrol Radarları ile kesintisiz veri bağı (Data Link) iletişimi.
+
+3. **Milli Hava Sahası Entegrasyonu:**
+   * HAKİM Komuta Kontrol yazılımı üzerinden KORKUT ve HİSAR bataryalarıyla müşterek hava resmi oluşturarak mühimmat israfını önleyen yapay zekâ hedef önceliklendirmesi.
+    `
+  },
+  {
+    id: "som-j-f-35-kaan-cruise-missile",
+    title: "SOM-J ve ÇAKIR Seyir Füzeleri: Mini Turbojet Motorlu Yeni Nesil Hassas Taarruz",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "9 dk okuma",
+    date: "09 Ekim 2026",
+    excerpt: "Kale Arge KTJ-3200 ve KTJ-1750 turbojet motorlarıyla güçlendirilen SOM-J ve ÇAKIR füzelerinin KAAN dahili istasyonundan ve AKINCI TİHA'dan gerçekleştirilen su üstü hedef atışları.",
+    tags: ["SOM-J", "ÇAKIR", "Seyir Füzesi", "ROKETSAN", "Kale Arge", "KTJ-3200"],
+    featured: true,
+    likes: 615,
+    content: `
+### MİLLİ TURBOJET MOTORLARLA STRATEJİK VURUŞ GÜCÜ
+
+ROKETSAN ve TÜBİTAK SAGE tarafından geliştirilen **SOM-J** ve kompakt seyir füzesi **ÇAKIR**, yerli turbojet motorlarla seri üretim ve operasyonel kabul testlerini tamamlamıştır.
+
+### ÖNE ÇIKAN HAREKÂT DİNAMİKLERİ
+
+1. **Dahili Silah İstasyonu Optimizasyonu:**
+   * KAAN ve KIZILELMA gibi 5. nesil hayalet platformların gövde içi istasyonlarına sığacak şekilde tasarlanan aerodinamik katlanır kanat geometrisi.
+
+2. **Görüntüleyici Kızılötesi (IIR) ve Karıştırmasız Navigasyon:**
+   * Yeryüzü referanslı seyrüsefer (TERCOM) ve hedefin termal silüetini hafızasındaki veri tabanıyla eşleştiren akıllı kızılötesi arayıcı başlık sayesinde yoğun GPS karıştırmasında dahi sıfır sapma.
+
+3. **Çok Platformlu Kullanım:**
+   * SİHA'lar (AKINCI, AKSUNGUR), insanlı savaş uçakları, SİDA'lar (ULAQ, MARLİN) ve karadan atılan kıyı savunma bataryalarından fırlatılabilme kabiliyeti.
+    `
+  },
   {
     id: "kaan-5th-gen-fighter-supersonic-avionics",
     title: "Milli Muharip Uçak KAAN: Süpersonik Seyir ve 5. Nesil Aviyonik Mimarisi",
