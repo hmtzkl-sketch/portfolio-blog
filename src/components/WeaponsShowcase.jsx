@@ -93,6 +93,10 @@ export default function WeaponsShowcase() {
                     <img
                       src={weapon.image}
                       alt={weapon.name}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = '/weapons/mpt-76.png';
+                      }}
                       className="max-h-full max-w-full object-contain filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.3)] group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
