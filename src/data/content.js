@@ -4,20 +4,66 @@ export const authorProfile = {
   title: "Açık Kaynak (OSINT) Savunma Sanayii & Askeri Teknolojiler Araştırmacısı",
   bio: "Halka açık savunma sanayii bültenleri, uluslararası askeri fuarlar (IDEF, SAHA EXPO), üretici teknik katalogları ve açık kaynak istihbaratı (OSINT) doğrultusunda; piyade silahları, balistik prensipler ve savunma teknolojileri üzerine bağımsız teknik analizler ve derlemeler sunuyorum.",
   location: "Türkiye",
-  status: "Açık Kaynak Savunma & Teknoloji Derlemesi Yayında",
+  status: "Canlı İstihbarat & Taktik Radar Aktif [Ekim 2026]",
   stats: [
-    { label: "Katalog & Sistem İncelemesi", value: "85+", change: "Açık Kaynak (OSINT)" },
-    { label: "İncelenen Açık Olay", value: "14 Bölge", change: "Uluslararası Basın" },
-    { label: "Teknik Bilgi Notu", value: "32 Modül", change: "Halka Açık Veri" },
-    { label: "Aylık Takipçi / Okur", value: "95.000+", change: "Savunma Meraklıları" }
+    { label: "Katalog & Sistem İncelemesi", value: "95+", change: "Açık Kaynak (OSINT)" },
+    { label: "Sıcak Çatışma Radarı", value: "16 Bölge", change: "Canlı Taktik Takip" },
+    { label: "Teknik Rapor & Doküman", value: "48 Modül", change: "Halka Açık Veri" },
+    { label: "Aylık Ziyaret & Okur", value: "140.000+", change: "Savunma Meraklıları" }
   ],
   socials: {
-    github: "https://github.com",
+    github: "https://github.com/hmtzkl-sketch",
     twitter: "https://x.com",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/ahmet-%C3%B6zkul-82aa0093",
     email: "iletisim@ahmetozkul.com.tr"
   }
 };
+
+// Canlı Tıklanabilir Son Dakika İstihbarat Radarı
+export const breakingIntel = [
+  {
+    id: "siper-urun-2-balistik-onleme-testi",
+    badge: "SON TEST",
+    title: "SİPER Ürün-2: Sinop'ta 150+ km Hit-to-Kill balistik önleme testi başarıyla icra edildi.",
+    target: "article",
+    type: "defense"
+  },
+  {
+    id: "rusya-ukrayna-savasi",
+    badge: "CEPHE RAPORU",
+    title: "Pokrovsk ve Kursk Hatlarında Fiber-Optik FPV kamikaze dron taarruzları yoğunlaştı.",
+    target: "conflict",
+    type: "conflict"
+  },
+  {
+    id: "kaan-5th-gen-fighter-supersonic-avionics",
+    badge: "MİLLİ HAVA GÜCÜ",
+    title: "KAAN MMU: ASELSAN MURAD AESA burun radarı entegrasyonu ve süpersonik seyir fazı.",
+    target: "article",
+    type: "defense"
+  },
+  {
+    id: "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
+    badge: "BALİSTİK HARP",
+    title: "İran-İsrail: THAAD ve Arrow-3 bataryaları ile Fettah hipersonik başlıkları arasında hava harbi.",
+    target: "conflict",
+    type: "conflict"
+  },
+  {
+    id: "kizilelma-insansiz-savas-ucagi-it-dalasi",
+    badge: "İNSANSIZ JET",
+    title: "KIZILELMA: Otonom it dalaşı ve BVR Görüş Ötesi GÖKDOĞAN füzesi entegrasyonu tamamlandı.",
+    target: "article",
+    type: "defense"
+  },
+  {
+    id: "bayraktar-tb3-tcg-anadolu-naval-uav",
+    badge: "MAVİ VATAN",
+    title: "Bayraktar TB3: TCG Anadolu LHD amfibi gemisi güvertesinden otonom iniş-kalkış döngüsü.",
+    target: "article",
+    type: "defense"
+  }
+];
 
 export const legalDisclaimer = {
   title: "Yasal Uyarı, Ulusal Güvenlik ve Mevzuat Bildirimi",

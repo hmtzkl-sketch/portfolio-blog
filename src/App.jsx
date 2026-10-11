@@ -12,6 +12,7 @@ import ArticleModal from './components/ArticleModal';
 import SearchModal from './components/SearchModal';
 import LegalNotice from './components/LegalNotice';
 import TacticalMapOverlay from './components/TacticalMapOverlay';
+import { articles } from './data/content';
 
 export default function App() {
   const [selectedArticle, setSelectedArticle] = useState(null);
@@ -106,6 +107,14 @@ export default function App() {
             onWeaponsClick={() => scrollTo('silah-arsivi')}
             onConflictsClick={() => scrollTo('kuresel-olaylar')}
             onExploreClick={() => scrollTo('yazilar')}
+            onSelectArticleById={(articleId) => {
+              const art = articles.find((a) => a.id === articleId);
+              if (art) {
+                setSelectedArticle(art);
+              } else {
+                scrollTo('yazilar');
+              }
+            }}
           />
         </div>
 

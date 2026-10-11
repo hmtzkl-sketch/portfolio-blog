@@ -191,8 +191,8 @@ export default function BlogSection({ onSelectArticle, likedArticleIds, onToggle
                           e.stopPropagation();
                           onToggleLike(article.id);
                         }}
-                        className={`flex items-center gap-1 text-xs font-mono transition-colors ${
-                          isLiked ? 'text-rose-600' : 'text-slate-500 hover:text-rose-600'
+                        className={`flex items-center gap-1 text-xs font-mono transition-colors px-2 py-1 rounded-md border ${
+                          isLiked ? 'text-rose-600 bg-rose-50 border-rose-200' : 'text-slate-500 hover:text-rose-600 bg-slate-50 border-slate-200'
                         }`}
                         title="Faydalı Buldum"
                       >
@@ -200,8 +200,9 @@ export default function BlogSection({ onSelectArticle, likedArticleIds, onToggle
                         <span>{totalLikes}</span>
                       </button>
 
-                      <div className="w-8 h-8 rounded-lg bg-slate-100 group-hover:bg-rose-500 group-hover:text-white flex items-center justify-center transition-all text-slate-600">
-                        <ArrowUpRight className="w-4 h-4" />
+                      <div className="px-3 py-1.5 rounded-lg bg-slate-100 group-hover:bg-rose-500 group-hover:text-white flex items-center gap-1 transition-all text-xs font-mono font-semibold text-slate-700">
+                        <span>İncele</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
                     </div>
                   </div>
