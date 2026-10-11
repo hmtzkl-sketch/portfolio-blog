@@ -73,11 +73,11 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
           {/* Left Text Column */}
           <div className="lg:col-span-8 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-              Askeri Silahlar, <br />
+              Küresel Sıcak Çatışmalar, <br />
               <span className="bg-gradient-to-r from-rose-500 via-amber-400 to-rose-400 bg-clip-text text-transparent">
-                Taktik Eğitimler
+                Taktik Silah Sistemleri
               </span> <br />
-              & Milli Savunma Sistemleri.
+              & Canlı Harp Radarı.
             </h1>
 
             <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-sans">
@@ -88,28 +88,28 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4">
               <button
-                onClick={onWeaponsClick}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-rose-600 via-rose-500 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-mono text-sm font-bold shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
+                onClick={onConflictsClick}
+                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-rose-600 via-rose-500 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-mono text-sm font-bold shadow-xl shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 cursor-pointer"
               >
-                <Crosshair className="w-4 h-4" />
-                Silah Envanterini İncele
+                <Radio className="w-4 h-4 animate-pulse" />
+                Sıcak Çatışma Radarı [CANLI]
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <button
-                onClick={onConflictsClick}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1e293b] hover:bg-[#28354b] text-white hover:text-rose-300 border border-slate-700 hover:border-rose-400 font-mono text-sm font-semibold transition-all cursor-pointer shadow-sm hover:scale-105"
+                onClick={onWeaponsClick}
+                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1e293b] hover:bg-[#28354b] text-white hover:text-rose-300 border border-slate-700 hover:border-rose-400 font-mono text-sm font-semibold transition-all cursor-pointer shadow-sm hover:scale-105"
               >
-                <Globe2 className="w-4 h-4 text-rose-400" />
-                Sıcak Bölgeler Radarı
+                <Crosshair className="w-4 h-4 text-rose-400" />
+                Silah & Balistik Laboratuvarı
               </button>
 
               <button
                 onClick={onExploreClick}
-                className="flex items-center gap-2 px-5 py-3 rounded-xl text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 font-mono text-sm transition-all cursor-pointer"
+                className="flex items-center gap-2 px-5 py-3.5 rounded-xl text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 font-mono text-sm transition-all cursor-pointer"
               >
                 <BookOpen className="w-4 h-4 text-amber-400" />
-                Eğitim & Makaleler
+                Taktik Brifingler
               </button>
             </div>
 
@@ -117,15 +117,15 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
             <div className="mt-6 pt-5 border-t border-slate-800 flex flex-wrap items-center gap-2 justify-center md:justify-start font-mono text-xs">
               <span className="text-slate-400 flex items-center gap-1 font-semibold text-[11px] mr-1">
                 <Flame className="w-3.5 h-3.5 text-rose-500" />
-                ÖNE ÇIKANLAR:
+                CANLI TAKİP:
               </span>
               {[
-                { label: "🎯 MPT-76 & KCR-556", action: onWeaponsClick },
-                { label: "🚀 SİPER Ürün-2", action: () => onSelectArticleById && onSelectArticleById('siper-urun-2-balistik-onleme-testi') },
-                { label: "✈️ KAAN MMU & AESA", action: () => onSelectArticleById && onSelectArticleById('kaan-5th-gen-fighter-supersonic-avionics') },
-                { label: "🦅 KIZILELMA İt Dalaşı", action: () => onSelectArticleById && onSelectArticleById('kizilelma-insansiz-savas-ucagi-it-dalasi') },
-                { label: "🛡️ Çelik Kubbe", action: () => onSelectArticleById && onSelectArticleById('celik-kubbe-integrated-air-defense') },
-                { label: "📍 Donbas & Pokrovsk", action: onConflictsClick }
+                { label: "📍 Donbas & Pokrovsk", action: onConflictsClick },
+                { label: "💥 İran-İsrail Balistik", action: onConflictsClick },
+                { label: "🌊 Kızıldeniz Husiler", action: onConflictsClick },
+                { label: "⚔️ MPT-76 vs HK416 Kıyasla", action: onWeaponsClick },
+                { label: "🚀 SİPER Ürün-2 Hit-to-Kill", action: () => onSelectArticleById && onSelectArticleById('siper-urun-2-balistik-onleme-testi') },
+                { label: "✈️ KAAN MMU & AESA", action: () => onSelectArticleById && onSelectArticleById('kaan-5th-gen-fighter-supersonic-avionics') }
               ].map((pill, idx) => (
                 <button
                   key={idx}

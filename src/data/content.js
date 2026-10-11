@@ -84,161 +84,218 @@ export const categories = [
   "Küresel Çatışmalar & Sıcak Olaylar"
 ];
 
-// Dünyada aktif olarak devam eden savaşlar, silahlı çatışmalar ve sıcak kriz bölgeleri
+// Dünyada aktif olarak devam eden savaşlar, silahlı çatışmalar ve sıcak kriz bölgeleri (Ekim 2026 Güncel)
 export const globalConflicts = [
   {
-    id: "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
-    title: "İran - İsrail Doğrudan Balistik Füze & Hava Savunma Muharebesi",
-    region: "Orta Doğu / Basra Körfezi",
-    location: "Tahran, İsfahan, Tel Aviv, Negev Çölü (Nevatim Hava Üssü)",
-    startDate: "Nisan 2024 (Ekim 2024 - 2026 Tırmanışı)",
-    duration: "Doğrudan Devletler Arası Balistik Füze Düellosu",
-    threatLevel: "KRİTİK BÖLGESEL BALİSTİK & HAVA HARBİ",
+    id: "rusya-ukrayna-savasi",
+    title: "Rusya - Ukrayna Savaşı (Donbas, Pokrovsk & Kursk Cepheleri)",
+    region: "Doğu Avrupa",
+    location: "Donbas (Pokrovsk Kuşatması, Toretsk, Kurahove Cebi) & Kursk Sınırı",
+    coordinates: "48.28°N, 37.18°E",
+    intensity: 98,
+    startDate: "24 Şubat 2022",
+    duration: "4+ Yıldır Devam Ediyor (12. Yıl)",
+    threatLevel: "AKTİF KONVANSİYONEL TOPYEKÛN SAVAŞ",
     levelColor: "rose",
-    parties: "İsrail Savunma Kuvvetleri (IDF) & ABD Merkez Komutanlığı (CENTCOM) vs. İran Devrim Muhafızları (IRGC)",
-    summary: "Hipersonik ve balistik füzeler (Fettah, Hayber Şeken) ile çok katmanlı hava savunma kalkanları (Arrow 3, David's Sling, THAAD) arasında tarihin ilk büyük çaplı kıtalararası füze savaşı.",
-    currentSituation: "İran'ın hipersonik manevra başlıklı katı yakıtlı balistik füzeleri ve yüzlerce Şahid-136 kamikaze İHA'sı ile İsrail'in askeri hava üsleri ve istihbarat merkezlerine yönelik gerçekleştirdiği dalga taarruzları, modern hava savunma doktrinlerini baştan yazmıştır. ABD'nin İsrail'e konuşlandırdığı THAAD bataryaları ile İsrail'in Arrow 3 ve David's Sling sistemleri atmosfer dışı önleme manevraları gerçekleştirmiştir. İsrail ise F-35I Adir hayalet jetleri ve RAMPAGE füzeleriyle İran'ın S-300 hava savunma radarlarına nokta vuruşlar yapmaktadır.",
-    keyTech: ["THAAD & Arrow-3 Atmosfer Dışı Füze Önleme", "Fettah Hipersonik Kayma Başlığı", "F-35I Adir Gizli Taarruz Jeti", "Elektronik GNSS Karartma & Erken İhbar Radarları"]
+    frontlineStatus: "Pokrovsk ve Kurahove Yıpratma Muharebeleri & Fiber-Optik FPV Dron Harbi",
+    parties: "Ukrayna Silahlı Kuvvetleri vs. Rusya Federasyonu Silahlı Kuvvetleri",
+    summary: "Donbas'ın ana lojistik merkezi Pokrovsk çevresinde ağır kentsel kuşatma, Kurahove yönünde kanat ilerlemeleri, Kursk sınırında yıpratma karşı taarruzları, derin enerji altyapı salvosu ve karıştırmasız fiber-optik FPV dronların muharebe sahasını ele geçirmesi.",
+    currentSituation: "Ekim 2026 itibarıyla Pokrovsk ve Kupyansk demiryolu/ikmal kavşaklarında yoğun kentsel kuşatma ve taarruz harekatları en üst noktaya ulaşmıştır. Vuhledar'ın düşüşünün ardından Rus kuvvetleri Kurahove rezervuarı çevresindeki Ukrayna mevzilerini kuşatmaya çalışmaktadır. Ukrayna kuvvetleri Batı menşeili F-16 devriyeleriyle seyir füzelerini önlemekte ve Patriot PAC-3 bataryalarıyla hava sahası savunmasını sürdürmektedir. Sahadaki en büyük taktik devrim, her iki tarafın 10-15 km menzilli fiber-optik makaralı FPV intihar dronlarını kullanmasıdır; bu dronlar jammer sinyal bozucularından %100 bağışık olarak tank ve siperleri nokta atışıyla imha etmektedir. Stratejik derinlikte ise Rusya'nın Oreshnik / İskender-M balistik salvo taarruzlarına karşılık Ukrayna, yerli jet motorlu Palianytsia dronları ile Rusya içindeki mühimmat depoları ve rafinerileri vurmaktadır.",
+    keyTech: [
+      "Fiber-Optik Karıştırmasız FPV Dron",
+      "FAB-3000 UMPK Süzülen Ağır Bombalar",
+      "Palianytsia Jet Kamikaze İHA & ATACMS",
+      "Patriot PAC-3 & S-400 Füze Kalkanı",
+      "Starlink & Taktik Ağ İletişimi"
+    ],
+    osintNote: "Ticari uydu fotoğrafları (Sentinel & Maxar), Pokrovsk güneybatısında siper hatlarının tamamen FPV dron avcıları tarafından kilitlendiğini ve zırhlı araç konvoylarının yerini küçük piyade sızma gruplarına bıraktığını doğrulamaktadır."
   },
   {
-    id: "rusya-ukrayna-savasi",
-    title: "Rusya - Ukrayna Savaşı (Topyekûn Cephe Taarruzları)",
-    region: "Doğu Avrupa",
-    location: "Donbas (Pokrovsk, Toretsk, Çasiv Yar, Kurahove) & Kursk Sınırı",
-    startDate: "24 Şubat 2022",
-    duration: "4+ Yıldır Devam Ediyor (2014 Kırım ilhakından itibaren 12. yıl)",
-    threatLevel: "AKTİF KONVANSİYONEL SAVAŞ",
+    id: "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
+    title: "İran - İsrail Doğrudan Balistik Füze & Hava Harbi",
+    region: "Orta Doğu / Basra Körfezi",
+    location: "Tahran, İsfahan, Şiraz, Tel Aviv, Negev Çölü (Nevatim & Ovda Hava Üssü)",
+    coordinates: "31.76°N, 35.21°E",
+    intensity: 95,
+    startDate: "Nisan 2024 (Ekim 2024 - 2026 Tırmanışı)",
+    duration: "Devletler Arası Doğrudan Balistik Füze Düellosu",
+    threatLevel: "KRİTİK BÖLGESEL BALİSTİK & HAVA HARBİ",
     levelColor: "rose",
-    parties: "Ukrayna Silahlı Kuvvetleri vs. Rusya Federasyonu Silahlı Kuvvetleri",
-    summary: "Donbas cephesi boyunca Pokrovsk, Toretsk ve Kurahove yönlerindeki yıpratma taarruzları, Kursk sınır bölgesi çatışmaları, derin altyapı füze/İHA vuruşları ve fiber-optik FPV dronların sahada yaygınlaşması.",
-    currentSituation: "Ekim 2026 itibarıyla Pokrovsk ve Kupyansk lojistik kavşaklarında yoğun kentsel kuşatma ve taarruz harekatları kilitlenmiştir. Ukrayna kuvvetleri Batı menşeili F-16 filolarıyla seyir füzesi avcılığı ve Patriot bataryalarıyla hava sahası savunmasını sürdürürken; Rusya güdümlü UMPK kitli FAB-3000 ağır hava bombaları ve fiber-optik kablolu FPV kamikaze dron akınlarıyla istihkam hatlarını dövmektedir. Karşılıklı derin vuruşlarda Ukrayna'nın yerli Palianytsia jet motorlu kamikaze dronları ve Rusya'nın Oreshnik / İskender-M balistik füze altyapı salvosu cephe gerisinde stratejik yıpratma savaşı yürütmektedir.",
-    keyTech: ["Fiber-Optik Güdümlü FPV Dron", "FAB-3000 Süzülen Ağır Bombalar", "Palianytsia Jet İHA & ATACMS", "Patriot PAC-3 & S-400 Çok Katmanlı Savunma"]
+    frontlineStatus: "THAAD / Arrow-3 Kalkanı vs. Fettah Hipersonik & İmad Katı Yakıtlı Balistik Başlıklar",
+    parties: "İsrail Savunma Kuvvetleri (IDF) & ABD Merkez Komutanlığı (CENTCOM) vs. İran Devrim Muhafızları (IRGC)",
+    summary: "Hipersonik manevra başlıklı katı yakıtlı balistik füzeler ile çok katmanlı atmosfer dışı füze savunma kalkanları (Arrow-3, THAAD, David's Sling) arasında modern harp tarihinin ilk kıtalararası füze savaşı.",
+    currentSituation: "İran Devrim Muhafızları'nın (IRGC) yüzlerce katı yakıtlı balistik füze (Fettah-1, Hayber Şeken, Kadr) ve Şahid-136 İHA salvosu ile İsrail askeri üslerine (Nevatim, Tel Nof) yönelik gerçekleştirdiği dalga taarruzları, küresel hava savunma mimarisini kökten değiştirmiştir. ABD Ordusu, İsrail topraklarına doğrudan THAAD (Terminal High Altitude Area Defense) bataryaları konuşlandırmış; İsrail'in Arrow 3 ve David's Sling sistemleriyle uzay boşluğu seviyesinde exo-atmosferik önlemeler gerçekleştirilmiştir. İsrail Hava Kuvvetleri ise F-35I Adir hayalet jetleri, Rampage süpersonik füzeleri ve Rocks aerobalistik füzeleriyle İran'ın radar sahaları ve füze yakıt üretim tesislerine nokta hava akınları düzenlemektedir.",
+    keyTech: [
+      "THAAD & Arrow-3 Atmosfer Dışı Füze Önleme",
+      "Fettah Hipersonik Manevra Başlığı (HGV)",
+      "F-35I Adir Hayalet Jet & RAMPAGE",
+      "Erken İhbar Radarları (AN/TPY-2 & Green Pine)",
+      "Elektronik GNSS Karartma & Uydu Karıştırma"
+    ],
+    osintNote: "Nevatim Hava Üssü uydu analizleri, balistik önleme oranının yüksek olmasına rağmen süpersonik enkaz ve doğrudan isabetlerin pistlerde ve taksi yollarında çukurlar açtığını göstermektedir."
   },
   {
     id: "israil-gazze-lubnan-catismasi",
-    title: "İsrail - Gazze & Lübnan Çatışmaları (Çok Cepheli Orta Doğu Krizi)",
+    title: "İsrail - Güney Lübnan & Gazze Çatışmaları",
     region: "Orta Doğu",
-    location: "Güney Lübnan (Litani Hattı), Beyrut, Gazze Şeridi & Golan Tepeleri",
+    location: "Güney Lübnan (Litani Hattı, Maroun al-Ras, Khiam), Beyrut, Gazze (Cebaliye)",
+    coordinates: "33.27°N, 35.20°E",
+    intensity: 92,
     startDate: "7 Ekim 2023",
     duration: "3. Yılına Giren Çok Cepheli Kriz",
-    threatLevel: "YÜKSEK ŞİDDETLİ ASİMETRİK VE BÖLGESEL HARP",
+    threatLevel: "YÜKSEK ŞİDDETLİ ASİMETRİK VE KARA HARBİ",
     levelColor: "rose",
+    frontlineStatus: "Litani Tampon Bölge Harekâtı & Tanksavar / İHA Pusuları",
     parties: "İsrail Savunma Kuvvetleri (IDF) vs. Hizbullah, Hamas & Direniş Ekseni",
-    summary: "Güney Lübnan Litani Nehri güneyinde şiddetli kara çatışmaları, Beyrut güney banliyöleri hava taarruzları, Hayfa ve Tel Aviv'e yönelik yoğun roket/İHA saldırıları.",
-    currentSituation: "İsrail ordusu Güney Lübnan sınırında Litani Nehri hattını temizlemeye yönelik mekanize tugaylarla sınır ötesi kara operasyonlarını sürdürürken, Hizbullah güçleri Kornet-EM tanksavar pusuları ve İHA akınlarıyla karşılık vermektedir. Hayfa limanı ve askeri üslerine her gün yüzlerce Katyuşa ve Fadi füzesi fırlatılmaktadır. Gazze'de ise Cebaliye ve Han Yunus ceplerinde meskun mahal gerilla çatışmaları devam etmektedir.",
-    keyTech: ["Demir Kubbe & David's Sling (Davud Sapanı)", "Kornet-EM & Almas Tanksavar Füzeleri", "Trophy Aktif Koruma Sistemi (APS)", "Termal Optikli Kamikaze İHA'lar"]
+    summary: "Güney Lübnan sınırında Litani Nehri güneyine yönelik zırhlı mekanize sınır ötesi kara operasyonu, Beyrut güney banliyöleri hava taarruzları, Hayfa ve Tel Aviv'e yönelik roket/İHA saldırıları.",
+    currentSituation: "İsrail ordusu, Güney Lübnan'da sınır hattındaki köyleri ve tünel ağlarını temizleyerek Litani Nehri güneyinde kalıcı bir tampon bölge oluşturmak amacıyla tugay seviyesinde kara taarruzlarını sürdürmektedir. Hizbullah güçleri ise sarp kayalık ve zeytinlik arazide Almas-3 (TV güdümlü) ve Kornet-EM tanksavar pusuları kurarak Merkava Mk4 tanklarını hedef almakta; Hayfa limanı, üsler ve Tel Aviv'e yönelik her gün onlarca Fadi-1/2 ağır roketi ve patlayıcı yüklü Ebabil kamikaze İHA'sı ateşlemektedir. Gazze'de ise Cebaliye mülteci kampı ve kuzey Gazze ceplerinde meskun mahal gerilla çatışmaları devam etmektedir.",
+    keyTech: [
+      "Demir Kubbe & Davud Sapanı (David's Sling)",
+      "Almas-3 (TV Güdümlü) & Kornet-EM Tanksavar",
+      "Trophy Aktif Koruma Sistemi (APS)",
+      "Meskun Mahal Tünel Arama Robotları",
+      "Hafif Taktik Kamikaze Dronlar"
+    ],
+    osintNote: "Termal İHA görüntülerinde Hizbullah'ın sınır tünellerinden anlık çıkıp optik güdümlü füzeleri fırlatarak 15 saniye içinde kaybolduğu 'vur-kaç-gizlen' taktiği gözlenmektedir."
+  },
+  {
+    id: "kizildeniz-yemen-deniz-krizi",
+    title: "Kızıldeniz & Aden Körfezi Deniz Güvenliği Krizi",
+    region: "Kızıldeniz & Arap Denizi",
+    location: "Babülmendep Boğazı, Aden Körfezi, Hudeyde Limanı & Kızıldeniz",
+    coordinates: "12.58°N, 43.33°E",
+    intensity: 88,
+    startDate: "19 Kasım 2023",
+    duration: "2+ Yıldır Devam Ediyor",
+    threatLevel: "DENİZ TİCARETİ VE DONANMA ANGAJMANI",
+    levelColor: "amber",
+    frontlineStatus: "Gemisavar Balistik Füzeler (ASBM) & Kamikaze USV İnsansız Botlar",
+    parties: "Ensarullah (Husiler / Yemen) vs. Çok Uluslu Görev Gücü (ABD, İngiltere, AB Aspides)",
+    summary: "Babülmendep Boğazı'nda ticari gemilere ve uluslararası donanmalara karşı gemisavar balistik füzeler, kamikaze insansız deniz botları ve karşı hava bombardımanları.",
+    currentSituation: "Husiler, İsrail limanlarıyla bağlantılı ve Batılı ticari gemilere yönelik Babülmendep Boğazı ve Aden Körfezi'nde seyir füzeleri, gemisavar balistik füzeler (ASBM) ve patlayıcı yüklü insansız deniz araçları (USV) ile saldırılarını sürdürmektedir. Küresel deniz taşımacılığının önemli bir kısmı rotasını Güney Afrika'daki Ümit Burnu'na çevirmiştir. ABD ve müttefik donanmaları Aegis destroyerleri ile SM-2/SM-3 füzelerini kullanarak angajman sağlamakta, Yemen içindeki füze fırlatma rampaları ve radar merkezlerine periyodik hava harekâtları düzenlemektedir.",
+    keyTech: [
+      "Gemisavar Balistik Füzeler (ASBM - Tankil)",
+      "Patlayıcı Yüklü İnsansız Deniz Araçları (Tufan USV)",
+      "Aegis Muharebe Sistemi & SM-2/SM-6 Füzeleri",
+      "Uzun Menzilli Quds Seyir Füzeleri",
+      "Donanma Lazer ve CIWS Yakın Savunma"
+    ],
+    osintNote: "Otomatik Tanımlama Sistemi (AIS) verilerine göre Süveyş Kanalı ticari gemi trafiği %60'ın üzerinde düşmüş durumdadır; güzergâhın Ümit Burnu'na kayması küresel navlun fiyatlarını yükseltmiştir."
+  },
+  {
+    id: "suriye-ic-savasi-bolgesel-dinamikler",
+    title: "Suriye Çatışmaları & Bölgesel Güvenlik Dinamikleri",
+    region: "Orta Doğu / Levant",
+    location: "Halep Kırsalı, İdlib Hattı, Tel Rıfat - Münbiç, Fırat'ın Doğusu & Deyrizor",
+    coordinates: "36.20°N, 37.13°E",
+    intensity: 84,
+    startDate: "15 Mart 2011",
+    duration: "15+ Yıldır Devam Eden Bölünmüş Kriz",
+    threatLevel: "BÖLGESEL HAREKÂT VE TERÖRLE MÜCADELE",
+    levelColor: "amber",
+    frontlineStatus: "Nokta SİHA Harekâtları, Tünel İmhaları & İdlib Topçu Düellosu",
+    parties: "Rejim Güçleri, HTŞ & Suriye Milli Ordusu, Terör Örgütü PKK/YPG, TSK/MİT ve Koalisyon",
+    summary: "İdlib temas hattında topçu-drone tacizleri, Fırat'ın doğusunda terör örgütü hedeflerine yönelik nokta SİHA operasyonları ve Deyrizor'da aşiret gerilimleri.",
+    currentSituation: "İdlib temas hattında rejim güçleri ile muhalif unsurlar arasında FPV intihar dronları ve karşılıklı topçu atışları sürmektedir. Türkiye, sınır güvenliğini tehdit eden terör örgütü PKK/YPG'nin Tel Rıfat, Münbiç ve Fırat'ın doğusundaki lojistik merkezleri, sözde lider kadroları ve tünel ağlarına yönelik Bayraktar TB2 ve AKINCI TİHA ile nokta operasyonlarını kararlılıkla sürdürmektedir. Deyrizor hattında ise yerel Arap aşiretleri ile terör örgütü unsurları arasında periyodik çatışmalar devam etmektedir.",
+    keyTech: [
+      "Milli TİHA/SİHA (Bayraktar TB2 / AKINCI) Hassas Vuruş",
+      "MAM-L & MAM-T Akıllı Mikro Mühimmat",
+      "Elektronik Harp (KORAL Sistemi)",
+      "Meskun Mahal Tahkimat ve Tünel Savunması"
+    ],
+    osintNote: "MİT ve TSK SİHA operasyonları, örgütün sözde lojistik merkezleri ve petrol kuyusu gelir kaynaklarını cerrahi vuruşlarla felç etmektedir."
   },
   {
     id: "sudan-ic-savasi",
     title: "Sudan İç Savaşı (Hartum ve El Faşir Kuşatması)",
     region: "Doğu & Kuzey Afrika",
     location: "Hartum, El Cezire, Kuzey Darfur (El Faşir)",
+    coordinates: "15.50°N, 32.55°E",
+    intensity: 90,
     startDate: "15 Nisan 2023",
     duration: "3+ Yıldır Devam Ediyor",
     threatLevel: "AĞIR İÇ SAVAŞ & İNSANİ KRİZ",
     levelColor: "rose",
+    frontlineStatus: "El Faşir Son Kale Kuşatması & Modifiye Dron Saldırıları",
     parties: "Sudan Silahlı Kuvvetleri (SAF - Burhan) vs. Hızlı Destek Kuvvetleri (RSF - Hemeti)",
     summary: "Dünyanın en derin insani krizlerinden biri haline gelen çatışmada, başkent Hartum köprüleri ve Kuzey Darfur'un son kalesi El Faşir çevresinde ağır kentsel kuşatma savaşı.",
     currentSituation: "Sudan ordusu (SAF) ile paramiliter Hızlı Destek Kuvvetleri (RSF) arasındaki çatışmalar, başkent Hartum'un kontrolü ve Kuzey Darfur eyaletinin başkenti El Faşir çevresinde kilitlenmiştir. RSF birlikleri kenti kuşatma altında tutarken, SAF hava saldırıları ve topçu bataryaları ile karşılık vermektedir. Çatışmalarda 10 milyondan fazla sivil yerinden edilmiş olup, hafif ticari dronların havan ve bomba atacak şekilde modifiye edildiği ve teknik araçlara dayalı hızlı manevra taktiklerinin kullanıldığı gözlenmektedir.",
-    keyTech: ["Modifiye Edilmiş Ticari Bombardıman Dronları", "Meskun Mahal Ağır Topçu & Çok Namlulu Roketatar", "Hafif Zırhlı Taktik Araçlar (Technical)", "Gezici Keskin Nişancı Timleri"]
-  },
-  {
-    id: "kizildeniz-yemen-deniz-krizi",
-    title: "Kızıldeniz & Aden Körfezi Deniz Güvenliği Krizi",
-    region: "Kızıldeniz & Arap Denizi",
-    location: "Babülmendep Boğazı, Aden Körfezi & Yemen Kıyı Hattı",
-    startDate: "19 Kasım 2023",
-    duration: "2+ Yıldır Devam Ediyor",
-    threatLevel: "DENİZ TİCARETİ VE DONANMA ANGAJMANI",
-    levelColor: "amber",
-    parties: "Ensarullah (Husiler / Yemen) vs. Çok Uluslu Görev Gücü (Prosperity Guardian, ABD, İngiltere vb.)",
-    summary: "Babülmendep Boğazı'nda ticari gemilere ve uluslararası donanmalara karşı gemisavar balistik füzeler, kamikaze insansız deniz botları ve karşı hava bombardımanları.",
-    currentSituation: "Husiler, İsrail limanlarıyla bağlantılı ve Batılı ticari gemilere yönelik Babülmendep Boğazı ve Aden Körfezi'nde seyir füzeleri, gemisavar balistik füzeler (ASBM) ve patlayıcı yüklü insansız deniz araçları (USV) ile saldırılarını sürdürmektedir. Küresel deniz taşımacılığının önemli bir kısmı rotasını Güney Afrika'daki Ümit Burnu'na çevirmiştir. ABD ve müttefik donanmaları Aegis destroyerleri ile SM-2/SM-3 füzelerini kullanarak angajman sağlamakta, Yemen içindeki füze fırlatma rampaları ve radar merkezlerine periyodik hava harekâtları düzenlemektedir.",
-    keyTech: ["Gemisavar Balistik Füzeler (ASBM)", "Patlayıcı Yüklü İnsansız Deniz Araçları (Kamikaze USV)", "Aegis Muharebe Sistemi & SM-2/SM-6", "Uzun Menzilli Quds Seyir Füzeleri"]
+    keyTech: [
+      "Modifiye Edilmiş Ticari Bombardıman Dronları",
+      "Meskun Mahal Ağır Topçu & Çok Namlulu Roketatar",
+      "Hafif Zırhlı Taktik Araçlar (Technical)",
+      "Gezici Keskin Nişancı Timleri"
+    ],
+    osintNote: "Açık kaynak uydu haritaları El Faşir çevresinde yüzlerce sivil mahallenin yakıldığını ve gıda koridorlarının tamamen kesildiğini belgelemektedir."
   },
   {
     id: "myanmar-ic-savasi",
     title: "Myanmar İç Savaşı (Bahar Devrimi ve 1027 Operasyonu)",
     region: "Güneydoğu Asya",
     location: "Shan Eyaleti, Rakhine, Sagaing, Çin Sınır Hatları",
+    coordinates: "21.91°N, 95.95°E",
+    intensity: 85,
     startDate: "1 Şubat 2021 (Askeri Darbe)",
     duration: "5+ Yıldır Devam Ediyor",
     threatLevel: "ÇOK CEPHELİ DİRENİŞ & GERİLLA HARBİ",
     levelColor: "rose",
+    frontlineStatus: "Cunta Karargahlarının Ele Geçirilmesi & 3D Dron Sürüleri",
     parties: "Myanmar Askeri Cuntası (Tatmadaw) vs. PDF (Halk Savunma Güçleri) & Etnik Silahlı İttifak (Üç Kardeşlik)",
     summary: "Askeri cuntanın kontrolü kaybetmeye başladığı, etnik orduların kritik Çin sınırı ticaret kapılarını ve cunta üslerini ele geçirdiği yaygın asimetrik halk savaşı.",
     currentSituation: "1027 Operasyonu ile büyük bir ivme kazanan etnik direniş ittifakı (MNDAA, TNLA, AA) ve sivil Halk Savunma Güçleri (PDF), Shan ve Rakhine eyaletlerinde cuntanın onlarca tabur karargahını ve stratejik sınır kapısını ele geçirmiştir. Cunta güçleri kara üstünlüğünü kaybederek yoğun hava bombardımanları ve zorunlu askerlik uygulamalarıyla ayakta kalmaya çalışmaktadır. Direniş güçleri ucuz 3D yazıcı teknolojileriyle ürettikleri bomba bırakan FPV dronları sürüler halinde kullanarak modern bir halk gerilla harbi yürütmektedir.",
-    keyTech: ["3D Baskı Bomba Bırakan Mini İHA Sistemleri", "Orman ve Dağ Tipi Asimetrik Pusu Taktikleri", "Hafif Havan ve Omuzdan Atılan Roketler", "Cunta Hava Kuvvetleri Ağır Bombardıman Uçakları"]
-  },
-  {
-    id: "suriye-ic-savasi-bolgesel-dinamikler",
-    title: "Suriye Çatışmaları & Bölgesel Güvenlik Dinamikleri",
-    region: "Orta Doğu / Levant",
-    location: "İdlib Hattı, Tel Rıfat - Münbiç, Fırat'ın Doğusu & Deyrizor",
-    startDate: "15 Mart 2011",
-    duration: "15+ Yıldır Devam Eden Bölünmüş Kriz",
-    threatLevel: "BÖLGESEL HAREKÂT VE TERÖRLE MÜCADELE",
-    levelColor: "amber",
-    parties: "Rejim Güçleri, HTŞ & Suriye Milli Ordusu, Terör Örgütü PKK/YPG, TSK/MİT ve Koalisyon",
-    summary: "İdlib cephe hattında topçu-drone tacizleri, Fırat'ın doğusunda terör örgütü hedeflerine yönelik nokta SİHA operasyonları ve Deyrizor'da aşiret gerilimleri.",
-    currentSituation: "İdlib temas hattında rejim güçleri ile muhalif unsurlar arasında FPV intihar dronları ve karşılıklı topçu atışları sürmektedir. Türkiye, sınır güvenliğini tehdit eden terör örgütü PKK/YPG'nin Tel Rıfat, Münbiç ve Fırat'ın doğusundaki lojistik merkezleri, sözde lider kadroları ve altyapı tesislerine yönelik Bayraktar TB2 ve AKINCI TİHA ile nokta operasyonlarını kararlılıkla sürdürmektedir. Deyrizor hattında ise yerel Arap aşiretleri ile PKK/YPG güçleri arasında periyodik çatışmalar devam etmektedir.",
-    keyTech: ["Milli TİHA/SİHA (Bayraktar TB2 / AKINCI) Hassas Vuruş", "MAM-L & MAM-T Akıllı Mühimmat", "Elektronik Harp (KORAL Sistemi)", "Meskun Mahal Tahkimat ve Tünel Savunması"]
-  },
-  {
-    id: "kongo-dc-m23-isyani",
-    title: "Kongo DC Doğu Bölgesi Savaşı (M23 İsyanı & Goma Tehdidi)",
-    region: "Orta Afrika / Büyük Göller",
-    location: "Kuzey Kivu Eyaleti (Goma, Rutshuru, Masisi)",
-    startDate: "Mart 2022 (Yeniden Alevlenme - Kökeni 1994)",
-    duration: "4+ Yıldır Devam Eden Şiddetli Çatışma",
-    threatLevel: "BÖLGESEL ASKERİ KRİZ",
-    levelColor: "rose",
-    parties: "M23 İsyancıları (Ruanda Destekli İddiası) vs. Kongo Ordusu (FARDC), Wazalendo & SAMIDRC",
-    summary: "Milyonluk Goma şehrini tehdit eden M23 ilerleyişi, gelişmiş hava savunma füzelerinin kullanımı ve Ruanda ile Kongo DC arasında topyekûn savaş riski.",
-    currentSituation: "Kuzey Kivu eyaletinde M23 isyancıları göl kenarındaki stratejik Goma kentinin ana tedarik yollarını kesmiş durumdadır. Çatışmalarda isyancıların modern gece görüş sistemleri, taşınabilir hava savunma füzeleri (MANPADS) ve topçu radarları kullandığı doğrulanmıştır. Kongo ordusu (FARDC) Doğu Avrupa menşeili askeri helikopterler ve yerel milis güçlerle karşı koymaya çalışırken, çatışmalar yüz binlerce yeni mülteci yaratmış ve Ruanda-KDC sınır hattında ordu birlikleri teyakkuz durumuna geçirilmiştir.",
-    keyTech: ["Omuzdan Atılan Hava Savunma Füzeleri (MANPADS)", "Termal ve Gece Görüş Taktik Cihazları", "Ağır Havan Bataryaları", "Saldırı Helikopterleri ve Yakın Hava Desteği"]
-  },
-  {
-    id: "somali-es-sebab-catismasi",
-    title: "Somali & Eş-Şebab Savaşı (Afrika Boynuzu Güvenliği)",
-    region: "Doğu Afrika / Afrika Boynuzu",
-    location: "Orta ve Güney Somali (Hiran, Galguduud, Mogadişu Kırsalı)",
-    startDate: "2006",
-    duration: "20 Yıldır Süren Asimetrik Savaş",
-    threatLevel: "ASİMETRİK TERÖR HARBİ & KIYI GÜVENLİĞİ",
-    levelColor: "amber",
-    parties: "Somali Federal Hükümeti (SNA & Klan Güçleri) vs. El Kaide Bağlantılı Eş-Şebab",
-    summary: "Somali ordusunun kırsal kurtarma taarruzları, Eş-Şebab'ın bomba yüklü intihar araçları (SVBIED) ve Türkiye-Somali Savunma Anlaşması kapsamında deniz güvenliği adımları.",
-    currentSituation: "Somali Ulusal Ordusu (SNA) yerel klan güçleriyle ortaklaşa Orta Somali kırsalında operasyonlarını sürdürmektedir. Eş-Şebab kontrol ettiği kırsal koridorlardan askeri kontrol noktalarına ve başkent Mogadişu'daki hükümet binalarına yönelik bomba yüklü araçlar (SVBIED) ve uzaktan komutalı EYP pusuları düzenlemektedir. ATMIS Afrika Birliği misyonunun kademeli çekilme sürecinde, Türkiye ile Somali arasında imzalanan Savunma ve Ekonomik İşbirliği Anlaşması gereğince Somali karasuları ve münhasır ekonomik bölgesinin güvenliği Türk Deniz Kuvvetleri desteğiyle güvence altına alınmaktadır.",
-    keyTech: ["El Yapımı Patlayıcı (EYP) & Bomba Yüklü İntihar Araçları", "Kırsal Pusu ve Vur-Kaç Taktikleri", "Bayraktar TB2 SİHA Hava Desteği", "Sahil Güvenlik Karakol ve Radar Ağları"]
+    keyTech: [
+      "3D Baskı Bomba Bırakan Mini İHA Sistemleri",
+      "Orman ve Dağ Tipi Asimetrik Pusu Taktikleri",
+      "Hafif Havan ve Omuzdan Atılan Roketler",
+      "Cunta Hava Kuvvetleri Ağır Bombardıman Uçakları"
+    ],
+    osintNote: "Etnik ittifakın Çin sınırındaki Lashio bölgesel askeri komutanlığını düşürmesi, 1962'den bu yana cunta ordusunun aldığı en büyük tekil yenilgi olarak kayda geçmiştir."
   },
   {
     id: "kore-yarimadasi-dmz-gerilimi",
     title: "Kore Yarımadası & DMZ Askeri Alarm Hattı",
     region: "Doğu Asya / Pasifik",
     location: "Askerden Arındırılmış Bölge (DMZ), Sarı Deniz & Pyongyang Sınır Hattı",
+    coordinates: "37.95°N, 126.95°E",
+    intensity: 82,
     startDate: "1950 (Ateşkes 1953, Nükleer/Füze Tırmanışı: 2024-2026)",
     duration: "70+ Yıldır Donmuş, Yeniden Isınan Kriz",
     threatLevel: "STRATEJİK NÜKLEER & BALİSTİK TEHDİT",
     levelColor: "amber",
+    frontlineStatus: "Sınır Yollarının Dinamitlenmesi & Hwasong-19 ICBM Testleri",
     parties: "Kore Demokratik Halk Cumhuriyeti (Kuzey) vs. Kore Cumhuriyeti (Güney) & ABD",
     summary: "Kuzey Kore'nin birleşme politikasını terk etmesi, sınır yollarını dinamitlemesi, Hwasong-19 katı yakıtlı ICBM testleri ve karşılıklı dev tatbikatlar.",
     currentSituation: "Kuzey Kore liderliği anayasal düzeyde Güney Kore ile barışçıl birleşme maddelerini kaldırarak sınır hattındaki tüm karayolu ve demiryolu bağlantılarını havaya uçurmuştur. Sınır boyunca yoğun beton tahkimatlar ve mayın hatları kurulurken, Pyongyang yönetimi katı yakıtlı kıtalararası balistik füzeler (Hwasong-19) ve hipersonik kayma araçları denemektedir. Güney Kore ve ABD ise nükleer denizaltılar, B-52 bombardıman uçakları ve F-35A filolarıyla ortak caydırıcılık manevralarını artırmıştır.",
-    keyTech: ["Katı Yakıtlı Kıtalararası Balistik Füzeler (ICBM)", "GPS Karıştırma ve Elektronik Sınır Harp Sistemleri", "THAAD & Patriot Çok Katmanlı Füze Kalkanı", "Hipersonik Kayma Araçları (HGV)"]
+    keyTech: [
+      "Katı Yakıtlı Kıtalararası Balistik Füzeler (ICBM)",
+      "GPS Karıştırma ve Elektronik Sınır Harp Sistemleri",
+      "THAAD & Patriot Çok Katmanlı Füze Kalkanı",
+      "Hipersonik Kayma Araçları (HGV)"
+    ],
+    osintNote: "DMZ boyunca inşa edilen anti-tank hendekleri ve mayın tarlaları, yarımadada barışçıl diplomasi döneminin tamamen kapandığını göstermektedir."
   },
   {
     id: "tayvan-bogazi-guney-cin-denizi",
     title: "Tayvan Boğazı & Güney Çin Denizi Askeri Abluka Kalkanı",
     region: "Güneydoğu Asya / Pasifik",
     location: "Tayvan Boğazı, Pratas Adaları, İkinci Thomas Resifi",
+    coordinates: "23.69°N, 120.96°E",
+    intensity: 80,
     startDate: "1949 (Son Tırmanış: 2022-2026)",
     duration: "Sürekli Yüksek Stratejik Gerilim",
     threatLevel: "DENİZ VE HAVA ALAN REDDİ (A2/AD)",
     levelColor: "amber",
+    frontlineStatus: "Joint Sword Ada Kuşatma Tatbikatları & Kirpi Savunma Stratejisi",
     parties: "Çin Halk Kurtuluş Ordusu (PLA) vs. Tayvan Savunma Kuvvetleri & Müttefikler (ABD, Japonya)",
     summary: "Çin'in Joint Sword ada kuşatma tatbikatları, Type 055 kruvazörleri, J-20 hayalet filoları ve Tayvan'ın yerli denizaltı ve kıyı savunma füzeleriyle karşı hamleleri.",
     currentSituation: "Çin ordusu (PLA), Tayvan çevresinde gerçekleştirdiği 'Joint Sword' tatbikatlarıyla adanın dış dünyayla petrol ve enerji tedarikini kesmeye yönelik koordineli deniz ve hava ablukası senaryolarını test etmektedir. Tayvan hava savunma tanımlama sahası (ADIZ) her gün onlarca Çin savaş uçağı ve İHA'sı tarafından aşılmaktadır. Tayvan ise asimetrik 'kirpi stratejisi' kapsamında karadan atılan Harpoon ve yerli Hsiung Feng III gemisavar füzeleri, yerli üretim Hai Kun denizaltıları ve deniz mayınlama kabiliyetleriyle yanıt vermektedir.",
-    keyTech: ["J-20 Hayalet Savaş Uçakları", "DF-21D & DF-26 Uçak Gemisi Katili Balistik Füzeler", "Kıyı Konuşlu Süpersonik Gemisavar Füzeleri", "Tip 075 Amfibi Çıkarma Gemileri"]
+    keyTech: [
+      "J-20 Hayalet Savaş Uçakları",
+      "DF-21D & DF-26 Uçak Gemisi Katili Balistik Füzeler",
+      "Kıyı Konuşlu Süpersonik Gemisavar Füzeleri",
+      "Tip 075 Amfibi Çıkarma Gemileri"
+    ],
+    osintNote: "Tayvan Boğazı orta çizgisinin (Median Line) Çin jetleri tarafından fiilen yok sayılması, tepki süresini 3 dakikanın altına indirmiştir."
   }
 ];
 

@@ -24,10 +24,9 @@ export default function Navbar({ onSearchClick, activeSection, onNavigate }) {
   }, []);
 
   const navLinks = [
-    { name: 'Silah Envanteri', href: '#silah-arsivi', icon: Crosshair },
-    { name: 'Milli Savunma', href: '#turk-savunma-sanayii', icon: ShieldCheck },
-    { name: 'Kriz Radarı', href: '#kuresel-olaylar', icon: Globe2 },
-    { name: 'Balistik & Eğitim', href: '#yazilar', icon: BookOpen },
+    { name: 'Silah Laboratuvarı', href: '#silah-arsivi', icon: Crosshair },
+    { name: 'Sıcak Kriz Radarı', href: '#kuresel-olaylar', icon: Globe2 },
+    { name: 'Taktik Brifingler', href: '#yazilar', icon: BookOpen },
     { name: 'İletişim', href: '#iletisim', icon: Send }
   ];
 
@@ -126,7 +125,7 @@ export default function Navbar({ onSearchClick, activeSection, onNavigate }) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 border-b border-slate-200 backdrop-blur-2xl px-6 py-6 transition-all animate-in fade-in slide-in-from-top-4 shadow-lg">
+        <div className="lg:hidden bg-[#0f172a]/98 border-b border-slate-800 backdrop-blur-2xl px-6 py-6 transition-all animate-in fade-in slide-in-from-top-4 shadow-2xl">
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => {
               const Icon = link.icon;
@@ -135,7 +134,7 @@ export default function Navbar({ onSearchClick, activeSection, onNavigate }) {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-mono text-slate-700 hover:text-rose-600 hover:bg-slate-100 border border-transparent hover:border-slate-200"
+                  className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-mono text-slate-200 hover:text-rose-400 hover:bg-slate-800/80 border border-slate-800"
                 >
                   <Icon className="w-4 h-4 text-rose-500" />
                   {link.name}

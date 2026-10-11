@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Search, X, BookOpen, Globe2, Crosshair, ArrowRight } from 'lucide-react';
-import { articles, globalConflicts, tacticalGearReviews } from '../data/content';
+import { Search, X, BookOpen, Globe2, Crosshair, ArrowRight, Target } from 'lucide-react';
+import { articles, globalConflicts } from '../data/content';
+import { weaponsList } from '../data/weapons';
 
 export default function SearchModal({ isOpen, onClose, onSelectArticle, onSelectConflict }) {
   const [query, setQuery] = useState('');
@@ -31,16 +32,18 @@ export default function SearchModal({ isOpen, onClose, onSelectArticle, onSelect
   const filteredConflicts = globalConflicts.filter(c =>
     c.title.toLowerCase().includes(query.toLowerCase()) ||
     c.region.toLowerCase().includes(query.toLowerCase()) ||
+    c.location.toLowerCase().includes(query.toLowerCase()) ||
     c.keyTech.some(k => k.toLowerCase().includes(query.toLowerCase()))
   );
 
-  const filteredGear = tacticalGearReviews.filter(g =>
-    g.title.toLowerCase().includes(query.toLowerCase()) ||
-    g.category.toLowerCase().includes(query.toLowerCase()) ||
-    g.specs.toLowerCase().includes(query.toLowerCase())
+  const filteredWeapons = weaponsList.filter(w =>
+    w.name.toLowerCase().includes(query.toLowerCase()) ||
+    w.caliber.toLowerCase().includes(query.toLowerCase()) ||
+    w.origin.toLowerCase().includes(query.toLowerCase()) ||
+    w.manufacturer.toLowerCase().includes(query.toLowerCase())
   );
 
-  const totalResults = filteredArticles.length + filteredConflicts.length + filteredGear.length;
+  const totalResults = filteredArticles.length + filteredConflicts.length + filteredWeapons.length;
 
   return (
     <div 
@@ -107,6 +110,42 @@ export default function SearchModal({ isOpen, onClose, onSelectArticle, onSelect
                           <span className="text-[11px] text-slate-400 font-mono">
                             {a.category} • {a.readTime}
                           </span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-rose-400 group-hover:translate-x-1 transition-all" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Weapons Section */}
+              {filteredWeapons.length > 0 && (
+                <div className="pt-2">
+                  <h4 className="text-[11px] font-mono text-rose-400 uppercase tracking-wider mb-2 flex items-center gap-1.5 px-2">
+                    <Target className="w-3.5 h-3.5" />
+                    <span>Silah Envanteri & Modeller ({filteredWeapons.length})</span>
+                  </h4>
+                  <div className="space-y-1">
+                    {filteredWeapons.map(w => (
+                      <div
+                        key={w.id}
+                        onClick={() => {
+                          onClose();
+                          const el = document.getElementById('silah-arsivi');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-rose-500/50 cursor-pointer flex items-center justify-between group"
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="text-base">{w.originFlag}</span>
+                          <div>
+                            <p className="text-sm font-medium text-white group-hover:text-rose-300 font-mono">
+                              {w.name}
+                            </p>
+                            <span className="text-[11px] text-slate-400 font-mono">
+                              {w.category} • {w.caliber} • {w.manufacturer}
+                            </span>
+                          </div>
                         </div>
                         <ArrowRight className="w-4 h-4 text-slate-600 group-hover:text-rose-400 group-hover:translate-x-1 transition-all" />
                       </div>
