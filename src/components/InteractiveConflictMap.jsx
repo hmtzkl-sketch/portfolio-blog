@@ -8,12 +8,11 @@ import {
   Layers, 
   Compass, 
   ChevronRight, 
-  Maximize2,
-  Minimize2,
   Navigation,
   Satellite,
   Flame,
-  Activity
+  Activity,
+  LocateFixed
 } from 'lucide-react';
 
 export const mapHotspots = [
@@ -129,9 +128,9 @@ export const mapHotspots = [
 
 const REGION_PRESETS = [
   { id: 'GLOBAL', label: 'Tüm Dünya', center: [26, 45], zoom: 3 },
-  { id: 'ME', label: 'Orta Doğu & Basra', center: [30, 42], zoom: 5 },
+  { id: 'ME', label: 'Orta Doğu & Levant', center: [31.5, 38], zoom: 5 },
   { id: 'EUR', label: 'Doğu Avrupa / Donbas', center: [48.5, 37.5], zoom: 6 },
-  { id: 'RED_SEA', label: 'Kızıldeniz & Yemen', center: [14.5, 43], zoom: 6 },
+  { id: 'RED_SEA', label: 'Kızıldeniz & Babülmendep', center: [14.5, 43], zoom: 6 },
   { id: 'ASIA', label: 'Doğu Asya & Pasifik', center: [28, 115], zoom: 4 },
   { id: 'AFR', label: 'Afrika / Sudan', center: [15, 30], zoom: 5 }
 ];
@@ -140,7 +139,7 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersRef = useRef({});
-  const tileLayerRef = useRef(null);
+  const activeLayerGroupRef = useRef(null);
 
   const [mapLayer, setMapLayer] = useState('dark'); // 'dark' | 'satellite'
   const [selectedHotspotId, setSelectedHotspotId] = useState(activeConflictId || mapHotspots[0].id);
@@ -149,6 +148,30 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
   const [mouseCoords, setMouseCoords] = useState({ lat: '32.00°N', lng: '35.00°E' });
 
   const activeSpot = mapHotspots.find(s => s.id === (hoveredHotspot?.id || selectedHotspotId)) || mapHotspots[0];
+
+  // Build Free Watermark-Free Esri Map Layer Groups
+  const createMapLayers = (type) => {
+    if (type === 'satellite') {
+      const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; High-Res Satellite',
+        maxZoom: 18
+      });
+      const borders = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 18
+      });
+      return L.layerGroup([sat, borders]);
+    } else {
+      // Tactical Dark Gray Canvas with Crisp Borders
+      const darkBase = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Dark Tactical WGS84',
+        maxZoom: 16
+      });
+      const darkLabels = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 16
+      });
+      return L.layerGroup([darkBase, darkLabels]);
+    }
+  };
 
   // Initialize Leaflet Map
   useEffect(() => {
@@ -167,14 +190,10 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
     // Custom tactical zoom control on bottom-right
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-    // Initial Dark Tile Layer (CartoDB Dark Matter)
-    const initialTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
-
-    tileLayerRef.current = initialTiles;
+    // Initial Dark Tile Layer Group (Esri Dark Gray - No API key needed, no watermark)
+    const initialLayers = createMapLayers('dark');
+    initialLayers.addTo(map);
+    activeLayerGroupRef.current = initialLayers;
     mapInstanceRef.current = map;
 
     // Mouse coordinates tracker
@@ -209,29 +228,15 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
     };
   }, []);
 
-  // Handle Layer Switch (Dark Matter vs Satellite)
+  // Handle Layer Switch (Esri Dark Gray vs Esri High-Res Satellite)
   useEffect(() => {
     const map = mapInstanceRef.current;
-    if (!map || !tileLayerRef.current) return;
+    if (!map || !activeLayerGroupRef.current) return;
 
-    map.removeLayer(tileLayerRef.current);
-
-    let newTileLayer;
-    if (mapLayer === 'satellite') {
-      newTileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-        maxZoom: 17
-      });
-    } else {
-      newTileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
-        subdomains: 'abcd',
-        maxZoom: 19
-      });
-    }
-
-    newTileLayer.addTo(map);
-    tileLayerRef.current = newTileLayer;
+    map.removeLayer(activeLayerGroupRef.current);
+    const newLayerGroup = createMapLayers(mapLayer);
+    newLayerGroup.addTo(map);
+    activeLayerGroupRef.current = newLayerGroup;
   }, [mapLayer]);
 
   // Sync external activeConflictId change (e.g. from bottom War Room tabs)
@@ -254,44 +259,48 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
     }
   }, [selectedHotspotId]);
 
+  // Clean, non-colliding military radar markers
   const createTacticalIcon = (spot, isSelected) => {
     const color = spot.color || '#f43f5e';
     const isRed = color === '#f43f5e';
-    const glowClass = isRed ? 'shadow-[0_0_20px_#f43f5e]' : 'shadow-[0_0_20px_#06b6d4]';
+    const glowClass = isRed ? 'shadow-[0_0_24px_rgba(244,63,94,0.9)]' : 'shadow-[0_0_24px_rgba(6,182,212,0.9)]';
 
     const html = `
-      <div class="relative flex items-center justify-center group" style="width: 44px; height: 44px; pointer-events: auto;">
-        <!-- Pulsing sonar radar wave -->
-        <span class="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping"
-              style="background-color: ${color}; animation-duration: ${isSelected ? '1.4s' : '3s'};"></span>
+      <div class="relative flex items-center justify-center group pointer-events-auto" style="width: 44px; height: 44px;">
+        <!-- Pulsing sonar radar beacon wave -->
+        <span class="absolute inline-flex h-full w-full rounded-full opacity-70 animate-ping pointer-events-none"
+              style="background-color: ${color}; animation-duration: ${isSelected ? '1.4s' : '3.2s'};"></span>
 
-        <!-- Outer Reticle Ring -->
-        <div class="relative flex items-center justify-center rounded-full border ${
+        <!-- Outer Tactical Reticle -->
+        <div class="relative flex items-center justify-center rounded-full transition-all duration-300 ${
           isSelected 
-            ? 'w-9 h-9 border-2 border-white bg-slate-950/80 ' + glowClass
-            : 'w-6 h-6 border border-slate-300/80 bg-slate-900/90'
-        } transition-all duration-300">
+            ? 'w-10 h-10 border-2 border-white bg-slate-950/90 ' + glowClass
+            : 'w-6 h-6 border border-white/80 bg-slate-950/80 shadow-[0_0_10px_rgba(0,0,0,0.8)]'
+        }">
           
-          <!-- Crosshair tick marks if selected -->
+          <!-- Crosshair target lock ticks when selected -->
           ${isSelected ? `
             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span class="w-11 h-[1.5px] bg-white/70 absolute"></span>
-              <span class="h-11 w-[1.5px] bg-white/70 absolute"></span>
+              <span class="w-12 h-[1.5px] bg-rose-400 absolute"></span>
+              <span class="h-12 w-[1.5px] bg-rose-400 absolute"></span>
             </div>
           ` : ''}
 
-          <!-- Glowing core center -->
-          <span class="rounded-full ${isSelected ? 'w-3.5 h-3.5' : 'w-2.5 h-2.5'} animate-pulse"
-                style="background-color: ${color}; box-shadow: 0 0 10px ${color};"></span>
+          <!-- Central Pulsing Core Dot -->
+          <span class="rounded-full ${isSelected ? 'w-4 h-4' : 'w-2.5 h-2.5'} animate-pulse"
+                style="background-color: ${color}; box-shadow: 0 0 12px ${color};"></span>
         </div>
 
-        <!-- Floating Tactical Mini-Badge -->
-        <div class="absolute top-9 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded font-mono text-[10px] font-bold whitespace-nowrap border pointer-events-none transition-all duration-200 ${
+        <!-- Smart Tactical Callout Badge: Appears when SELECTED or on HOVER (Zero Clutter at Low Zoom) -->
+        <div class="absolute -top-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded font-mono text-[10px] font-bold whitespace-nowrap pointer-events-none transition-all duration-200 z-50 ${
           isSelected
-            ? 'bg-slate-950 text-white border-rose-500 shadow-lg scale-105 z-30'
-            : 'bg-slate-900/90 text-slate-300 border-slate-700/80 shadow'
+            ? 'opacity-100 bg-rose-950/95 text-white border border-rose-500 shadow-xl scale-105'
+            : 'opacity-0 group-hover:opacity-100 bg-slate-950/95 text-slate-200 border border-slate-700 shadow-lg'
         }">
-          ${spot.name.split(',')[0]}
+          <span class="flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full" style="background-color: ${color};"></span>
+            ${spot.name.split(',')[0]}
+          </span>
         </div>
       </div>
     `;
@@ -358,10 +367,10 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
   };
 
   return (
-    <div className="mb-12 rounded-2xl bg-[#090e1b] border border-slate-700/90 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+    <div className="mb-12 rounded-2xl bg-[#070b16] border border-slate-700/90 shadow-2xl relative overflow-hidden backdrop-blur-xl">
       
       {/* Top Tactical Command HUD Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 p-4 sm:p-5 border-b border-slate-800 bg-[#070b16]/90 font-mono text-xs">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 p-4 sm:p-5 border-b border-slate-800 bg-[#050811] font-mono text-xs">
         
         {/* Left: Status & Telemetry */}
         <div className="flex flex-wrap items-center gap-3">
@@ -372,13 +381,13 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
             </span>
             <span className="text-white font-extrabold tracking-wider flex items-center gap-1.5 text-sm">
               <Crosshair className="w-4 h-4 text-rose-400" />
-              CANLI TAKTİK ÇATIŞMA RADARI (WGS84)
+              CANLI ASKERİ ÇATIŞMA RADARI (WGS84)
             </span>
           </div>
 
           <div className="flex items-center gap-2 text-[11px] text-slate-400">
             <span className="hidden sm:inline px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-cyan-400">
-              OSINT SATELLITE FEED
+              ESRI SATELLITE & TACTICAL FEED
             </span>
             <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">
               GPS: {mouseCoords.lat}, {mouseCoords.lng}
@@ -418,7 +427,7 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
       </div>
 
       {/* Region Jump Presets Bar */}
-      <div className="px-4 py-2 bg-slate-950/60 border-b border-slate-800/80 flex items-center gap-1.5 overflow-x-auto scrollbar-none font-mono text-[11px]">
+      <div className="px-4 py-2 bg-slate-950/80 border-b border-slate-800/80 flex items-center gap-1.5 overflow-x-auto scrollbar-none font-mono text-[11px]">
         <span className="text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1 mr-1 shrink-0">
           <Navigation className="w-3 h-3 text-rose-400" />
           BÖLGE ODAKLAN:
@@ -446,11 +455,11 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
 
         {/* Ambient Tactical Grid Scan Lines Overlay (Does not block clicks) */}
         <div className="absolute inset-0 pointer-events-none border border-slate-800/40 shadow-inner z-10">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(7,11,22,0.6)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_50%,_rgba(5,8,17,0.5)_100%)]" />
         </div>
 
         {/* Top-Left Telemetry Watermark Overlay */}
-        <div className="absolute top-4 left-4 z-20 pointer-events-none font-mono text-[10px] text-slate-400 space-y-1 hidden sm:block bg-slate-950/80 backdrop-blur-md p-2.5 rounded-lg border border-slate-800">
+        <div className="absolute top-4 left-4 z-20 pointer-events-none font-mono text-[10px] text-slate-400 space-y-1 hidden sm:block bg-slate-950/85 backdrop-blur-md p-2.5 rounded-lg border border-slate-800">
           <div className="flex items-center gap-2 text-cyan-400 font-bold">
             <Activity className="w-3 h-3 animate-pulse" />
             <span>GLOBAL THREAT MATRIX: LEVEL DEFCON-2</span>
@@ -502,9 +511,9 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
       </div>
 
       {/* Hotspots Quick Action Carousel Pills (Bottom Bar) */}
-      <div className="p-3 sm:p-4 bg-[#070b16] border-t border-slate-800 flex items-center gap-2 overflow-x-auto scrollbar-none font-mono text-xs">
+      <div className="p-3 sm:p-4 bg-[#050811] border-t border-slate-800 flex items-center gap-2 overflow-x-auto scrollbar-none font-mono text-xs">
         <span className="text-slate-500 text-[11px] shrink-0 font-bold uppercase tracking-wider flex items-center gap-1 mr-1">
-          <Crosshair className="w-3.5 h-3.5 text-rose-500" />
+          <LocateFixed className="w-3.5 h-3.5 text-rose-500" />
           HEDEFE KİLİTLEN:
         </span>
         {mapHotspots.map((spot) => {
