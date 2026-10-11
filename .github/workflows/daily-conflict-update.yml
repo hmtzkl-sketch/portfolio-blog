@@ -1,0 +1,41 @@
+name: Günlük Otomatik Çatışma & Askeri İstihbarat Radarı Botu
+
+on:
+  schedule:
+    # Her gün saat 03:00 UTC (06:00 TSİ) otomatik çalışır
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Actions sekmesinden elle de çalıştırılabilir
+
+permissions:
+  contents: write
+
+jobs:
+  update-intel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node.js Ortamını Kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Canlı OSINT İstihbarat Botunu Çalıştır
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/update-conflict-intel.mjs
+
+      - name: Değişiklikleri Commit Yap ve Gönder
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/liveConflictData.json
+          if git diff --staged --quiet; then
+            echo "Yeni değişiklik bulunmadı, commit atlanıyor."
+          else
+            git commit -m "chore(radar): otomatik günlük çatışma ve savunma istihbaratı güncellemesi [$(date +'%Y-%m-%d')]"
+            git push origin main
+          fi
