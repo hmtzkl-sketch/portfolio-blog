@@ -22,6 +22,7 @@ import {
   SlidersHorizontal,
   ExternalLink
 } from 'lucide-react';
+import InteractiveConflictMap from './InteractiveConflictMap';
 
 export default function ConflictTracker() {
   const [selectedRegion, setSelectedRegion] = useState('Tümü');
@@ -110,6 +111,22 @@ export default function ConflictTracker() {
             </div>
           </div>
         </div>
+
+        {/* Interactive Vector World Map with Pulsing Hotspot Beacons */}
+        <InteractiveConflictMap 
+          activeConflictId={activeConflict.id}
+          onSelectConflict={(id) => {
+            setActiveConflictId(id);
+            // Optionally update region if outside current filter
+            const conflict = globalConflicts.find(c => c.id === id);
+            if (conflict && selectedRegion !== 'Tümü') {
+              if (selectedRegion === 'Afrika' && !conflict.region.includes('Afrika')) setSelectedRegion('Tümü');
+              if (selectedRegion === 'Orta Doğu' && !conflict.region.includes('Orta Doğu') && !conflict.region.includes('Kızıldeniz')) setSelectedRegion('Tümü');
+              if (selectedRegion === 'Doğu Avrupa' && !conflict.region.includes('Avrupa')) setSelectedRegion('Tümü');
+              if (selectedRegion === 'Asya & Pasifik' && !conflict.region.includes('Asya') && !conflict.region.includes('Pasifik')) setSelectedRegion('Tümü');
+            }
+          }}
+        />
 
         {/* Region Filter Bar */}
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none">
