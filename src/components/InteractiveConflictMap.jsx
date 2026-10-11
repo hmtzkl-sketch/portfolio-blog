@@ -15,116 +15,36 @@ import {
   LocateFixed
 } from 'lucide-react';
 
-export const mapHotspots = [
-  {
-    id: "rusya-ukrayna-savasi",
-    name: "Donbas, Pokrovsk & Kursk",
-    region: "Doğu Avrupa",
-    lat: 48.28,
-    lng: 37.18,
-    threat: "%98 KRİTİK",
-    color: "#f43f5e",
-    intensity: 98,
-    status: "Pokrovsk Kentsel Kuşatması & Fiber-Optik FPV Dron Harbi",
-    tech: "Fiber-Optik FPV, UMPK FAB-3000, Palianytsia Jet İHA, Patriot PAC-3"
-  },
-  {
-    id: "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
-    name: "İran - İsrail Füze Düellosu",
-    region: "Orta Doğu / Basra",
-    lat: 32.08,
-    lng: 34.82,
-    threat: "%95 BALİSTİK",
-    color: "#f43f5e",
-    intensity: 95,
-    status: "THAAD / Arrow-3 Kalkanı vs. Fettah Hipersonik Füzeler",
-    tech: "THAAD, Arrow-3, Fettah HGV, F-35I Adir, AN/TPY-2 Radar"
-  },
-  {
-    id: "israil-gazze-lubnan-catismasi",
-    name: "Güney Lübnan & Gazze",
-    region: "Orta Doğu",
-    lat: 33.27,
-    lng: 35.20,
-    threat: "%92 KARA HARBİ",
-    color: "#f43f5e",
-    intensity: 92,
-    status: "Litani Tampon Bölge Harekâtı & Tanksavar Pusuları",
-    tech: "Demir Kubbe, Almas-3 TV Güdümlü ATGM, Trophy APS, Ebabil İHA"
-  },
-  {
-    id: "suriye-ic-savasi-bolgesel-dinamikler",
-    name: "Suriye & İdlib Hattı",
-    region: "Orta Doğu",
-    lat: 35.93,
-    lng: 36.63,
-    threat: "%84 BÖLGESEL",
-    color: "#f59e0b",
-    intensity: 84,
-    status: "Nokta SİHA Harekâtları & Topçu Düelloları",
-    tech: "Bayraktar TB2 / AKINCI TİHA, MAM-L Hassas Mühimmat, KORAL EH"
-  },
-  {
-    id: "kizildeniz-yemen-deniz-krizi",
-    name: "Kızıldeniz & Babülmendep",
-    region: "Kızıldeniz",
-    lat: 12.58,
-    lng: 43.33,
-    threat: "%88 DENİZ ABLUKASI",
-    color: "#f59e0b",
-    intensity: 88,
-    status: "Husiler Gemisavar Balistik Füze & Kamikaze Botlar",
-    tech: "ASBM Tankil Gemisavar Balistik, Tufan USV İnsansız Bot, Aegis SM-6"
-  },
-  {
-    id: "sudan-ic-savasi",
-    name: "Sudan & El Faşir Kuşatması",
-    region: "Afrika",
-    lat: 13.63,
-    lng: 25.35,
-    threat: "%90 İÇ SAVAŞ",
-    color: "#f43f5e",
-    intensity: 90,
-    status: "El Faşir Kuşatması & Modifiye Dron Saldırıları",
-    tech: "Modifiye Havan Dronları, Ağır ÇNRA Topçu, Technical Taktik Araçlar"
-  },
-  {
-    id: "myanmar-ic-savasi",
-    name: "Myanmar & Shan Eyaleti",
-    region: "Güneydoğu Asya",
-    lat: 22.93,
-    lng: 97.75,
-    threat: "%85 DİRENİŞ",
-    color: "#f59e0b",
-    intensity: 85,
-    status: "Cunta Karargahlarının Düşüşü & 3D Dron Sürüleri",
-    tech: "3D Baskı Bomba Dronları, Asimetrik Orman Pusu, Hafif Havanlar"
-  },
-  {
-    id: "kore-yarimadasi-dmz-gerilimi",
-    name: "Kore DMZ & Sarı Deniz",
-    region: "Doğu Asya",
-    lat: 37.95,
-    lng: 126.95,
-    threat: "%82 NÜKLEER ALARM",
-    color: "#06b6d4",
-    intensity: 82,
-    status: "Sınır Yollarının Dinamitlenmesi & Hwasong-19 ICBM",
-    tech: "Hwasong-19 Katı Yakıtlı ICBM, GPS Karartma, B-52 Caydırıcılık"
-  },
-  {
-    id: "tayvan-bogazi-guney-cin-denizi",
-    name: "Tayvan Boğazı & Abluka Hattı",
-    region: "Pasifik",
-    lat: 23.97,
-    lng: 120.98,
-    threat: "%80 A2/AD ABLUKA",
-    color: "#06b6d4",
-    intensity: 80,
-    status: "Joint Sword Ada Kuşatması & Kirpi Savunması",
-    tech: "J-20 Hayalet Filoları, DF-21D Uçak Gemisi Katili, Kıyı Harpoon"
-  }
-];
+import { globalConflicts } from '../data/content';
+
+const parseCoordinates = (coordStr) => {
+  if (!coordStr) return [30, 40];
+  const parts = coordStr.split(',');
+  if (parts.length < 2) return [30, 40];
+  const lat = parseFloat(parts[0].replace(/[^0-9.-]/g, '')) * (parts[0].includes('S') ? -1 : 1);
+  const lng = parseFloat(parts[1].replace(/[^0-9.-]/g, '')) * (parts[1].includes('W') ? -1 : 1);
+  return [isNaN(lat) ? 30 : lat, isNaN(lng) ? 40 : lng];
+};
+
+export const mapHotspots = globalConflicts.map((c) => {
+  const [lat, lng] = parseCoordinates(c.coordinates);
+  const isCritical = c.intensity >= 90;
+  const isMedium = c.intensity >= 84;
+  const color = isCritical ? '#f43f5e' : (isMedium ? '#f59e0b' : '#06b6d4');
+
+  return {
+    id: c.id,
+    name: c.title.split('(')[0].trim(),
+    region: c.region,
+    lat,
+    lng,
+    threat: `%${c.intensity} ${c.threatLevel ? c.threatLevel.split(' ')[0] : 'ALARM'}`,
+    color,
+    intensity: c.intensity,
+    status: c.frontlineStatus,
+    tech: Array.isArray(c.keyTech) ? c.keyTech.slice(0, 4).join(', ') : ''
+  };
+});
 
 const REGION_PRESETS = [
   { id: 'GLOBAL', label: 'Tüm Dünya', center: [26, 45], zoom: 3 },

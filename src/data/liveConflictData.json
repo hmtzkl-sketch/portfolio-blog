@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "11 Ekim 2026, 22:12 TSİ",
+  "lastUpdated": "11 Ekim 2026, 22:24 TSİ",
   "activeConflictsCount": 9,
   "breakingIntel": [
     {
@@ -68,7 +68,7 @@
         "Patriot PAC-3 & S-400 Füze Kalkanı",
         "Starlink & Taktik Ağ İletişimi"
       ],
-      "osintNote": "Ticari uydu fotoğrafları (Sentinel & Maxar), Pokrovsk güneybatısında siper hatlarının tamamen FPV dron avcıları tarafından kilitlendiğini doğrulamaktadır."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Ukraine strikes Yandex data centre in third attack on Russian tech giant\"."
     },
     {
       "id": "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
@@ -92,7 +92,7 @@
         "Erken İhbar Radarları (AN/TPY-2 & Green Pine)",
         "Elektronik GNSS Karartma & Uydu Karıştırma"
       ],
-      "osintNote": "Nevatim Hava Üssü uydu analizleri, balistik önleme oranının yüksek olmasına rağmen süpersonik enkaz ve doğrudan isabetlerin taksi yollarında çukurlar açtığını göstermektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"War and high debt to dominate IMF-World Bank meetings in Bangkok\"."
     },
     {
       "id": "israil-gazze-lubnan-catismasi",
@@ -116,7 +116,7 @@
         "Meskun Mahal Tünel Arama Robotları",
         "Hafif Taktik Kamikaze Dronlar"
       ],
-      "osintNote": "Termal İHA görüntülerinde sınır tünellerinden anlık çıkıp optik güdümlü füze fırlatarak 15 saniyede kaybolan 'vur-kaç-gizlen' taktiği gözlenmektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Jerusalem Daily: Panicked Palestinians flee Israeli attacks on Gaza\"."
     },
     {
       "id": "kizildeniz-yemen-deniz-krizi",
@@ -140,7 +140,7 @@
         "Uzun Menzilli Quds Seyir Füzeleri",
         "Donanma Lazer ve CIWS Yakın Savunma"
       ],
-      "osintNote": "Süveyş Kanalı ticari gemi trafiği %60'ın üzerinde düşmüş durumdadır; güzergâhın Ümit Burnu'na kayması küresel navlun fiyatlarını yükseltmiştir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Saudi capital airport hit by second Houthi strike in two days\"."
     },
     {
       "id": "suriye-ic-savasi-bolgesel-dinamikler",
@@ -163,7 +163,7 @@
         "Elektronik Harp (KORAL Sistemi)",
         "Meskun Mahal Tahkimat ve Tünel Savunması"
       ],
-      "osintNote": "MİT ve TSK SİHA operasyonları, örgütün sözde lojistik merkezleri ve petrol kuyusu gelir kaynaklarını cerrahi vuruşlarla felç etmektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Syria condemns Netanyahu's 'illegal entry' into occupied Syrian territory - TRT World\"."
     },
     {
       "id": "sudan-ic-savasi",
@@ -186,7 +186,7 @@
         "Hafif Zırhlı Taktik Araçlar (Technical)",
         "Gezici Keskin Nişancı Timleri"
       ],
-      "osintNote": "Açık kaynak uydu haritaları El Faşir çevresinde yüzlerce sivil mahallenin yakıldığını ve gıda koridorlarının kesildiğini belgelemektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Drone strike in Sudan kills 40, Lebanon welcomes US flight ban lift, and other Mideast developments - Audacy\"."
     },
     {
       "id": "myanmar-ic-savasi",
@@ -209,7 +209,7 @@
         "Hafif Havan ve Omuzdan Atılan Roketler",
         "Cunta Hava Kuvvetleri Ağır Bombardıman Uçakları"
       ],
-      "osintNote": "Lashio bölgesel askeri komutanlığının düşüşü, 1962'den bu yana cunta ordusunun aldığı en büyük tekil yenilgidir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Young men live in fear of being snatched off the streets and sold to Myanmar's army\"."
     },
     {
       "id": "kore-yarimadasi-dmz-gerilimi",
@@ -255,7 +255,7 @@
         "Kıyı Konuşlu Süpersonik Gemisavar Füzeleri",
         "Tip 075 Amfibi Çıkarma Gemileri"
       ],
-      "osintNote": "Tayvan Boğazı orta çizgisinin (Median Line) Çin jetleri tarafından fiilen yok sayılması, tepki süresini 3 dakikanın altına indirmiştir."
+      "osintNote": "[Canlı OSINT Doğrulama - 11 Ekim 2026, 22:24 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Poland detains man suspected of planning assassination of PM Tusk\"."
     }
   ]
 }

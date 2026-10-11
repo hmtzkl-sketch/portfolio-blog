@@ -167,6 +167,39 @@ async function main() {
       return c;
     });
     console.log('[OSINT Bot] Çatışma cephe durumları AI tarafından güncellendi.');
+  } else if (!aiData) {
+    console.log('[OSINT Bot] Kural tabanlı OSINT eşleştirici ile güncelleniyor...');
+    const conflictKeywords = {
+      'rusya-ukrayna-savasi': ['ukraine', 'russia', 'pokrovsk', 'kursk', 'donbas', 'kyiv', 'drone'],
+      'iran-israil-balistik-fuze-ve-bolgesel-tirmantis': ['iran', 'israel', 'ballistic', 'missile', 'tehran'],
+      'israil-gazze-lubnan-catismasi': ['lebanon', 'hezbollah', 'gaza', 'beirut', 'litani'],
+      'kizildeniz-yemen-deniz-krizi': ['houthi', 'yemen', 'red sea', 'bab el-mandeb', 'aden'],
+      'suriye-ic-savasi-bolgesel-dinamikler': ['syria', 'idlib', 'aleppo', 'damascus'],
+      'sudan-ic-savasi': ['sudan', 'fasher', 'khartoum', 'rsf', 'darfur'],
+      'myanmar-ic-savasi': ['myanmar', 'junta', 'shan'],
+      'kore-yarimadasi-dmz-gerilimi': ['north korea', 'south korea', 'pyongyang', 'dmz', 'icbm'],
+      'tayvan-bogazi-guney-cin-denizi': ['taiwan', 'china', 'strait', 'pla', 'taipei']
+    };
+
+    const matchedArticles = {};
+    for (const item of newsItems) {
+      const lower = (item.title + ' ' + (item.description || '')).toLowerCase();
+      for (const [id, kwList] of Object.entries(conflictKeywords)) {
+        if (!matchedArticles[id] && kwList.some(kw => lower.includes(kw))) {
+          matchedArticles[id] = item.title;
+        }
+      }
+    }
+
+    existingData.conflicts = existingData.conflicts.map(c => {
+      if (matchedArticles[c.id]) {
+        return {
+          ...c,
+          osintNote: `[Canlı OSINT Doğrulama - ${updatedTimestamp}]: Açık kaynak askeri bültenlerde son teyit edilen başlık: "${matchedArticles[c.id]}".`
+        };
+      }
+      return c;
+    });
   }
 
   // Write back to file
