@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import L from 'leaflet';
 import { 
   Globe2, 
   Crosshair, 
   Radio, 
-  Flame, 
-  MapPin, 
-  Maximize2, 
-  Info, 
-  ChevronRight,
-  ShieldAlert,
-  Compass,
+  ShieldAlert, 
+  Layers, 
+  Compass, 
+  ChevronRight, 
+  Maximize2,
+  Minimize2,
+  Navigation,
+  Satellite,
+  Flame,
   Activity
 } from 'lucide-react';
 
@@ -18,348 +21,506 @@ export const mapHotspots = [
     id: "rusya-ukrayna-savasi",
     name: "Donbas, Pokrovsk & Kursk",
     region: "Doğu Avrupa",
-    x: 580,
-    y: 125,
+    lat: 48.28,
+    lng: 37.18,
     threat: "%98 KRİTİK",
     color: "#f43f5e",
-    status: "Pokrovsk Kentsel Kuşatması & Fiber-Optik FPV Dron Harbi"
+    intensity: 98,
+    status: "Pokrovsk Kentsel Kuşatması & Fiber-Optik FPV Dron Harbi",
+    tech: "Fiber-Optik FPV, UMPK FAB-3000, Palianytsia Jet İHA, Patriot PAC-3"
   },
   {
     id: "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
     name: "İran - İsrail Füze Düellosu",
     region: "Orta Doğu / Basra",
-    x: 622,
-    y: 185,
+    lat: 32.08,
+    lng: 34.82,
     threat: "%95 BALİSTİK",
     color: "#f43f5e",
-    status: "THAAD / Arrow-3 Kalkanı vs. Fettah Hipersonik Füzeler"
+    intensity: 95,
+    status: "THAAD / Arrow-3 Kalkanı vs. Fettah Hipersonik Füzeler",
+    tech: "THAAD, Arrow-3, Fettah HGV, F-35I Adir, AN/TPY-2 Radar"
   },
   {
     id: "israil-gazze-lubnan-catismasi",
-    name: "Güney Lübnan (Litani) & Gazze",
+    name: "Güney Lübnan & Gazze",
     region: "Orta Doğu",
-    x: 588,
-    y: 180,
+    lat: 33.27,
+    lng: 35.20,
     threat: "%92 KARA HARBİ",
     color: "#f43f5e",
-    status: "Litani Tampon Bölge Harekâtı & Tanksavar Pusuları"
+    intensity: 92,
+    status: "Litani Tampon Bölge Harekâtı & Tanksavar Pusuları",
+    tech: "Demir Kubbe, Almas-3 TV Güdümlü ATGM, Trophy APS, Ebabil İHA"
   },
   {
     id: "suriye-ic-savasi-bolgesel-dinamikler",
     name: "Suriye & İdlib Hattı",
     region: "Orta Doğu",
-    x: 598,
-    y: 166,
+    lat: 35.93,
+    lng: 36.63,
     threat: "%84 BÖLGESEL",
     color: "#f59e0b",
-    status: "Nokta SİHA Harekâtları & Topçu Düelloları"
+    intensity: 84,
+    status: "Nokta SİHA Harekâtları & Topçu Düelloları",
+    tech: "Bayraktar TB2 / AKINCI TİHA, MAM-L Hassas Mühimmat, KORAL EH"
   },
   {
     id: "kizildeniz-yemen-deniz-krizi",
     name: "Kızıldeniz & Babülmendep",
     region: "Kızıldeniz",
-    x: 605,
-    y: 236,
+    lat: 12.58,
+    lng: 43.33,
     threat: "%88 DENİZ ABLUKASI",
     color: "#f59e0b",
-    status: "Husiler Gemisavar Balistik Füze (ASBM) & Kamikaze Botlar"
+    intensity: 88,
+    status: "Husiler Gemisavar Balistik Füze & Kamikaze Botlar",
+    tech: "ASBM Tankil Gemisavar Balistik, Tufan USV İnsansız Bot, Aegis SM-6"
   },
   {
     id: "sudan-ic-savasi",
     name: "Sudan & El Faşir Kuşatması",
     region: "Afrika",
-    x: 565,
-    y: 238,
+    lat: 13.63,
+    lng: 25.35,
     threat: "%90 İÇ SAVAŞ",
     color: "#f43f5e",
-    status: "El Faşir Kuşatması & Modifiye Dron Saldırıları"
+    intensity: 90,
+    status: "El Faşir Kuşatması & Modifiye Dron Saldırıları",
+    tech: "Modifiye Havan Dronları, Ağır ÇNRA Topçu, Technical Taktik Araçlar"
   },
   {
     id: "myanmar-ic-savasi",
     name: "Myanmar & Shan Eyaleti",
     region: "Güneydoğu Asya",
-    x: 748,
-    y: 212,
+    lat: 22.93,
+    lng: 97.75,
     threat: "%85 DİRENİŞ",
     color: "#f59e0b",
-    status: "Cunta Karargahlarının Düşüşü & 3D Dron Sürüleri"
+    intensity: 85,
+    status: "Cunta Karargahlarının Düşüşü & 3D Dron Sürüleri",
+    tech: "3D Baskı Bomba Dronları, Asimetrik Orman Pusu, Hafif Havanlar"
   },
   {
     id: "kore-yarimadasi-dmz-gerilimi",
     name: "Kore DMZ & Sarı Deniz",
     region: "Doğu Asya",
-    x: 828,
-    y: 165,
+    lat: 37.95,
+    lng: 126.95,
     threat: "%82 NÜKLEER ALARM",
     color: "#06b6d4",
-    status: "Sınır Yollarının Dinamitlenmesi & Hwasong-19 ICBM"
+    intensity: 82,
+    status: "Sınır Yollarının Dinamitlenmesi & Hwasong-19 ICBM",
+    tech: "Hwasong-19 Katı Yakıtlı ICBM, GPS Karartma, B-52 Caydırıcılık"
   },
   {
     id: "tayvan-bogazi-guney-cin-denizi",
-    name: "Tayvan Boğazı & Abluka Kalkanı",
+    name: "Tayvan Boğazı & Abluka Hattı",
     region: "Pasifik",
-    x: 808,
-    y: 206,
+    lat: 23.97,
+    lng: 120.98,
     threat: "%80 A2/AD ABLUKA",
     color: "#06b6d4",
-    status: "Joint Sword Ada Kuşatması & Kirpi Savunması"
+    intensity: 80,
+    status: "Joint Sword Ada Kuşatması & Kirpi Savunması",
+    tech: "J-20 Hayalet Filoları, DF-21D Uçak Gemisi Katili, Kıyı Harpoon"
   }
 ];
 
+const REGION_PRESETS = [
+  { id: 'GLOBAL', label: 'Tüm Dünya', center: [26, 45], zoom: 3 },
+  { id: 'ME', label: 'Orta Doğu & Basra', center: [30, 42], zoom: 5 },
+  { id: 'EUR', label: 'Doğu Avrupa / Donbas', center: [48.5, 37.5], zoom: 6 },
+  { id: 'RED_SEA', label: 'Kızıldeniz & Yemen', center: [14.5, 43], zoom: 6 },
+  { id: 'ASIA', label: 'Doğu Asya & Pasifik', center: [28, 115], zoom: 4 },
+  { id: 'AFR', label: 'Afrika / Sudan', center: [15, 30], zoom: 5 }
+];
+
 export default function InteractiveConflictMap({ activeConflictId, onSelectConflict }) {
+  const mapContainerRef = useRef(null);
+  const mapInstanceRef = useRef(null);
+  const markersRef = useRef({});
+  const tileLayerRef = useRef(null);
+
+  const [mapLayer, setMapLayer] = useState('dark'); // 'dark' | 'satellite'
+  const [selectedHotspotId, setSelectedHotspotId] = useState(activeConflictId || mapHotspots[0].id);
   const [hoveredHotspot, setHoveredHotspot] = useState(null);
-  const [activeFilter, setActiveFilter] = useState('ALL');
+  const [activePreset, setActivePreset] = useState('GLOBAL');
+  const [mouseCoords, setMouseCoords] = useState({ lat: '32.00°N', lng: '35.00°E' });
 
-  const activeMarker = mapHotspots.find(m => m.id === activeConflictId) || mapHotspots[0];
-  const displayedHotspot = hoveredHotspot || activeMarker;
+  const activeSpot = mapHotspots.find(s => s.id === (hoveredHotspot?.id || selectedHotspotId)) || mapHotspots[0];
 
-  const filteredMarkers = activeFilter === 'ALL'
-    ? mapHotspots
-    : mapHotspots.filter(m => {
-        if (activeFilter === 'EUR') return m.region.includes('Avrupa');
-        if (activeFilter === 'ME') return m.region.includes('Orta Doğu') || m.region.includes('Kızıldeniz');
-        if (activeFilter === 'AFR') return m.region.includes('Afrika');
-        if (activeFilter === 'ASIA') return m.region.includes('Asya') || m.region.includes('Pasifik');
-        return true;
+  // Initialize Leaflet Map
+  useEffect(() => {
+    if (!mapContainerRef.current || mapInstanceRef.current) return;
+
+    const map = L.map(mapContainerRef.current, {
+      center: [28, 45],
+      zoom: 3,
+      minZoom: 2,
+      maxZoom: 14,
+      zoomControl: false,
+      attributionControl: true,
+      worldCopyJump: true
+    });
+
+    // Custom tactical zoom control on bottom-right
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Initial Dark Tile Layer (CartoDB Dark Matter)
+    const initialTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    tileLayerRef.current = initialTiles;
+    mapInstanceRef.current = map;
+
+    // Mouse coordinates tracker
+    map.on('mousemove', (e) => {
+      const lat = e.latlng.lat.toFixed(2);
+      const lng = e.latlng.lng.toFixed(2);
+      setMouseCoords({
+        lat: `${Math.abs(lat)}°${lat >= 0 ? 'N' : 'S'}`,
+        lng: `${Math.abs(lng)}°${lng >= 0 ? 'E' : 'W'}`
+      });
+    });
+
+    // Add markers
+    renderMarkers(map, selectedHotspotId);
+
+    // Invalidate size to ensure crisp tiles on initial mount
+    const timer = setTimeout(() => {
+      map.invalidateSize();
+    }, 300);
+
+    const handleResize = () => {
+      map.invalidateSize();
+    };
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+      map.remove();
+      mapInstanceRef.current = null;
+    };
+  }, []);
+
+  // Handle Layer Switch (Dark Matter vs Satellite)
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map || !tileLayerRef.current) return;
+
+    map.removeLayer(tileLayerRef.current);
+
+    let newTileLayer;
+    if (mapLayer === 'satellite') {
+      newTileLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+        maxZoom: 17
+      });
+    } else {
+      newTileLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
+        subdomains: 'abcd',
+        maxZoom: 19
+      });
+    }
+
+    newTileLayer.addTo(map);
+    tileLayerRef.current = newTileLayer;
+  }, [mapLayer]);
+
+  // Sync external activeConflictId change (e.g. from bottom War Room tabs)
+  useEffect(() => {
+    if (activeConflictId && activeConflictId !== selectedHotspotId) {
+      setSelectedHotspotId(activeConflictId);
+      const spot = mapHotspots.find(s => s.id === activeConflictId);
+      if (spot && mapInstanceRef.current) {
+        mapInstanceRef.current.flyTo([spot.lat, spot.lng], Math.max(mapInstanceRef.current.getZoom(), 5), {
+          duration: 1.2
+        });
+      }
+    }
+  }, [activeConflictId]);
+
+  // Update marker visual styles when selectedHotspotId changes
+  useEffect(() => {
+    if (mapInstanceRef.current) {
+      renderMarkers(mapInstanceRef.current, selectedHotspotId);
+    }
+  }, [selectedHotspotId]);
+
+  const createTacticalIcon = (spot, isSelected) => {
+    const color = spot.color || '#f43f5e';
+    const isRed = color === '#f43f5e';
+    const glowClass = isRed ? 'shadow-[0_0_20px_#f43f5e]' : 'shadow-[0_0_20px_#06b6d4]';
+
+    const html = `
+      <div class="relative flex items-center justify-center group" style="width: 44px; height: 44px; pointer-events: auto;">
+        <!-- Pulsing sonar radar wave -->
+        <span class="absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping"
+              style="background-color: ${color}; animation-duration: ${isSelected ? '1.4s' : '3s'};"></span>
+
+        <!-- Outer Reticle Ring -->
+        <div class="relative flex items-center justify-center rounded-full border ${
+          isSelected 
+            ? 'w-9 h-9 border-2 border-white bg-slate-950/80 ' + glowClass
+            : 'w-6 h-6 border border-slate-300/80 bg-slate-900/90'
+        } transition-all duration-300">
+          
+          <!-- Crosshair tick marks if selected -->
+          ${isSelected ? `
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span class="w-11 h-[1.5px] bg-white/70 absolute"></span>
+              <span class="h-11 w-[1.5px] bg-white/70 absolute"></span>
+            </div>
+          ` : ''}
+
+          <!-- Glowing core center -->
+          <span class="rounded-full ${isSelected ? 'w-3.5 h-3.5' : 'w-2.5 h-2.5'} animate-pulse"
+                style="background-color: ${color}; box-shadow: 0 0 10px ${color};"></span>
+        </div>
+
+        <!-- Floating Tactical Mini-Badge -->
+        <div class="absolute top-9 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded font-mono text-[10px] font-bold whitespace-nowrap border pointer-events-none transition-all duration-200 ${
+          isSelected
+            ? 'bg-slate-950 text-white border-rose-500 shadow-lg scale-105 z-30'
+            : 'bg-slate-900/90 text-slate-300 border-slate-700/80 shadow'
+        }">
+          ${spot.name.split(',')[0]}
+        </div>
+      </div>
+    `;
+
+    return L.divIcon({
+      html,
+      className: 'tactical-div-icon',
+      iconSize: [44, 44],
+      iconAnchor: [22, 22]
+    });
+  };
+
+  const renderMarkers = (map, activeId) => {
+    // Remove existing markers
+    Object.values(markersRef.current).forEach(marker => marker.remove());
+    markersRef.current = {};
+
+    mapHotspots.forEach(spot => {
+      const isSelected = spot.id === activeId;
+      const icon = createTacticalIcon(spot, isSelected);
+
+      const marker = L.marker([spot.lat, spot.lng], {
+        icon,
+        zIndexOffset: isSelected ? 1000 : 100
+      }).addTo(map);
+
+      // Event handlers
+      marker.on('click', () => {
+        setSelectedHotspotId(spot.id);
+        if (onSelectConflict) onSelectConflict(spot.id);
+        map.flyTo([spot.lat, spot.lng], Math.max(map.getZoom(), 5), { duration: 1.0 });
       });
 
+      marker.on('mouseover', () => {
+        setHoveredHotspot(spot);
+      });
+
+      marker.on('mouseout', () => {
+        setHoveredHotspot(null);
+      });
+
+      markersRef.current[spot.id] = marker;
+    });
+  };
+
+  const handleSelectPreset = (preset) => {
+    setActivePreset(preset.id);
+    if (mapInstanceRef.current) {
+      mapInstanceRef.current.flyTo(preset.center, preset.zoom, { duration: 1.4 });
+    }
+  };
+
+  const handleHotspotClick = (spot) => {
+    setSelectedHotspotId(spot.id);
+    if (onSelectConflict) onSelectConflict(spot.id);
+    if (mapInstanceRef.current) {
+      mapInstanceRef.current.flyTo([spot.lat, spot.lng], 6, { duration: 1.2 });
+    }
+  };
+
+  const handleScrollToBriefing = () => {
+    const el = document.getElementById('kuresel-olaylar');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="mb-12 rounded-2xl bg-[#090e1b] border border-slate-700/80 p-4 sm:p-6 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+    <div className="mb-12 rounded-2xl bg-[#090e1b] border border-slate-700/90 shadow-2xl relative overflow-hidden backdrop-blur-xl">
       
-      {/* Top Header & Telemetry Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-800 font-mono text-xs">
-        <div className="flex items-center gap-2.5">
-          <div className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" />
-          <span className="text-white font-bold tracking-wider flex items-center gap-1.5">
-            <Globe2 className="w-4 h-4 text-rose-400" />
-            CANLI KÜRESEL ÇATIŞMA VE SICAK BÖLGELER HARİTASI
-          </span>
-          <span className="hidden md:inline px-2 py-0.5 rounded bg-slate-800 text-[10px] text-slate-300 border border-slate-700">
-            WGS84 TEKNİK RADAR
-          </span>
+      {/* Top Tactical Command HUD Header */}
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 p-4 sm:p-5 border-b border-slate-800 bg-[#070b16]/90 font-mono text-xs">
+        
+        {/* Left: Status & Telemetry */}
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-2">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+            </span>
+            <span className="text-white font-extrabold tracking-wider flex items-center gap-1.5 text-sm">
+              <Crosshair className="w-4 h-4 text-rose-400" />
+              CANLI TAKTİK ÇATIŞMA RADARI (WGS84)
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2 text-[11px] text-slate-400">
+            <span className="hidden sm:inline px-2 py-0.5 rounded bg-slate-900 border border-slate-700 text-cyan-400">
+              OSINT SATELLITE FEED
+            </span>
+            <span className="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300 font-mono">
+              GPS: {mouseCoords.lat}, {mouseCoords.lng}
+            </span>
+          </div>
         </div>
 
-        {/* Region View Filters */}
-        <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none text-[11px]">
-          {[
-            { id: 'ALL', label: 'Tüm Dünya' },
-            { id: 'ME', label: 'Orta Doğu' },
-            { id: 'EUR', label: 'Doğu Avrupa' },
-            { id: 'ASIA', label: 'Asya & Pasifik' },
-            { id: 'AFR', label: 'Afrika' }
-          ].map((btn) => (
+        {/* Right: Map Layer Switcher & Preset Zoom Filters */}
+        <div className="flex flex-wrap items-center gap-2">
+          {/* Layer Toggle */}
+          <div className="inline-flex p-0.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">
             <button
-              key={btn.id}
-              onClick={() => setActiveFilter(btn.id)}
-              className={`px-2.5 py-1 rounded-lg border transition-all cursor-pointer whitespace-nowrap ${
-                activeFilter === btn.id
-                  ? 'bg-rose-500/20 text-rose-300 border-rose-500/50 font-bold shadow-[0_0_10px_rgba(244,63,94,0.3)]'
-                  : 'bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white'
+              onClick={() => setMapLayer('dark')}
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                mapLayer === 'dark'
+                  ? 'bg-rose-500/20 text-rose-300 font-bold border border-rose-500/40 shadow'
+                  : 'text-slate-400 hover:text-white'
               }`}
             >
-              {btn.label}
+              <Compass className="w-3 h-3" />
+              <span>Taktik Vektör</span>
             </button>
-          ))}
+            <button
+              onClick={() => setMapLayer('satellite')}
+              className={`flex items-center gap-1 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
+                mapLayer === 'satellite'
+                  ? 'bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/40 shadow'
+                  : 'text-slate-400 hover:text-white'
+              }`}
+            >
+              <Satellite className="w-3 h-3" />
+              <span>Askeri Uydu</span>
+            </button>
+          </div>
         </div>
+
       </div>
 
-      {/* SVG Interactive Cyber Radar Canvas */}
-      <div className="relative w-full aspect-[2/1] sm:aspect-[2.2/1] bg-[#070b16] rounded-xl border border-slate-800/90 overflow-hidden shadow-inner group select-none">
-        
-        {/* Radar Ambient Glow Effect */}
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-500/5 via-slate-900/0 to-transparent" />
+      {/* Region Jump Presets Bar */}
+      <div className="px-4 py-2 bg-slate-950/60 border-b border-slate-800/80 flex items-center gap-1.5 overflow-x-auto scrollbar-none font-mono text-[11px]">
+        <span className="text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1 mr-1 shrink-0">
+          <Navigation className="w-3 h-3 text-rose-400" />
+          BÖLGE ODAKLAN:
+        </span>
+        {REGION_PRESETS.map((preset) => (
+          <button
+            key={preset.id}
+            onClick={() => handleSelectPreset(preset)}
+            className={`px-2.5 py-1 rounded-lg border transition-all cursor-pointer whitespace-nowrap ${
+              activePreset === preset.id
+                ? 'bg-rose-500/20 text-rose-300 border-rose-500/60 font-bold shadow-[0_0_10px_rgba(244,63,94,0.3)]'
+                : 'bg-slate-900/60 text-slate-400 border-slate-800/80 hover:text-white hover:border-slate-700'
+            }`}
+          >
+            {preset.label}
+          </button>
+        ))}
+      </div>
 
-        {/* Tactical Crosshair Watermark */}
-        <div className="absolute top-3 left-4 font-mono text-[10px] text-slate-400 pointer-events-none flex items-center gap-3">
-          <span>SCAN: REAL-TIME OSINT SATELLITE</span>
-          <span className="text-cyan-400">AKTİF SICAK NOKTA: {filteredMarkers.length} BÖLGE</span>
+      {/* Map Viewport Container */}
+      <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] bg-[#070b16] select-none">
+        
+        {/* Real Leaflet Map */}
+        <div ref={mapContainerRef} className="w-full h-full z-0" />
+
+        {/* Ambient Tactical Grid Scan Lines Overlay (Does not block clicks) */}
+        <div className="absolute inset-0 pointer-events-none border border-slate-800/40 shadow-inner z-10">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_40%,_rgba(7,11,22,0.6)_100%)]" />
         </div>
 
-        <svg 
-          viewBox="0 0 1000 500" 
-          className="w-full h-full object-cover"
-        >
-          <defs>
-            {/* Grid Pattern */}
-            <pattern id="tacticalGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(51, 65, 85, 0.25)" strokeWidth="0.75" />
-            </pattern>
+        {/* Top-Left Telemetry Watermark Overlay */}
+        <div className="absolute top-4 left-4 z-20 pointer-events-none font-mono text-[10px] text-slate-400 space-y-1 hidden sm:block bg-slate-950/80 backdrop-blur-md p-2.5 rounded-lg border border-slate-800">
+          <div className="flex items-center gap-2 text-cyan-400 font-bold">
+            <Activity className="w-3 h-3 animate-pulse" />
+            <span>GLOBAL THREAT MATRIX: LEVEL DEFCON-2</span>
+          </div>
+          <div>HEDEF: 9 AKTİF JEOPOLİTİK KRİZ ODAĞI</div>
+          <div className="text-slate-500">PROJEKSİYON: WGS84 EQUIRECTANGULAR / MERCATOR</div>
+        </div>
 
-            {/* Glowing Radar Beacon Filter */}
-            <filter id="glowBeacon" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="3" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-
-          {/* Cyber Coordinate Grid Background */}
-          <rect width="1000" height="500" fill="url(#tacticalGrid)" />
-
-          {/* Latitude & Longitude Reference Lines */}
-          <line x1="0" y1="250" x2="1000" y2="250" stroke="rgba(244, 63, 94, 0.2)" strokeWidth="1" strokeDasharray="4 4" />
-          <line x1="500" y1="0" x2="500" y2="500" stroke="rgba(56, 189, 248, 0.2)" strokeWidth="1" strokeDasharray="4 4" />
-          <line x1="0" y1="125" x2="1000" y2="125" stroke="rgba(51, 65, 85, 0.3)" strokeWidth="0.75" strokeDasharray="2 4" />
-          <line x1="0" y1="375" x2="1000" y2="375" stroke="rgba(51, 65, 85, 0.3)" strokeWidth="0.75" strokeDasharray="2 4" />
-
-          {/* Stylized Tactical World Continents (Accurate Equirectangular Geometry) */}
-          <g fill="rgba(30, 41, 59, 0.65)" stroke="rgba(71, 85, 105, 0.6)" strokeWidth="1.2">
-            {/* North America */}
-            <path d="M 120,60 L 190,50 L 250,65 L 290,110 L 250,150 L 270,180 L 250,210 L 210,230 L 180,210 L 150,160 L 110,130 L 90,80 Z" />
-            {/* Greenland */}
-            <path d="M 330,40 L 400,35 L 410,75 L 360,95 L 330,65 Z" />
-            {/* South America */}
-            <path d="M 270,250 L 330,260 L 375,310 L 350,380 L 310,440 L 280,445 L 260,370 L 250,300 Z" />
-            {/* Europe */}
-            <path d="M 460,80 L 530,70 L 580,75 L 590,120 L 540,155 L 480,155 L 450,120 Z" />
-            {/* Scandinavia */}
-            <path d="M 510,45 L 540,40 L 550,75 L 515,80 Z" />
-            {/* United Kingdom & Ireland */}
-            <path d="M 445,95 L 465,95 L 460,120 L 440,115 Z" />
-            {/* Africa */}
-            <path d="M 460,170 L 580,165 L 615,220 L 580,340 L 530,380 L 490,320 L 455,220 Z" />
-            {/* Madagascar */}
-            <path d="M 620,320 L 635,325 L 625,370 L 615,360 Z" />
-            {/* Asia (Russia, China, Middle East, India, SE Asia) */}
-            <path d="M 590,75 L 750,60 L 890,65 L 910,110 L 860,160 L 880,210 L 830,225 L 780,240 L 730,285 L 680,240 L 630,210 L 590,160 Z" />
-            {/* Japan */}
-            <path d="M 885,140 L 905,150 L 890,185 L 875,175 Z" />
-            {/* Australia */}
-            <path d="M 780,320 L 890,315 L 905,375 L 850,420 L 785,395 L 770,350 Z" />
-            {/* New Zealand */}
-            <path d="M 920,400 L 935,410 L 920,440 L 910,430 Z" />
-          </g>
-
-          {/* Interactive Radar Hotspots */}
-          {filteredMarkers.map((spot) => {
-            const isSelected = activeConflictId === spot.id;
-            const isHovered = hoveredHotspot?.id === spot.id;
-
-            return (
-              <g 
-                key={spot.id}
-                className="cursor-pointer transition-transform"
-                onClick={() => {
-                  onSelectConflict(spot.id);
-                  const el = document.getElementById('kuresel-olaylar');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }}
-                onMouseEnter={() => setHoveredHotspot(spot)}
-                onMouseLeave={() => setHoveredHotspot(null)}
-              >
-                {/* Expanding Radar Wave Ring */}
-                <circle
-                  cx={spot.x}
-                  cy={spot.y}
-                  r={isSelected ? "18" : "12"}
-                  fill="none"
-                  stroke={spot.color}
-                  strokeWidth="1.5"
-                  opacity={isSelected ? "0.8" : "0.4"}
-                  className="animate-ping origin-center"
-                  style={{ animationDuration: isSelected ? '1.8s' : '3s' }}
-                />
-
-                {/* Outer Ring */}
-                <circle
-                  cx={spot.x}
-                  cy={spot.y}
-                  r={isSelected ? "10" : "6"}
-                  fill={isSelected ? "rgba(244,63,94,0.3)" : "rgba(15,23,42,0.6)"}
-                  stroke={spot.color}
-                  strokeWidth={isSelected ? "2.5" : "1.5"}
-                  filter="url(#glowBeacon)"
-                />
-
-                {/* Center Core Dot */}
-                <circle
-                  cx={spot.x}
-                  cy={spot.y}
-                  r={isSelected ? "4.5" : "3"}
-                  fill={spot.color}
-                  className="animate-pulse"
-                />
-
-                {/* Active Reticle Lines if selected */}
-                {(isSelected || isHovered) && (
-                  <g stroke={spot.color} strokeWidth="1.2" opacity="0.9">
-                    <line x1={spot.x - 14} y1={spot.y} x2={spot.x - 7} y2={spot.y} />
-                    <line x1={spot.x + 7} y1={spot.y} x2={spot.x + 14} y2={spot.y} />
-                    <line x1={spot.x} y1={spot.y - 14} x2={spot.x} y2={spot.y - 7} />
-                    <line x1={spot.x} y1={spot.y + 7} x2={spot.x} y2={spot.y + 14} />
-                  </g>
-                )}
-
-                {/* Permanent or Hover Title Tag */}
-                <text
-                  x={spot.x}
-                  y={spot.y - (isSelected ? 16 : 12)}
-                  textAnchor="middle"
-                  fill={isSelected ? "#ffffff" : "#cbd5e1"}
-                  fontSize={isSelected ? "11" : "9"}
-                  fontFamily="monospace"
-                  fontWeight={isSelected ? "bold" : "600"}
-                  className="pointer-events-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
-                >
-                  {spot.name}
-                </text>
-              </g>
-            );
-          })}
-        </svg>
-
-        {/* Floating Real-Time HUD Target Card */}
-        <div className="absolute bottom-3 left-3 right-3 sm:right-auto sm:max-w-md p-3 sm:p-4 rounded-xl bg-slate-900/95 border border-rose-500/50 shadow-2xl backdrop-blur-xl font-mono text-xs z-20 animate-in fade-in">
-          <div className="flex items-center justify-between gap-2 mb-1.5">
-            <span className="text-[10px] text-rose-400 font-bold flex items-center gap-1.5 uppercase tracking-wider">
+        {/* Floating Real-Time Target Intel HUD (Bottom Center/Left) */}
+        <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-md p-4 rounded-xl bg-slate-950/95 border border-rose-500/60 shadow-2xl backdrop-blur-xl font-mono text-xs z-20 animate-in fade-in transition-all">
+          <div className="flex items-center justify-between gap-2 mb-2">
+            <span className="text-[11px] text-rose-400 font-extrabold flex items-center gap-1.5 uppercase tracking-wider">
               <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
-              SEÇİLİ HEDEF: {displayedHotspot.region}
+              KİLİTLENEN HEDEF: {activeSpot.region}
             </span>
             <span className="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-extrabold border border-rose-500/40">
-              {displayedHotspot.threat}
+              {activeSpot.threat}
             </span>
           </div>
 
-          <h4 className="text-sm sm:text-base font-extrabold text-white leading-tight">
-            {displayedHotspot.name}
+          <h4 className="text-base sm:text-lg font-extrabold text-white leading-tight">
+            {activeSpot.name}
           </h4>
 
-          <p className="text-[11px] text-amber-400 mt-1 truncate">
-            ⚡ {displayedHotspot.status}
-          </p>
+          <div className="text-[11px] text-amber-300 mt-1.5 font-semibold flex items-center gap-1.5">
+            <Flame className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+            <span className="truncate">{activeSpot.status}</span>
+          </div>
 
-          <div className="mt-2.5 pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Haritada noktaya tıklayarak istihbaratı açın</span>
-            <span className="text-cyan-400 font-bold flex items-center gap-0.5 group-hover:translate-x-1">
-              Raporu Gör <ChevronRight className="w-3 h-3" />
+          <div className="mt-2 text-[10px] text-slate-400 bg-slate-900/80 p-2 rounded border border-slate-800">
+            <span className="text-cyan-400 font-bold block mb-0.5">KRİTİK TEKNOLOJİ / HARP UNSURLARI:</span>
+            <span className="text-slate-300">{activeSpot.tech}</span>
+          </div>
+
+          <div className="mt-3 pt-2.5 border-t border-slate-800 flex items-center justify-between">
+            <span className="text-[10px] text-slate-400">
+              📍 {activeSpot.lat}°N, {activeSpot.lng}°E
             </span>
+            <button
+              onClick={handleScrollToBriefing}
+              className="px-3 py-1 rounded bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs flex items-center gap-1 cursor-pointer transition-all shadow-[0_0_12px_rgba(244,63,94,0.4)]"
+            >
+              <span>War Room Brifingi</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </button>
           </div>
         </div>
 
       </div>
 
-      {/* Hotspots Quick Click Navigation Pills */}
-      <div className="mt-4 flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none font-mono text-xs">
+      {/* Hotspots Quick Action Carousel Pills (Bottom Bar) */}
+      <div className="p-3 sm:p-4 bg-[#070b16] border-t border-slate-800 flex items-center gap-2 overflow-x-auto scrollbar-none font-mono text-xs">
         <span className="text-slate-500 text-[11px] shrink-0 font-bold uppercase tracking-wider flex items-center gap-1 mr-1">
           <Crosshair className="w-3.5 h-3.5 text-rose-500" />
-          HIZLI HEDEF:
+          HEDEFE KİLİTLEN:
         </span>
         {mapHotspots.map((spot) => {
-          const isSelected = activeConflictId === spot.id;
+          const isSelected = selectedHotspotId === spot.id;
           return (
             <button
               key={spot.id}
-              onClick={() => onSelectConflict(spot.id)}
+              onClick={() => handleHotspotClick(spot)}
               className={`px-3 py-1.5 rounded-lg border transition-all cursor-pointer whitespace-nowrap flex items-center gap-1.5 text-xs ${
                 isSelected
-                  ? 'bg-rose-500/20 text-rose-300 border-rose-500/50 font-bold shadow-[0_0_12px_rgba(244,63,94,0.3)]'
-                  : 'bg-slate-900/70 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
+                  ? 'bg-rose-500/20 text-rose-300 border-rose-500 font-bold shadow-[0_0_12px_rgba(244,63,94,0.35)]'
+                  : 'bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
               }`}
             >
               <span 
-                className="w-1.5 h-1.5 rounded-full" 
+                className="w-2 h-2 rounded-full" 
                 style={{ backgroundColor: spot.color }} 
               />
               <span>{spot.name}</span>

@@ -1,5 +1,56 @@
 @import "tailwindcss";
 
+/* Tactical Leaflet Dark Styling */
+.leaflet-container {
+  background-color: #070b16 !important;
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+}
+.leaflet-bar {
+  border: 1px solid rgba(71, 85, 105, 0.5) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7) !important;
+}
+.leaflet-bar a {
+  background-color: #0f172a !important;
+  color: #94a3b8 !important;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5) !important;
+  transition: all 0.2s ease;
+}
+.leaflet-bar a:hover {
+  background-color: #1e293b !important;
+  color: #f43f5e !important;
+}
+.leaflet-popup-content-wrapper {
+  background: #090e1b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(244, 63, 94, 0.5) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(244, 63, 94, 0.2) !important;
+  padding: 0 !important;
+}
+.leaflet-popup-tip {
+  background: #090e1b !important;
+  border: 1px solid rgba(244, 63, 94, 0.5) !important;
+}
+.leaflet-popup-content {
+  margin: 10px 12px !important;
+  line-height: 1.4 !important;
+}
+.leaflet-control-attribution {
+  background: rgba(7, 11, 22, 0.8) !important;
+  color: #64748b !important;
+  font-size: 9px !important;
+  font-family: monospace !important;
+  border-top-left-radius: 6px;
+  padding: 2px 6px !important;
+}
+.leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
