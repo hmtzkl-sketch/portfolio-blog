@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { globalConflicts } from '../data/content';
+import { globalConflicts, lastRadarUpdate } from '../data/content';
 import { 
   Globe2, 
   AlertTriangle, 
@@ -68,9 +68,15 @@ export default function ConflictTracker() {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-rose-400 uppercase tracking-widest mb-3 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 font-bold">
-              <Radio className="w-3.5 h-3.5 text-rose-400 animate-pulse" />
-              <span>CANLI ASKERİ İSTİHBARAT & SICAK KRİZ KOMUTA MERKEZİ</span>
+            <div className="flex flex-wrap items-center gap-2 mb-3">
+              <div className="inline-flex items-center gap-2 font-mono text-xs text-rose-400 uppercase tracking-widest px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 font-bold">
+                <Radio className="w-3.5 h-3.5 text-rose-400 animate-pulse" />
+                <span>CANLI ASKERİ İSTİHBARAT & SICAK KRİZ KOMUTA MERKEZİ</span>
+              </div>
+              <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[10px] font-mono font-bold">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                OTOMATİK GÜNCELLEME: {lastRadarUpdate}
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Sıcak Çatışma Alanları & <br className="hidden sm:inline" />
