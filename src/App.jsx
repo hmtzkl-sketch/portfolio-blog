@@ -132,8 +132,8 @@ export default function App() {
         {/* 4. İletişim & Geri Bildirim */}
         <ContactSection />
 
-        {/* 8. Footer with Legal Notice */}
-        <Footer />
+        {/* 8. Footer with Single Legal Notice Banner */}
+        <Footer onLegalClick={() => setIsLegalOpen(true)} />
 
         {/* Interactive Legal Notice Modal */}
         <LegalNotice isOpen={isLegalOpen} onOpenChange={setIsLegalOpen} />
