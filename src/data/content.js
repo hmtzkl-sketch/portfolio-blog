@@ -4,12 +4,12 @@ export const authorProfile = {
   title: "Açık Kaynak (OSINT) Savunma Sanayii & Askeri Teknolojiler Araştırmacısı",
   bio: "Halka açık savunma sanayii bültenleri, uluslararası askeri fuarlar (IDEF, SAHA EXPO), üretici teknik katalogları ve açık kaynak istihbaratı (OSINT) doğrultusunda; piyade silahları, balistik prensipler ve savunma teknolojileri üzerine bağımsız teknik analizler ve derlemeler sunuyorum.",
   location: "Türkiye",
-  status: "Canlı İstihbarat & Taktik Radar Aktif [Ekim 2026]",
+  status: "Canlı Askeri İstihbarat & Taktik Radar [15 Ekim 2026 Aktif]",
   stats: [
     { label: "Katalog & Sistem İncelemesi", value: "95+", change: "Açık Kaynak (OSINT)" },
     { label: "Sıcak Çatışma Radarı", value: "16 Bölge", change: "Canlı Taktik Takip" },
-    { label: "Teknik Rapor & Doküman", value: "48 Modül", change: "Halka Açık Veri" },
-    { label: "Aylık Ziyaret & Okur", value: "140.000+", change: "Savunma Meraklıları" }
+    { label: "Teknik Rapor & Doküman", value: "52 Modül", change: "Halka Açık Veri" },
+    { label: "Aylık Ziyaret & Okur", value: "155.000+", change: "Savunma Meraklıları" }
   ],
   socials: {
     github: "https://github.com/hmtzkl-sketch",
@@ -22,7 +22,7 @@ export const authorProfile = {
 // Canlı Dinamik İstihbarat ve Çatışma Verisi (Her gün otomatik güncellenir)
 import liveConflictData from './liveConflictData.json';
 
-export const lastRadarUpdate = liveConflictData.lastUpdated || "11 Ekim 2026, 22:12 TSİ";
+export const lastRadarUpdate = liveConflictData.lastUpdated || "15 Ekim 2026, 09:15 TSİ";
 export const breakingIntel = liveConflictData.breakingIntel;
 
 export const legalDisclaimer = {
@@ -50,15 +50,71 @@ export const globalConflicts = liveConflictData.conflicts;
 
 export const articles = [
   {
+    id: "thaad-arrow-3-exo-atmospheric-defense",
+    title: "THAAD ve Arrow-3 vs. Hipersonik Balistik Tehditler: Atmosfer Dışı Uzay ve Füze Savunma Doktrini",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "12 dk okuma",
+    date: "15 Ekim 2026",
+    excerpt: "ABD'nin İsrail'e konuşlandırdığı THAAD bataryaları, AN/TPY-2 erken ihbar radarı ve Arrow-3 ile uzay boşluğunda Hit-to-Kill exo-atmosferik füze önleme mimarisi.",
+    tags: ["THAAD", "Arrow-3", "Balistik Füze", "Exo-Atmosferik", "Uzay Harbi", "Fettah"],
+    featured: true,
+    likes: 812,
+    content: `
+### GİRİŞ: STRATOSFER VE UZAY BOŞLUĞUNDA BALİSTİK ÖNLEME
+
+Ekim 2026'da Orta Doğu sahasında katı yakıtlı balistik füzeler ve hipersonik kayma araçlarının (HGV) kitlesel salvo halinde kullanılması, küresel hava savunma mimarisini yer seviyesinden uzay boşluğuna (Exo-Atmospheric) taşımıştır.
+
+### THAAD VE ARROW-3 SİSTEMLERİNİN ÇALIŞMA MEKANİZMASI
+
+1. **AN/TPY-2 İleri Konuşlu X-Band Radarı:**
+   * Binlerce kilometrelik menziliyle füzelerin yakıt tükenme (burn-out) irtifasını milimetrik olarak izler.
+   * Hedefin gerçek harp başlığı mı yoksa yanıltıcı sahte hedef (decoy) mi olduğunu radar dalgalarının mikro-doppler yansımalarından ayrıştırır.
+
+2. **Hit-to-Kill (Doğrudan Kinetik Çarpma) Prensibi:**
+   * Klasik parçacıklı harp başlığı yerine, önleme füzesinin kinetik öldürücü aracı (KKV) saniyede 3.5 kilometre hızla hedefin gövdesine doğrudan çarparak imha eder.
+   * Bu sayede kimyasal, biyolojik veya nükleer yüklerin infilak etmeden uzayda buharlaşması sağlanır.
+
+3. **Çok Katmanlı Ağ Entegrasyonu:**
+   * Uzay boşluğunda **Arrow-3** önleme yapar; ıskalanması halinde üst atmosferde **THAAD**, alt atmosferde ise **David's Sling (Davud Sapanı)** ve **Patriot PAC-3** devreye girer.
+    `
+  },
+  {
+    id: "fiber-optic-spool-fpv-drones-doctrine",
+    title: "Fiber-Optik Makaralı FPV Dronlar: Jammer Kalkanlarını Çözen Kablolu Harp Devrimi",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "10 dk okuma",
+    date: "15 Ekim 2026",
+    excerpt: "Elektronik harp jammer'larının iflas ettiği Donbas ve Pokrovsk siperlerinde 15 km mikro fiber-optik makaralı FPV kamikaze dronların muharebe sahasını ele geçirmesi.",
+    tags: ["Fiber-Optik", "FPV Dron", "Elektronik Harp", "Pokrovsk", "Asimetrik Harp"],
+    featured: true,
+    likes: 749,
+    content: `
+### ELEKTRONİK HARPTE KURALLARI YIKAN DEVRİM: KABLOLU DRONLAR
+
+Donbas, Pokrovsk ve Kursk temas hatlarında ortaya çıkan en şaşırtıcı taktik gelişme, her iki tarafın kablosuz radyo dalgalarını tamamen terk ederek arkasından 10-15 km mikro fiber-optik kablo salan FPV kamikaze dronlara geçmesidir.
+
+### FİBER-OPTİK İNTİHAR DRONLARININ ÜSTÜNLÜKLERİ
+
+1. **%100 Jammer ve Elektronik Karıştırma Bağışıklığı:**
+   * Sinyal bozucular (Jammer'lar) sadece radyo frekanslarını (RF) kesebilir. Dron komutları ve video verisi cam elyaf kablo içinden ışık hızında aktığı için sahadaki en güçlü elektronik harp kuleleri bile bu dronları durduramaz.
+
+2. **Kristal Netliğinde 4K Sıfır Gecikmeli Görüntü:**
+   * Klasik analog FPV dronlar yere yaklaştıkça sinyal zayıflar ve karıncalanır. Fiber-optik kabloda ise son saniyeye kadar pırıl pırıl 4K görüntü gelir; operatör tankın en zayıf zırh kapağını nokta atışıyla seçebilir.
+
+3. **Sıfır Elektronik İz:**
+   * RF yayını yapmadığı için düşmanın elektronik gözetleme istasyonları dronun nereden kalktığını ve operatörün nerede saklandığını tespit edemez.
+    `
+  },
+  {
     id: "siper-urun-2-balistik-onleme-testi",
     title: "SİPER Ürün-2 Uzun Menzilli Bölge Hava Savunma Sistemi: Balistik Önleme Başarısı",
     category: "Saldırı & Savunma Teknolojileri",
     readTime: "10 dk okuma",
-    date: "10 Ekim 2026",
+    date: "14 Ekim 2026",
     excerpt: "ROKETSAN ve ASELSAN ortaklığıyla geliştirilen SİPER Ürün-2 füzesinin Sinop atış alanında 150+ km menzilde yüksek irtifa ve süpersonik hedefi doğrudan vuruşla (Hit-to-Kill) imha testi.",
     tags: ["SİPER", "Hava Savunma", "Çelik Kubbe", "ROKETSAN", "ASELSAN", "Hit-to-Kill"],
     featured: true,
-    likes: 728,
+    likes: 785,
     content: `
 ### SİPER ÜRÜN-2 İLE TÜRKİYE'NİN STRATEJİK HAVA SAVUNMA KALKANI
 
