@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "15 Ekim 2026, 09:15 TSİ",
+  "lastUpdated": "16 Ekim 2026, 06:18 TSİ",
   "activeConflictsCount": 9,
   "breakingIntel": [
     {
@@ -68,7 +68,7 @@
         "Patriot PAC-3 & S-400 Füze Kalkanı",
         "Starlink & Taktik Ağ İletişimi"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: Ticari uydu analizleri, Pokrovsk güneybatısında zırhlı araç intikallerinin FPV dron avcıları sebebiyle tamamen durduğunu, birliklerin 3-4 kişilik küçük piyade sızma kolları halinde hareket ettiğini doğrulamaktadır."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume\"."
     },
     {
       "id": "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
@@ -92,7 +92,7 @@
         "Erken İhbar Radarları (AN/TPY-2 & Green Pine)",
         "Elektronik GNSS Karartma & Uydu Karıştırma"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: Nevatim ve Ovda üsleri çevresindeki AN/TPY-2 radar verileri, hipersonik kayma araçlarının terminal fazda saniyede 4 kilometreyi aşan hızlarla alçaldığını ve çoklu önleme gerektirdiğini göstermektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Houthi missile attack on Yemeni presidential palace kills five, minister says\"."
     },
     {
       "id": "israil-gazze-lubnan-catismasi",
@@ -116,7 +116,7 @@
         "Meskun Mahal Tünel Arama Robotları",
         "Hafif Taktik Kamikaze Dronlar"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: Termal gece görüş kayıtları, Hizbullah unsurlarının sınır tünellerinden anlık çıkış yaparak optik güdümlü Almas füzelerini ateşleyip 15 saniyede kaybolduğu 'vur-kaç-gizlen' taktiğini belgelemektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Israel halts commercial goods from entering Gaza; Hamas denies tax claims\"."
     },
     {
       "id": "kizildeniz-yemen-deniz-krizi",
@@ -140,7 +140,7 @@
         "Uzun Menzilli Quds Seyir Füzeleri",
         "Donanma Lazer ve CIWS Yakın Savunma"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: AIS uydu sinyalleri, Kızıldeniz'den geçen ticari gemilerin sahte transponder verileri yayınladığını ve rotalarını Kızıldeniz dışına kaydırdığını doğrulamaktadır."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Houthi missile attack on Yemeni presidential palace kills five, minister says\"."
     },
     {
       "id": "suriye-ic-savasi-bolgesel-dinamikler",
@@ -163,7 +163,7 @@
         "Elektronik Harp (KORAL Sistemi)",
         "Meskun Mahal Tahkimat ve Tünel Savunması"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: MİT ve TSK SİHA harekâtları, örgütün petrol kuyusu gelir kaynaklarını ve sözde mühimmat üretim atölyelerini cerrahi vuruşlarla felç etmektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Two Syrian pipelines damaged amid spate of attacks on energy infrastructure\"."
     },
     {
       "id": "sudan-ic-savasi",
@@ -186,7 +186,7 @@
         "Hafif Zırhlı Taktik Araçlar (Technical)",
         "Gezici Keskin Nişancı Timleri"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: Açık kaynak uydu haritaları El Faşir çevresinde gıda koridorlarının tamamen kesildiğini ve ağır topçu atışlarının kentsel mahalleleri tahrip ettiğini belgelemektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Sudan Turns Away From Iranian Weapons in Hopes of Courting Washington - Foundation for Defense of Democracies\"."
     },
     {
       "id": "myanmar-ic-savasi",
@@ -209,7 +209,7 @@
         "Hafif Havan ve Omuzdan Atılan Roketler",
         "Cunta Hava Kuvvetleri Ağır Bombardıman Uçakları"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: Lashio bölgesel komutanlığının kaybı sonrası cuntanın Çin sınırı ticaret gelirlerinin %70'inden mahrum kaldığı doğrulanmıştır."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Myanmar’s coup leader-turned-president wins back neighbours despite war\"."
     },
     {
       "id": "kore-yarimadasi-dmz-gerilimi",
@@ -232,7 +232,7 @@
         "THAAD & Patriot Çok Katmanlı Füze Kalkanı",
         "Hipersonik Kayma Araçları (HGV)"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: DMZ boyunca inşa edilen 12 metrelik anti-tank hendekleri ve mayın tarlaları, yarımadada barışçıl diplomasi döneminin tamamen kapandığını göstermektedir."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"North Korea and China open new bridge after 12-year delay\"."
     },
     {
       "id": "tayvan-bogazi-guney-cin-denizi",
@@ -255,7 +255,7 @@
         "Kıyı Konuşlu Süpersonik Gemisavar Füzeleri",
         "Tip 075 Amfibi Çıkarma Gemileri"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 15 Ekim 2026]: Tayvan Boğazı orta çizgisinin (Median Line) Çin jetleri tarafından fiilen yok sayılması, olası bir ani hava angajmanında tepki süresini 3 dakikanın altına indirmiştir."
+      "osintNote": "[Canlı OSINT Doğrulama - 16 Ekim 2026, 06:18 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Tip-off foiled US teen suspect's plot to attack Hindu temple, police say\"."
     }
   ]
 }
