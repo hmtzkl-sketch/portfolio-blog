@@ -123,6 +123,7 @@ export default function ConflictTracker() {
           activeConflictId={activeConflict.id}
           onSelectConflict={(id) => {
             setActiveConflictId(id);
+            setViewMode('console');
             // Optionally update region if outside current filter
             const conflict = globalConflicts.find(c => c.id === id);
             if (conflict && selectedRegion !== 'Tümü') {
@@ -242,7 +243,10 @@ export default function ConflictTracker() {
             </div>
 
             {/* Right Tactical Situation Screen (7 Cols) */}
-            <div className="lg:col-span-7 bg-[#11182c]/95 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+            <div 
+              id="taktik-brifing-konsolu" 
+              className="lg:col-span-7 bg-[#11182c]/95 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden backdrop-blur-xl scroll-mt-24 transition-all duration-300"
+            >
               {/* Tactical Watermark HUD */}
               <div className="absolute top-4 right-4 flex items-center gap-3 font-mono text-[10px] text-slate-400 pointer-events-none">
                 <span>COORD: {activeConflict.coordinates}</span>

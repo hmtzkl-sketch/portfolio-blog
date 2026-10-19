@@ -12,7 +12,8 @@ import {
   Satellite,
   Flame,
   Activity,
-  LocateFixed
+  LocateFixed,
+  ArrowDown
 } from 'lucide-react';
 
 import { globalConflicts } from '../data/content';
@@ -249,9 +250,8 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
 
       // Event handlers
       marker.on('click', () => {
-        setSelectedHotspotId(spot.id);
-        if (onSelectConflict) onSelectConflict(spot.id);
-        map.flyTo([spot.lat, spot.lng], Math.max(map.getZoom(), 5), { duration: 1.0 });
+        map.flyTo([spot.lat, spot.lng], Math.max(map.getZoom(), 5), { duration: 0.8 });
+        scrollToBriefing(spot.id);
       });
 
       marker.on('mouseover', () => {
@@ -273,17 +273,28 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
     }
   };
 
+  const scrollToBriefing = (spotId) => {
+    setSelectedHotspotId(spotId);
+    if (onSelectConflict) onSelectConflict(spotId);
+
+    // Harita bölgesine tıklanınca doğrudan aşağıdaki brifing bölümüne yumuşak kaydır
+    setTimeout(() => {
+      const el = document.getElementById('taktik-brifing-konsolu');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 150);
+  };
+
   const handleHotspotClick = (spot) => {
-    setSelectedHotspotId(spot.id);
-    if (onSelectConflict) onSelectConflict(spot.id);
     if (mapInstanceRef.current) {
-      mapInstanceRef.current.flyTo([spot.lat, spot.lng], 6, { duration: 1.2 });
+      mapInstanceRef.current.flyTo([spot.lat, spot.lng], 6, { duration: 0.8 });
     }
+    scrollToBriefing(spot.id);
   };
 
   const handleScrollToBriefing = () => {
-    const el = document.getElementById('kuresel-olaylar');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    scrollToBriefing(activeSpot.id);
   };
 
   return (
@@ -420,10 +431,10 @@ export default function InteractiveConflictMap({ activeConflictId, onSelectConfl
             </span>
             <button
               onClick={handleScrollToBriefing}
-              className="px-3 py-1 rounded bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs flex items-center gap-1 cursor-pointer transition-all shadow-[0_0_12px_rgba(244,63,94,0.4)]"
+              className="px-3 py-1 rounded bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs flex items-center gap-1.5 cursor-pointer transition-all shadow-[0_0_12px_rgba(244,63,94,0.4)] hover:scale-105 active:scale-95"
             >
-              <span>War Room Brifingi</span>
-              <ChevronRight className="w-3.5 h-3.5" />
+              <span>Aşağıdaki Brifinge İn</span>
+              <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
             </button>
           </div>
         </div>
