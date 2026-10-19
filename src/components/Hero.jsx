@@ -122,7 +122,8 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
               {[
                 { label: "📍 Donbas & Pokrovsk", action: onConflictsClick },
                 { label: "💥 İran-İsrail Balistik", action: onConflictsClick },
-                { label: "🌊 Kızıldeniz Husiler", action: onConflictsClick },
+                { label: "🚢 Hürmüz & Kızıldeniz SİDA", action: () => onSelectArticleById && onSelectArticleById('hurmuz-kizildeniz-sida-akilli-deniz-mayini') },
+                { label: "⚡ GÖKBERK & ALKA Lazer", action: () => onSelectArticleById && onSelectArticleById('lazer-ve-mikrodalga-hpm-anti-drone-savunma') },
                 { label: "⚔️ MPT-76 vs HK416 Kıyasla", action: onWeaponsClick },
                 { label: "🚀 SİPER Ürün-2 Hit-to-Kill", action: () => onSelectArticleById && onSelectArticleById('siper-urun-2-balistik-onleme-testi') },
                 { label: "✈️ KAAN MMU & AESA", action: () => onSelectArticleById && onSelectArticleById('kaan-5th-gen-fighter-supersonic-avionics') }
