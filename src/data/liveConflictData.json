@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "19 Ekim 2026, 06:20 TSİ",
+  "lastUpdated": "19 Ekim 2026, 21:00 TSİ",
   "activeConflictsCount": 9,
   "breakingIntel": [
+    {
+      "id": "hurmuz-kizildeniz-sida-akilli-deniz-mayini",
+      "badge": "DENİZ HARBİ & SİDA",
+      "title": "Hürmüz ve Kızıldeniz: MARLİN, ULAQ ve akıllı dip mayınları ile asimetrik boğaz ablukası.",
+      "target": "article",
+      "type": "defense"
+    },
+    {
+      "id": "lazer-ve-mikrodalga-hpm-anti-drone-savunma",
+      "badge": "IŞIK HIZI KALKAN",
+      "title": "GÖKBERK & ALKA: Kamikaze dron sürülerini kuruş maliyetle eriten taktik lazer ve HPM çağı.",
+      "target": "article",
+      "type": "defense"
+    },
     {
       "id": "thaad-arrow-3-exo-atmospheric-defense",
       "badge": "UZAY & BALİSTİK",

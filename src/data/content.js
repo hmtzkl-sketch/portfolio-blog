@@ -4,12 +4,12 @@ export const authorProfile = {
   title: "Açık Kaynak (OSINT) Savunma Sanayii & Askeri Teknolojiler Araştırmacısı",
   bio: "Halka açık savunma sanayii bültenleri, uluslararası askeri fuarlar (IDEF, SAHA EXPO), üretici teknik katalogları ve açık kaynak istihbaratı (OSINT) doğrultusunda; piyade silahları, balistik prensipler ve savunma teknolojileri üzerine bağımsız teknik analizler ve derlemeler sunuyorum.",
   location: "Türkiye",
-  status: "Canlı Askeri İstihbarat & Taktik Radar [15 Ekim 2026 Aktif]",
+  status: "Canlı Askeri İstihbarat & Taktik Radar [19 Ekim 2026 Aktif]",
   stats: [
-    { label: "Katalog & Sistem İncelemesi", value: "95+", change: "Açık Kaynak (OSINT)" },
+    { label: "Katalog & Sistem İncelemesi", value: "98+", change: "Açık Kaynak (OSINT)" },
     { label: "Sıcak Çatışma Radarı", value: "16 Bölge", change: "Canlı Taktik Takip" },
-    { label: "Teknik Rapor & Doküman", value: "52 Modül", change: "Halka Açık Veri" },
-    { label: "Aylık Ziyaret & Okur", value: "155.000+", change: "Savunma Meraklıları" }
+    { label: "Teknik Rapor & Doküman", value: "58 Modül", change: "Halka Açık Veri" },
+    { label: "Aylık Ziyaret & Okur", value: "170.000+", change: "Savunma Meraklıları" }
   ],
   socials: {
     github: "https://github.com/hmtzkl-sketch",
@@ -22,7 +22,7 @@ export const authorProfile = {
 // Canlı Dinamik İstihbarat ve Çatışma Verisi (Her gün otomatik güncellenir)
 import liveConflictData from './liveConflictData.json';
 
-export const lastRadarUpdate = liveConflictData.lastUpdated || "15 Ekim 2026, 09:15 TSİ";
+export const lastRadarUpdate = liveConflictData.lastUpdated || "19 Ekim 2026, 21:00 TSİ";
 export const breakingIntel = liveConflictData.breakingIntel;
 
 export const legalDisclaimer = {
@@ -49,6 +49,64 @@ export const globalConflicts = liveConflictData.conflicts;
 
 
 export const articles = [
+  {
+    id: "hurmuz-kizildeniz-sida-akilli-deniz-mayini",
+    title: "Hürmüz Boğazı ve Kızıldeniz'de SİDA Devrimi: Akıllı Deniz Mayınları ve Asimetrik Deniz Harbi",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "11 dk okuma",
+    date: "19 Ekim 2026",
+    excerpt: "MARLİN, ULAQ ve kamikaze insansız deniz araçlarının (USV) dar boğazlardaki krizlerde oynadığı rol, akustik/manyetik akıllı dip mayınları ve asimetrik kıyı savunma doktrini.",
+    tags: ["SİDA", "MARLİN", "ULAQ", "Hürmüz Boğazı", "Kızıldeniz", "Akıllı Mayın", "Asimetrik Deniz Harbi"],
+    featured: true,
+    likes: 834,
+    content: `
+### GİRİŞ: DAR SU YOLLARINDA ASİMETRİK DENİZ HARBİ VE SİDA ÇAĞI
+
+Ekim 2026 küresel jeopolitiğinde, Hürmüz Boğazı ve Kızıldeniz (Babülmendep) hattı, klasik muhripler ve fırkateynlerin yerini hafif, ucuz ve otonom İnsansız Deniz Araçlarına (SİDA / USV) bıraktığı bir taktik dönüşüm yaşamaktadır.
+
+### AKILLI DENİZ MAYINLARI VE OTONOM DİP SİSTEMLERİ
+
+1. **Çok Modlu Akustik ve Manyetik Algılama:**
+   * Klasik demirli temas mayınları yerine; deniz tabanında yatan, geçen geminin tonajını ve akustik motor pervanesi imzasını analiz ederek sadece askeri hedefleri vuran akıllı dip mayınları.
+   * Gemi yaklaşırken tabandan fırlayan roket güdümlü torpido-mayın hibrit sistemleri.
+
+2. **Türk Savunma Sanayiinin SİDA Doktrini (MARLİN & ULAQ):**
+   * **MARLİN SİDA:** NATO tatbikatlarında elektronik harp podu taşıyarak dünyada ilk kez elektronik taarruz icra eden insansız su üstü platformudur. Düşman sahil radarlarını körleştirirken KUZGUN seyir füzeleri fırlatabilmektedir.
+   * **ULAQ SİDA Ailesi:** CİRİT ve L-UMTAS lazer güdümlü füzeleriyle asimetrik hücumbot akınlarını yüzlerce mil açıktan karşılayan milli deniz muhafızı.
+
+3. **Sürü Taktikleri ve Denizaltı Savunma Harbi (DSH):**
+   * Hafif torpido taşıyan veya daldırma sonarı indiren otonom SİDA sürüleri, milyonlarca dolarlık denizaltıların boğaz geçişlerini tamamen abluka altına alabilmektedir.
+    `
+  },
+  {
+    id: "lazer-ve-mikrodalga-hpm-anti-drone-savunma",
+    title: "Taktik Lazer ve Mikrodalga (HPM) Silahları: Dron Sürülerine Karşı 'Sıfır Maliyetli' Işık Hızı Kalkanı",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "10 dk okuma",
+    date: "19 Ekim 2026",
+    excerpt: "ASELSAN GÖKBERK ve ROKETSAN ALKA sistemlerinin sürü kamikaze İHA'lara karşı kilowatt başına atış maliyetini kuruş seviyesine indiren yönlendirilmiş enerji devrimi.",
+    tags: ["Lazer Silahı", "GÖKBERK", "ALKA", "HPM Mikrodalga", "Anti-Drone", "Yönlendirilmiş Enerji"],
+    featured: true,
+    likes: 792,
+    content: `
+### HAVA SAVUNMASINDA EKONOMİK AÇMAZ: FÜZE VS. UCUZ DRON
+
+Geleneksel hava savunma füzelerinin (Patriot, SM-2, HİSAR vb.) her bir atış maliyeti 100.000 ila 2.000.000 dolar arasındayken; hedeflenen intihar dronlarının maliyeti 500 ila 5.000 dolardır. Bu asimetrik maliyet dengesizliğini kalıcı olarak çözen teknoloji: **Yönlendirilmiş Enerji Silahları (DEW)**.
+
+### LAZER VE YÜKSEK GÜÇLÜ MİKRODALGA (HPM) MEKANİZMASI
+
+1. **ASELSAN GÖKBERK Mobil Lazer Silah Sistemi:**
+   * Çok namlulu elektro-optik hedefleme ve 5 kW - 10 kW fiber lazer kaynağı ile kamikaze İHA'ların kanatlarını, kompozit gövdelerini ve optik kameralarını 1 saniyenin altında eriterek imha eder.
+   * Şarjör sınırlaması yoktur; aracın jeneratörü veya bataryası çalıştığı sürece sınırsız mermi kapasitesine sahiptir. Her atışın maliyeti sadece birkaç sentlik elektrik tüketimidir.
+
+2. **ROKETSAN ALKA Yönlendirilmiş Enerji Ağı:**
+   * Elektromanyetik karıştırma (Jammer) ve yüksek güçlü lazeri tek kulede birleştirir.
+   * Yaklaşan dron sürüsünün haberleşmesini keser; yaklaşmaya devam edenleri lazer ışınıyla imha eder.
+
+3. **Yüksek Güçlü Mikrodalga (HPM) ile Toplu Sürü İmhası:**
+   * Lazer tek bir hedefe odaklanırken, HPM (High Power Microwave) konik bir mikrodalga şoku yayarak havadaki 20-30 dronun tüm mikroçiplerini aynı anda yakar ve sürüyü gökyüzünden yere indirir.
+    `
+  },
   {
     id: "thaad-arrow-3-exo-atmospheric-defense",
     title: "THAAD ve Arrow-3 vs. Hipersonik Balistik Tehditler: Atmosfer Dışı Uzay ve Füze Savunma Doktrini",
