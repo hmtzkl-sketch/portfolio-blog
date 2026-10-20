@@ -120,6 +120,7 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
                 CANLI TAKİP:
               </span>
               {[
+                { label: "🎯 Kursk & KN-23 Balistik", action: () => onSelectArticleById && onSelectArticleById('kn23-kursk-donbas-tactical-ballistic') },
                 { label: "📍 Donbas & Pokrovsk", action: onConflictsClick },
                 { label: "💥 İran-İsrail Balistik", action: onConflictsClick },
                 { label: "🚢 Hürmüz & Kızıldeniz SİDA", action: () => onSelectArticleById && onSelectArticleById('hurmuz-kizildeniz-sida-akilli-deniz-mayini') },

@@ -1,10 +1,15 @@
+// Canlı Dinamik İstihbarat ve Çatışma Verisi (Her gün otomatik güncellenir)
+import liveConflictData from './liveConflictData.json';
+
+const activeDateLabel = liveConflictData.lastUpdated ? liveConflictData.lastUpdated.split(',')[0].trim() : "20 Ekim 2026";
+
 export const authorProfile = {
   name: "Ahmet Özkul",
   handle: "@ahmetozkul",
   title: "Açık Kaynak (OSINT) Savunma Sanayii & Askeri Teknolojiler Araştırmacısı",
   bio: "Halka açık savunma sanayii bültenleri, uluslararası askeri fuarlar (IDEF, SAHA EXPO), üretici teknik katalogları ve açık kaynak istihbaratı (OSINT) doğrultusunda; piyade silahları, balistik prensipler ve savunma teknolojileri üzerine bağımsız teknik analizler ve derlemeler sunuyorum.",
   location: "Türkiye",
-  status: "Canlı Askeri İstihbarat & Taktik Radar [19 Ekim 2026 Aktif]",
+  status: `Canlı Askeri İstihbarat & Taktik Radar [${activeDateLabel} Aktif]`,
   stats: [
     { label: "Katalog & Sistem İncelemesi", value: "98+", change: "Açık Kaynak (OSINT)" },
     { label: "Sıcak Çatışma Radarı", value: "16 Bölge", change: "Canlı Taktik Takip" },
@@ -19,10 +24,7 @@ export const authorProfile = {
   }
 };
 
-// Canlı Dinamik İstihbarat ve Çatışma Verisi (Her gün otomatik güncellenir)
-import liveConflictData from './liveConflictData.json';
-
-export const lastRadarUpdate = liveConflictData.lastUpdated || "19 Ekim 2026, 21:00 TSİ";
+export const lastRadarUpdate = liveConflictData.lastUpdated || "20 Ekim 2026, 21:00 TSİ";
 export const breakingIntel = liveConflictData.breakingIntel;
 
 export const legalDisclaimer = {
@@ -49,6 +51,35 @@ export const globalConflicts = liveConflictData.conflicts;
 
 
 export const articles = [
+  {
+    id: "kn23-kursk-donbas-tactical-ballistic",
+    title: "Kursk ve Donbas Hattında KN-23 Taktik Balistik Füzeleri: Yarı-Balistik Manevra ve Topçu Entegrasyonu",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "11 dk okuma",
+    date: "20 Ekim 2026",
+    excerpt: "Kuzey Kore menşeili KN-23 (Hwasong-11Ga) katı yakıtlı füzelerinin alçak irtifa seyrüseferi, pull-up manevrası ve Kursk sınır hattındaki 152mm/122mm mühimmat ve personel sevkiyatı analizi.",
+    tags: ["KN-23", "Kursk Cephesi", "Taktik Balistik Füze", "Donbas", "Hwasong-11", "Hava Savunma"],
+    featured: true,
+    likes: 865,
+    content: `
+### GİRİŞ: DOĞU AVRUPA VE KORE YARIMADASI KESİŞİMİ
+
+Ekim 2026 askeri istihbarat raporlarında (OSINT), Rusya-Ukrayna savaşı Kursk sınır cebi ve Donbas hattında Kuzey Kore menşeili taktik balistik füzelerin (KN-23 / Hwasong-11Ga) ve milyonlarca 152mm topçu mühimmatının yoğun kullanımı muharebe sahasını stratejik olarak genişletmiştir.
+
+### KN-23 (HWASONG-11GA) FÜZESİNİN BALİSTİK DİNAMİKLERİ
+
+1. **Yarı-Balistik (Quasi-Ballistic) Alçak İrtifa Uçuş Profili:**
+   * Klasik parabolik balistik yay çizmek yerine, atmosferin üst sınırında (40-50 km irtifada) yatay uçuş gerçekleştirir.
+   * Bu sayede kara konuşlu erken ihbar radarlarının radar ufkunun (radar horizon) altında kalarak tespit süresini asgariye indirir.
+
+2. **Terminal Fazda 'Pull-Up' (Yukarı Tırmanma) Manevrası:**
+   * Hedefe dalışa geçmeden önce aerodinamik kanatçıklarıyla ani bir irtifa tırmanışı yaparak Patriot PAC-3 veya SAMP/T gibi hava savunma sistemlerinin önleme algoritmasını yanıltır ve 90 dereceye yakın dik açıyla dalış yapar.
+   * 500 kg harp başlığı ve ~600-700 km operasyonel menzil sunmaktadır.
+
+3. **152mm ve 122mm Sovyet Standardı Topçu Uyumluluğu:**
+   * Kuzey Kore cephaneliklerinden gelen mühimmatlar, Rus 2S19 Msta-S ve D-20 obüsleriyle birebir kovan uyumluluğuna sahip olup, günde on binlerce atımlık ateş üstünlüğü sağlamaktadır.
+    `
+  },
   {
     id: "hurmuz-kizildeniz-sida-akilli-deniz-mayini",
     title: "Hürmüz Boğazı ve Kızıldeniz'de SİDA Devrimi: Akıllı Deniz Mayınları ve Asimetrik Deniz Harbi",

@@ -3,6 +3,13 @@
   "activeConflictsCount": 9,
   "breakingIntel": [
     {
+      "id": "kn23-kursk-donbas-tactical-ballistic",
+      "badge": "KURSK & BALİSTİK",
+      "title": "Kursk ve Donbas: KN-23 taktik balistik füzeleri ve 152mm topçu mühimmatı sevkiyatı.",
+      "target": "article",
+      "type": "defense"
+    },
+    {
       "id": "hurmuz-kizildeniz-sida-akilli-deniz-mayini",
       "badge": "DENİZ HARBİ & SİDA",
       "title": "Hürmüz ve Kızıldeniz: MARLİN, ULAQ ve akıllı dip mayınları ile asimetrik boğaz ablukası.",
