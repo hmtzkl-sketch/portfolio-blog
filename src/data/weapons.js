@@ -235,6 +235,34 @@ export const weaponsList = [
   },
   // --- KESKİN NİŞANCI TÜFEKLERİ ---
   {
+    id: "mke-kn-12",
+    name: "MKE KN-12 (Çok Kalibreli Değişken Keskin Nişancı)",
+    category: "Keskin Nişancı Tüfekleri",
+    subCategory: "Değişken Kalibre Cerrahi Tüfek",
+    origin: "Türkiye",
+    originFlag: "🇹🇷",
+    manufacturer: "MKE A.Ş.",
+    caliber: "7.62x51mm NATO & .300 Win Mag",
+    usedBy: "Polis Özel Harekat (PÖH), TSK, Jandarma (8. BORAN Şampiyonu)",
+    specs: {
+      range: "1500 m etkili menzil (.300 WM)",
+      accuracy: "0.5 MOA altı cerrahi hassasiyet",
+      weight: "7.2 kg",
+      barrel: "Serbest Salınımlı Değiştirilebilir Namlu (660 mm)"
+    },
+    metrics: {
+      range: 1500,
+      fireRate: 30,
+      weight: 7.2,
+      penetration: 99,
+      recoilControl: 88,
+      modularity: 98
+    },
+    image: "/weapons/bora-12.jpg",
+    description: "Türkiye'nin ilk değişken kalibreli cerrahi keskin nişancı tüfeğidir. Namlu ve kilit mekanizması operatör tarafından arazide hızla değiştirilerek hem 7.62x51mm NATO hem de .300 Winchester Magnum mühimmatı atabilmektedir. 8. BORAN Uluslararası Keskin Nişancı Yarışması'nda Polis Özel Harekat (PÖH) timleri bu tüfekle dünya 1.si olarak şampiyonluk kupasını kazanmıştır.",
+    highlight: "8. BORAN Uluslararası Keskin Nişancı Yarışması Şampiyonu Tüfek (PÖH)."
+  },
+  {
     id: "knt-76",
     name: "MKE KNT-76 (Manga Keskin Nişancı)",
     category: "Keskin Nişancı Tüfekleri",

@@ -52,6 +52,80 @@ export const globalConflicts = liveConflictData.conflicts;
 
 export const articles = [
   {
+    id: "boran-uluslararasi-keskin-nisanci-yarismasi-poh-kn12",
+    title: "8. BORAN Uluslararası Keskin Nişancı Yarışması: PÖH Şampiyonluğu, Kürsü Zaferi ve MKE KN-12 Analizi",
+    category: "Askeri Silahlar & Balistik",
+    readTime: "12 dk okuma",
+    date: "20 Ekim 2026",
+    excerpt: "İzmir Foça'da 20 ülkeden 96 seçkin keskin nişancının katıldığı 8. BORAN Yarışması'nda Polis Özel Harekât (PÖH) birinci oldu. Milli çoklu kalibre keskin nişancı tüfeği MKE KN-12, yarışma sıralaması ve zorlu etapların teknik analizi.",
+    tags: ["8. BORAN", "Polis Özel Harekat", "PÖH", "MKE KN-12", "Keskin Nişancı", "Özel Kuvvetler", "KNT-76", "BORA-12"],
+    featured: true,
+    likes: 1240,
+    content: `
+### GİRİŞ: FOÇA'DA DÜNYA SEVİYESİNDE KESKİN NİŞANCI REKABETİ
+
+Jandarma Genel Komutanlığı ev sahipliğinde, İzmir Foça Jandarma Komando Okulu ve Eğitim Merkezi Komutanlığı'nda düzenlenen **8. BORAN Uluslararası Keskin Nişancı Yarışması**, dünyanın en prestijli taktik ve cerrahi atış etkinliklerinden biri olarak tamamlandı. 
+
+Yarışmaya **20 farklı ülkeden toplam 96 seçkin keskin nişancı** (ABD, İngiltere, Katar, Azerbaycan, Suudi Arabistan, Kazakistan, Özbekistan, Pakistan, Bahreyn vb.) katılarak fiziksel dayanıklılık, kamuflaj, gece görüş atışları, aşırı rüzgar ve açı hesaplamaları gibi son derece zorlu parkurlarda yarıştı.
+
+---
+
+### YARIŞMA SIRALAMASI VE KÜRSÜ TABLOSU
+
+8. BORAN yarışmasında Türk güvenlik güçleri uluslararası tüm rakiplerini geride bırakarak **kürsünün tamamını (1., 2. ve 3. basamakları)** domine etti:
+
+1. 🥇 **BİRİNCİ (DÜNYA ŞAMPİYONU):** **Emniyet Genel Müdürlüğü Polis Özel Harekât (PÖH) Başkanlığı**
+   * PÖH timleri, gece ve gündüz etaplarında hedefleri en kısa sürede ve ilk atışta (first-round hit) vurarak genel klasmanda zirveye yerleşti.
+   * Şampiyonlukta kullanılan ana silah: **Milli Çok Kalibreli MKE KN-12 Keskin Nişancı Tüfeği**.
+
+2. 🥈 **İKİNCİ:** **Genelkurmay Özel Kuvvetler Komutanlığı (ÖKK - Bordo Bereliler)**
+   * Yüksek irtifa, sızma ve aşırı stres parkurlarındaki cerrahi isabetleriyle dünya ikinciliğini elde etti.
+
+3. 🥉 **ÜÇÜNCÜ:** **Kara Kuvvetleri Komutanlığı**
+   * Manga keskin nişancı tüfeği **MKE KNT-76** ve yerli optiklerle desteklenen Kara Kuvvetleri timi, yabancı özel birlikleri geride bırakarak 3. oldu.
+
+4. **Yabancı Katılımcılar Sıralaması:**
+   * Katar Özel Kuvvetleri, Azerbaycan Özel Kuvvetleri ve Suudi Arabistan timleri ilk 10 içinde yer alırken; ABD ve İngiltere temsilcileri Türk timlerinin hız ve isabet derecelerine yetişemedi.
+
+---
+
+### ŞAMPİYON TÜFEK: MKE KN-12 ÇOKLU KALİBRE CERRAHİ TÜFEK
+
+PÖH'e şampiyonluk getiren ve yarışmanın odak noktası haline gelen **MKE KN-12**, Türk savunma sanayiinin ilk değişken kalibreli modüler keskin nişancı tüfeğidir:
+
+1. **Değiştirilebilir Namlu ve Mekanizma:**
+   * Operatör arazide dakikalar içinde kilit ve namluyu değiştirerek **7.62x51mm NATO (.308 Win)** kalibresinden **.300 Winchester Magnum (8.6x70mm)** kalibresine geçiş yapabilmektedir.
+   * Bu özellik; meskun mahalde veya orta menzilde 7.62mm ekonomi ve kontrolü sağlarken, 1000m+ açık arazi hedeflerinde .300 Win Mag'in süpersonik düz hatlı balistik avantajını devreye sokar.
+
+2. **Cerrahi Hassasiyet (Sub-MOA):**
+   * KN-12, **0.5 MOA'nın altında** grupman performansı sunmaktadır (100 metrede yaklaşık 1.4 cm çapında bir daireye mermileri toplayabilme kabiliyeti).
+   * Serbest salınımlı (free-floating) soğuk dövme namlu yapısı, el kundağına veya bipod'a binen yüklerin namlu titreşimini (harmonics) bozmasını engeller.
+
+3. **Etkili Cerrahi Menzil:**
+   * .300 Win Mag konfigürasyonunda **1500 metreye kadar** nokta hedef tahribatı sağlayabilmektedir.
+   * Yarışmadaki 800m - 1200m hedeflerinde PÖH nişancılarının rüzgar sapması (drift) ve yerçekimi düşüşünü (drop) minimum düzeltmeyle tolere etmesine imkan tanımıştır.
+
+---
+
+### YARIŞMANIN ZORLU ETAPLARI VE TAKTİK DİSİPLİNLER
+
+BORAN yarışması klasik poligon atışlarından tamamen farklı, gerçek harp ortamını simüle eden senaryolardan oluşur:
+
+* **Stres ve Fiziksel Kondisyon Etabı:** Nişancılar ağır taktik yük ile engelleri aştıktan ve kalp atış hızı 160-180 bpm seviyesine ulaştıktan hemen sonra saniyeler içinde 400-600 metredeki gizlenmiş hedeflere angaje oldu.
+* **Gece Termal ve Gece Görüş (NVG) Atışları:** Sıfır ışıkta, termal kamuflajlı ve reaktif hedeflere yönelik cerrahi gece atışları icra edildi.
+* **Meskun Mahal Rehineli Hedef Ayrımı:** Dost unsurlar ile düşman hedeflerinin milisaniyeler içinde teşhis edilip vurulması gereken açısal poligon parkuru.
+* **Aşırı Uzun Menzil (1200m+) ve Açılı Atışlar:** Vadi ve yükselti farkı olan Ege arazisinde, termal hava akımları (mirage) ve çapraz rüzgarlar altında 1 kilometreyi aşan hedeflere ilk mermide isabet başarısı ölçüldü.
+
+---
+
+### SONUÇ: TÜRK ASKERİ VE YERLİ SİLAH DOKTRİNİNİN ÜSTÜNLÜĞÜ
+
+8. BORAN Uluslararası Keskin Nişancı Yarışması iki büyük gerçeği tescillemiştir:
+1. **İnsan Faktörü:** PÖH, ÖKK ve Kara Kuvvetleri personelinin gerek dağlık arazide gerek meskun mahalde edindiği operasyonel tecrübe ve disiplin, dünya özel kuvvetleri arasında zirvededir.
+2. **Milli Silah Sanayii:** Eskiden yabancı silahlara (Accuracy International, Barrett, Sako vb.) bağımlı olan güvenlik güçlerimiz; artık **MKE KN-12**, **KNT-76** ve **BORA-12** gibi tamamen yerli ve milli silahlarla dünya şampiyonlukları kazanmakta, sahada mutlak üstünlük kurmaktadır.
+`
+  },
+  {
     id: "kn23-kursk-donbas-tactical-ballistic",
     title: "Kursk ve Donbas Hattında KN-23 Taktik Balistik Füzeleri: Yarı-Balistik Manevra ve Topçu Entegrasyonu",
     category: "Saldırı & Savunma Teknolojileri",
