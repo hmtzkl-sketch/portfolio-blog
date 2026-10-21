@@ -52,6 +52,65 @@ export const globalConflicts = liveConflictData.conflicts;
 
 export const articles = [
   {
+    id: "libya-deniz-yetki-alani-mavi-vatan-onay",
+    title: "Libya Meclisi'nden Tarihi Mavi Vatan Onayı: Türkiye-Libya Deniz Yetki Alanları Anlaşması Oy Birliğiyle Kabul Edildi",
+    category: "Küresel Çatışmalar & Sıcak Olaylar",
+    readTime: "12 dk okuma",
+    date: "21 Ekim 2026",
+    excerpt: "Libya Temsilciler Meclisi (Bingazi), Türkiye ile imzalanan Deniz Yetki Alanlarının Sınırlandırılması Mutabakatı'nı oy birliğiyle onaylayarak 2020 ret kararını iptal etti. Mavi Vatan koridoru, çöken Seville haritası, Atina-AB paniği ve Türk donanmasının yeni safhası.",
+    tags: ["Mavi Vatan", "Libya", "Deniz Yetki Alanları", "Doğu Akdeniz", "Temsilciler Meclisi", "Yunanistan", "Oruç Reis", "Sismik Araştırma"],
+    featured: true,
+    likes: 1480,
+    content: `
+### GİRİŞ: DOĞU AKDENİZ'DE TARİHİ JEOPOLİTİK DÖNÜM NOKTASI
+
+Doğu Akdeniz'deki hidrokarbon ve deniz yetki alanları mücadelesinde Türkiye'nin "Mavi Vatan" doktrinini uluslararası hukuki zeminde perçinleyen tarihi bir gelişme yaşandı. 
+
+Libya'nın doğusunda faaliyet gösteren ve yıllardır Türkiye karşıtı bir çizgide konumlanan **Libya Temsilciler Meclisi (Bingazi / Akile Salih Meclisi)**, Türkiye Cumhuriyeti ile Libya arasında 27 Kasım 2019'da imzalanan *"Akdeniz'de Deniz Yetki Alanlarının Sınırlandırılmasına İlişkin Mutabakat Muhtırası"*nı **oy birliğiyle resmen onayladı.**
+
+Ayrıca Meclis, mutabakatın reddine ilişkin 2020 yılında aldığı eski parlamenter kararını da yine oy birliğiyle **feshederek yürürlükten kaldırdı.**
+
+---
+
+### BU KARAR NEDEN "TARİHİ" BİR KIRILMA NOKTASIDIR?
+
+1. **Libya'nın İki Kanadı da Anlaşmayı Onayladı (Tam Ulusal Meşruiyet):**
+   * 2019 yılında mutabakat Trablus'taki Ulusal Mutabakat Hükümeti (UMH) ile imzalandığında, Yunanistan, Mısır, İsrail ve Avrupa Birliği; "Anlaşmanın Libya Temsilciler Meclisi tarafından onaylanmadığı, bu nedenle hukuken geçersiz olduğu" tezine sığınıyordu.
+   * Bingazi'deki Temsilciler Meclisi'nin oy birliğiyle aldığı bu karar; Libya'nın hem Batı (Trablus) hem Doğu (Bingazi/Tobruk) siyasi iradelerinin anlaşmayı resmen tanıdığını tescilledi. Yunanistan'ın yıllardır öne sürdüğü "geçersizlik" argümanı kökünden çöktü.
+
+2. **Sözde Seville Haritası ve Yunan İddialarının Çöküşü:**
+   * Yunanistan ve Güney Kıbrıs Rum Yönetimi (GKRY); Meis, Rodos, Kerpe, Kaşot ve Girit adalarının ana karalar gibi devasa kıta sahanlığı ürettiğini iddia ederek Türkiye'yi Antalya Körfezi'ne hapsetmeye çalışıyordu (Seville Haritası).
+   * Türkiye-Libya deniz sınırı, Anadolu ana karası ile Libya ana karası arasındaki karşılıklı kıyıları esas alarak Doğu Akdeniz'i köşegenle ikiye bölen bir "Deniz Koridoru" oluşturmuştur. Bu koridor, Yunanistan'ın Mısır ve İsrail ile Türkiye'yi dışlayan korsan deniz hattı kurmasını fiziksel olarak engellemektedir.
+
+3. **Enerji ve Hidrokarbon Arama Sahalarının Hukuki Güvencesi:**
+   * Mutabakatın tescillenmesiyle Türkiye Petrolleri Anonim Ortaklığı'nın (TPAO) Girit'in güneyi ve doğusunda ilan ettiği ruhsat sahalarında Türk sismik ve derin deniz sondaj gemilerinin (Oruç Reis, Abdülhamid Han, Fatih, Yavuz, Kanuni) faaliyetleri tartışmasız bir uluslararası meşruiyet zırhına bürünmüştür.
+
+---
+
+### TÜRK DENİZ KUVVETLERİ VE ASKERİ MEKANİZMA
+
+Deniz yetki anlaşmasının hukuki başarısı, sahadaki güçlü donanma caydırıcılığıyla doğrudan bağlantılıdır:
+
+* **MİLGEM ADA Sınıfı ve Fırkateyn Kalkanı:** Türk Deniz Kuvvetleri, Doğu Akdeniz'deki araştırma gemilerini TCG Heybeliada, TCG Büyükada, TCG Kınalıada ve gabya sınıfı fırkateynlerle kesintisiz koruma çemberine almaktadır.
+* **ATMACA ve Hava Savunma Üstünlüğü:** 220+ km menzilli milli gemisavar füzesi ATMACA ve denizaltı savunma harbi sistemleri bölgede yabancı tacizlerini caydırmaktadır.
+* **MARLİN ve ULAQ SİDA Entegrasyonu:** Dünyanın ilk elektronik harp kabiliyetli silahlı insansız deniz aracı MARLİN ve füzeli ULAQ botları, Doğu Akdeniz devriyelerinde kritik görev almaktadır.
+
+---
+
+### ULUSLARARASI TEPKİLER: ATİNA, BRÜKSEL VE İSRAİL CEPHESİ
+
+* **Yunanistan:** Atina'da kararın ardından Dışişleri Bakanlığı olağanüstü toplantılar düzenlerken, Yunan medyası gelişmeyi *"Atina diplomasisine indirilmiş ağır bir balyoz"* olarak nitelendirdi.
+* **Avrupa Birliği (AB):** Brüksel yönetimi mutabakatın üçüncü ülkelerin egemenlik haklarını ihlal ettiğini öne sürse de; Libya Meclisi'nin bağımsız egemen iradesine karşı hukuki bir yaptırım gücü bulunmuyor.
+* **Ankara'nın Net Mesajı:** Dışişleri Bakanı Hakan Fidan ve Cumhurbaşkanlığı, Türkiye'nin Mavi Vatan'daki haklarından asla taviz verilmeyeceğini, kararın Doğu Akdeniz'de barış, istikrar ve hakkaniyete hizmet ettiğini vurguladı.
+
+---
+
+### STRATEJİK DEĞERLENDİRME
+
+Libya Temsilciler Meclisi'nin oy birliği kararı, Türk dış politikasının ve savunma sanayiinin Doğu Akdeniz'de son 20 yılda attığı en büyük stratejik zaferlerden biridir. Mavi Vatan sadece bir askeri doktrin olmaktan çıkmış; Doğu Akdeniz'in iki yakasındaki halkların parlamentolarıyla tescillediği sarsılmaz bir uluslararası hukuki gerçeklik haline gelmiştir.
+`
+  },
+  {
     id: "boran-uluslararasi-keskin-nisanci-yarismasi-poh-kn12",
     title: "8. BORAN Uluslararası Keskin Nişancı Yarışması: PÖH Şampiyonluğu, Kürsü Zaferi ve MKE KN-12 Analizi",
     category: "Askeri Silahlar & Balistik",

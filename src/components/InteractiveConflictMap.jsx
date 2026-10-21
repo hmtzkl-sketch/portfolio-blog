@@ -49,6 +49,7 @@ export const mapHotspots = globalConflicts.map((c) => {
 
 const REGION_PRESETS = [
   { id: 'GLOBAL', label: 'Tüm Dünya', center: [26, 45], zoom: 3 },
+  { id: 'MED', label: 'Doğu Akdeniz & Mavi Vatan', center: [34.5, 27], zoom: 6 },
   { id: 'ME', label: 'Orta Doğu & Levant', center: [31.5, 38], zoom: 5 },
   { id: 'EUR', label: 'Doğu Avrupa / Donbas', center: [48.5, 37.5], zoom: 6 },
   { id: 'RED_SEA', label: 'Kızıldeniz & Babülmendep', center: [14.5, 43], zoom: 6 },

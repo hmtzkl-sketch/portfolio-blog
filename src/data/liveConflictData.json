@@ -1,7 +1,14 @@
 {
-  "lastUpdated": "21 Ekim 2026, 06:20 TSİ",
-  "activeConflictsCount": 9,
+  "lastUpdated": "21 Ekim 2026, 21:15 TSİ",
+  "activeConflictsCount": 10,
   "breakingIntel": [
+    {
+      "id": "libya-deniz-yetki-alani-mavi-vatan-onay",
+      "badge": "MAVİ VATAN & LİBYA",
+      "title": "Libya Meclisi'nden Tarihi Onay: Türkiye-Libya Deniz Yetki Alanı Muhtırası oy birliğiyle kabul edildi.",
+      "target": "article",
+      "type": "defense"
+    },
     {
       "id": "boran-uluslararasi-keskin-nisanci-yarismasi-poh-kn12",
       "badge": "BORAN ŞAMPİYONU",
@@ -121,6 +128,30 @@
         "Elektronik GNSS Karartma & Uydu Karıştırma"
       ],
       "osintNote": "[Canlı OSINT Doğrulama - 21 Ekim 2026, 06:20 TSİ]: Açık kaynak askeri bültenlerde son teyit edilen başlık: \"Houthi missile strike on Yemen camp kills 73 security recruits, local authorities say\"."
+    },
+    {
+      "id": "dogu-akdeniz-libya-mavi-vatan-gerilimi",
+      "title": "Doğu Akdeniz & Mavi Vatan (Türkiye - Libya Deniz Yetki Koridoru)",
+      "region": "Doğu Akdeniz / Kuzey Afrika",
+      "location": "Girit Güneyi, Rodos - Meis Açıkları, Libya Kıta Sahanlığı (Tobruk, Bingazi, Trablus)",
+      "coordinates": "34.00°N, 26.50°E",
+      "intensity": 86,
+      "startDate": "27 Kasım 2019 (Ekim 2026 Meclis Oy Birliği ile Perçinlendi)",
+      "duration": "Hukuki, Jeopolitik ve Donanma Güç Mücadelesi",
+      "threatLevel": "YÜKSEK STRATEJİK & DONANMA ALARMI",
+      "levelColor": "amber",
+      "frontlineStatus": "Libya Meclisi Oy Birliği Onayı vs. Yunanistan & AB Diplomatik İtirazları",
+      "parties": "Türkiye Cumhuriyeti & Libya Devleti vs. Yunanistan, GKRY ve AB Bloğu",
+      "summary": "Libya Temsilciler Meclisi'nin Türkiye ile 2019 Deniz Yetki Alanı Anlaşması'nı oy birliğiyle onaylayıp 2020 vetosunu iptal etmesiyle Doğu Akdeniz'de maksimalist Seville Haritası çöktü; Türk sismik/sondaj filosu ve donanma koruması tescillendi.",
+      "currentSituation": "Libya'nın doğusundaki Temsilciler Meclisi'nin (Bingazi) Türkiye ile imzalanan Deniz Yetki Alanlarının Sınırlandırılması Mutabakatı'nı oy birliğiyle onaylaması, Doğu Akdeniz enerji ve güvenlik haritasında tarihi bir dönüm noktası yaratmıştır. Yunanistan ve GKRY'nin Türkiye'yi Antalya Körfezi'ne hapsetmeyi amaçlayan maksimalist Seville Haritası hukuki olarak tamamen hükümsüz kalmıştır. Türk Deniz Kuvvetleri fırkateynleri ve denizaltıları refakatinde Oruç Reis ve Abdülhamid Han gibi sismik ve sondaj gemilerinin ruhsat sahalarındaki faaliyetleri hukuki meşruiyet kazanırken, Atina ve Brüksel'den kınama açıklamaları gelmektedir.",
+      "keyTech": [
+        "MİLGEM ADA Sınıfı Fırkateynler & TCG Anadolu",
+        "Oruç Reis & Abdülhamid Han Derin Deniz Sondaj Filosu",
+        "ATMACA Gemisavar Füzeleri (220+ km)",
+        "Denizaltı Savunma Harbi (DSH) & P-72 Deniz Karakol Uçakları",
+        "MARLİN & ULAQ Silahlı İnsansız Deniz Araçları (SİDA)"
+      ],
+      "osintNote": "[Canlı OSINT Doğrulama - 21 Ekim 2026, 21:15 TSİ]: Libya Temsilciler Meclisi'nin 2020 tarihli ret kararını oy birliğiyle feshedip 2019 Deniz Yetki Anlaşması'nı onayladığı resmi oturum tutanakları ile teyit edilmiştir."
     },
     {
       "id": "israil-gazze-lubnan-catismasi",
