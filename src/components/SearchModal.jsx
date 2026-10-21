@@ -23,24 +23,37 @@ export default function SearchModal({ isOpen, onClose, onSelectArticle, onSelect
 
   if (!isOpen) return null;
 
+  const q = query.toLowerCase().trim();
+
   const filteredArticles = articles.filter(a => 
-    a.title.toLowerCase().includes(query.toLowerCase()) || 
-    a.tags.some(t => t.toLowerCase().includes(query.toLowerCase())) ||
-    a.category.toLowerCase().includes(query.toLowerCase())
+    a.title.toLowerCase().includes(q) || 
+    a.tags.some(t => t.toLowerCase().includes(q)) ||
+    a.category.toLowerCase().includes(q) ||
+    (a.excerpt && a.excerpt.toLowerCase().includes(q)) ||
+    (a.content && a.content.toLowerCase().includes(q))
   );
 
   const filteredConflicts = globalConflicts.filter(c =>
-    c.title.toLowerCase().includes(query.toLowerCase()) ||
-    c.region.toLowerCase().includes(query.toLowerCase()) ||
-    c.location.toLowerCase().includes(query.toLowerCase()) ||
-    c.keyTech.some(k => k.toLowerCase().includes(query.toLowerCase()))
+    c.title.toLowerCase().includes(q) ||
+    c.region.toLowerCase().includes(q) ||
+    c.location.toLowerCase().includes(q) ||
+    (c.summary && c.summary.toLowerCase().includes(q)) ||
+    (c.currentSituation && c.currentSituation.toLowerCase().includes(q)) ||
+    (c.parties && c.parties.toLowerCase().includes(q)) ||
+    (c.frontlineStatus && c.frontlineStatus.toLowerCase().includes(q)) ||
+    c.keyTech.some(k => k.toLowerCase().includes(q))
   );
 
   const filteredWeapons = weaponsList.filter(w =>
-    w.name.toLowerCase().includes(query.toLowerCase()) ||
-    w.caliber.toLowerCase().includes(query.toLowerCase()) ||
-    w.origin.toLowerCase().includes(query.toLowerCase()) ||
-    w.manufacturer.toLowerCase().includes(query.toLowerCase())
+    w.name.toLowerCase().includes(q) ||
+    w.category.toLowerCase().includes(q) ||
+    (w.subCategory && w.subCategory.toLowerCase().includes(q)) ||
+    w.caliber.toLowerCase().includes(q) ||
+    w.origin.toLowerCase().includes(q) ||
+    w.manufacturer.toLowerCase().includes(q) ||
+    (w.usedBy && w.usedBy.toLowerCase().includes(q)) ||
+    (w.description && w.description.toLowerCase().includes(q)) ||
+    (w.highlight && w.highlight.toLowerCase().includes(q))
   );
 
   const totalResults = filteredArticles.length + filteredConflicts.length + filteredWeapons.length;
