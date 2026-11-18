@@ -52,6 +52,59 @@ export const globalConflicts = liveConflictData.conflicts;
 
 export const articles = [
   {
+    id: "nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi",
+    title: "NATO EDGE 26 İzmir Zirvesi ve Bayraktar TB3'ün TCG Anadolu'da Sonoboy (DSH) Devrimi",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "12 dk okuma",
+    date: "18 Kasım 2026",
+    excerpt: "NATO'nun dev teknoloji zirvesi NATO EDGE 26 ilk kez İzmir'de 25 ülke ve 30 Türk firmasıyla toplandı; 2026 sözleşmeleri 16 milyar doları aştı. TCG Anadolu'da 355 iniş-kalkışı geride bırakan Bayraktar TB3 ise milli SAS POD Sonoboy atım sistemiyle denizaltı avcılığına başladı.",
+    tags: ["NATO EDGE 26", "Bayraktar TB3", "TCG Anadolu", "Sonoboy", "DSH Denizaltı Savunma", "SSB Haluk Görgün", "Mavi Vatan", "Savunma İhracatı"],
+    featured: true,
+    likes: 1620,
+    content: `
+### GİRİŞ: KASIM 2026 TÜRK SAVUNMA SANAYİİNDE İKİ TARİHİ EŞİK
+
+Kasım 2026, Türk savunma sanayiinin hem müttefik ittifak mimarisindeki diplomatik ağırlığı hem de sahadaki deniz havacılığı doktrini açısından iki büyük kırılmaya sahne oldu:
+
+1. NATO’nun en büyük teknoloji ve sanayi buluşması olan **NATO EDGE 26**, İttifak tarihinde ilk kez Türkiye’nin ev sahipliğinde **İzmir Fuar Merkezi'nde (17-19 Kasım 2026)** toplandı.
+2. Türkiye'nin sancak gemisi **TCG Anadolu** üzerinde görev yapan **Bayraktar TB3**, 355 iniş-kalkışlık dünya rekorunu geride bırakırken, milli **Sonoboy Atım Sistemi (SAS POD)** entegrasyonuyla denizaltı savunma harbi (DSH) icra eden dünyadaki ilk taktik deniz İHA'sı haline geldi.
+
+---
+
+### 1. NATO EDGE 26 İZMİR: 25 ÜLKE, 300 DEV ŞİRKET VE TÜRK GÖVDE GÖSTERİSİ
+
+NATO İletişim ve Bilgi Ajansı (NCIA) ile T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) koordinasyonunda İzmir'de düzenlenen zirve, Türk savunma ekosisteminin küresel standart koyucu gücünü tescilledi:
+
+* **30 Yerli Sanayi Devi Vitrinde:** ASELSAN, ROKETSAN, TUSAŞ, HAVELSAN, STM, Meteksan Savunma ve Tualcom gibi milli kuruluşlar; kuantum şifreleme, AESA radarları, elektronik harp podları ve otonom İDA sürüleriyle zirvenin odak noktası oldu.
+* **SSB Başkanı Prof. Dr. Haluk Görgün'ün Stratejik Verileri:**
+  * Türkiye'nin toplam savunma ve havacılık ihracatının **yüzde 56'sı doğrudan NATO müttefiklerine** gerçekleştirilmektedir.
+  * 2026 yılı içerisinde imzalanan savunma sözleşmelerinin büyüklüğü **16 milyar doları aşmış**, yıl sonu hedefi ise **20 milyar dolar** olarak belirlenmiştir.
+  * Son 12 aylık ihracat 11 milyar dolar barajını aşarken; genel Türkiye ihracatında kilogram değeri 1.6 dolar seviyesindeyken, savunma sanayiinde kilogram başına katma değer **65 dolara** ulaşmıştır.
+  * Türkiye, dünya savunma ihracatı liginde 11. sıraya yerleşmiş ve kalıcı olarak ilk 10 hedefine kilitlenmiştir.
+
+---
+
+### 2. BAYRAKTAR TB3 VE TCG ANADOLU: DENİZALTI AVINDA "SONOBOY (SAS POD)" DEVRİMİ
+
+Dünya deniz harp tarihinde katlanır kanatlı bir SİHA'nın kısa pistli LHD sınıfı bir amfibi hücum gemisinden kalkıp inebilmesi ilk kez Bayraktar TB3 ile başarılmıştı. Kasım 2026 itibarıyla bu kabiliyet yeni bir stratejik boyuta evrildi:
+
+* **355 İniş-Kalkış ve 9 Canlı Güdümlü Atış:** TCG Anadolu güvertesinde icra edilen 355 otonom sortide sıfır kaza kırım yaşandı. Baltık Denizi’nin dondurucu kar fırtınasında dahi NATO müttefiklerinin gözü önünde sorunsuz kalkış-iniş icra edildi.
+* **Sonoboy Atım Sistemi (SAS POD) Nedir?**
+  * Baykar tarafından geliştirilen pod sayesinde TB3; kanat altı istasyonlarında çok sayıda akustik ses şamandırası (Sonoboy) taşımaktadır.
+  * SİHA, deniz yüzeyine otonom olarak aktif ve pasif sonoboylar bırakmakta; su altına inen hidrofonlar düşman denizaltılarının motor pervane kavitasyonunu ve akustik izini tespit etmektedir.
+  * Tespit edilen telemetri verisi anında TCG Anadolu muharebe harekat merkezine ve P-72 Deniz Karakol Uçaklarına aktarılmaktadır.
+* **Maliyet ve Taktik Üstünlük:** Milyonlarca dolarlık deniz karakol uçaklarının havada kalış süreleri sınırlıyken, 24 saatin üzerinde havada kalabilen Bayraktar TB3, Doğu Akdeniz, Ege ve Karadeniz'de düşman denizaltılarını tespit ve takip altında tutma maliyetini onda bire düşürmüştür.
+
+---
+
+### 3. ÇELİK KUBBE İLE DENİZ-HAVA ENTEGRASYONU
+
+TCG Anadolu, Bayraktar TB3 (DSH ve MAM-L/MAM-T taarruz), MARLİN ve ULAQ SİDA'ları ile birleştiğinde; Türkiye'nin "Çelik Kubbe" hava savunma mimarisi karadan Mavi Vatan açıklarına kadar entegre bir kalkan oluşturmaktadır.
+
+**Sonuç:** Kasım 2026'da İzmir'deki NATO EDGE 26 zirvesi ve TCG Anadolu'daki Sonoboy testleri; Türk savunma sanayiinin artık sadece ürün geliştiren değil, küresel harp doktrinlerini baştan yazan bir merkez haline geldiğini kanıtlamaktadır.
+`
+  },
+  {
     id: "libya-deniz-yetki-alani-mavi-vatan-onay",
     title: "Libya Meclisi'nden Tarihi Mavi Vatan Onayı: Türkiye-Libya Deniz Yetki Alanları Anlaşması Oy Birliğiyle Kabul Edildi",
     category: "Küresel Çatışmalar & Sıcak Olaylar",

@@ -120,6 +120,8 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
                 CANLI TAKİP:
               </span>
               {[
+                { label: "⚡ NATO EDGE 26 İzmir Zirvesi", action: () => onSelectArticleById && onSelectArticleById('nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi') },
+                { label: "⚓ TB3 & Sonoboy Denizaltı Avı", action: () => onSelectArticleById && onSelectArticleById('nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi') },
                 { label: "🌊 Libya'dan Tarihi Mavi Vatan Onayı", action: () => onSelectArticleById && onSelectArticleById('libya-deniz-yetki-alani-mavi-vatan-onay') },
                 { label: "🏆 8. BORAN Şampiyonu PÖH & KN-12", action: () => onSelectArticleById && onSelectArticleById('boran-uluslararasi-keskin-nisanci-yarismasi-poh-kn12') },
                 { label: "🎯 Kursk & KN-23 Balistik", action: () => onSelectArticleById && onSelectArticleById('kn23-kursk-donbas-tactical-ballistic') },

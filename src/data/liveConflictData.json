@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "18 Kasım 2026, 13:55 TSİ",
+  "lastUpdated": "18 Kasım 2026, 20:30 TSİ",
   "activeConflictsCount": 10,
   "breakingIntel": [
+    {
+      "id": "nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi",
+      "badge": "NATO EDGE 26 İZMİR",
+      "title": "İzmir'de NATO EDGE 26 Zirvesi: 25 ülke, 30 Türk devi ve 20 milyar $ rekor savunma sözleşmesi.",
+      "target": "article",
+      "type": "defense"
+    },
+    {
+      "id": "nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi",
+      "badge": "TB3 & SONOBOY",
+      "title": "Bayraktar TB3 & TCG Anadolu: 355 iniş-kalkış rekoru ve Sonoboy (SAS POD) ile denizaltı avcılığı dönemi.",
+      "target": "article",
+      "type": "defense"
+    },
     {
       "id": "libya-deniz-yetki-alani-mavi-vatan-onay",
       "badge": "MAVİ VATAN & LİBYA",
