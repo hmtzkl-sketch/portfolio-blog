@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "21 Kasım 2026, 13:29 TSİ",
+  "lastUpdated": "22 Kasım 2026, 13:33 TSİ",
   "activeConflictsCount": 10,
   "breakingIntel": [
     {
@@ -43,7 +43,7 @@
       "duration": "4+ Yıldır Devam Ediyor (12. Yıl)",
       "threatLevel": "AKTİF KONVANSİYONEL TOPYEKÛN SAVAŞ",
       "levelColor": "rose",
-      "frontlineStatus": "Pokrovsk ve Kurahove Hattında Ağır Kuşatma & Karıştırmasız Fiber-Optik FPV Dron Harbi",
+      "frontlineStatus": "Kursk Sınır Hattında Karşı Taarruzlar ve Ağır Topçu/Hava Bombardımanları",
       "parties": "Ukrayna Silahlı Kuvvetleri vs. Rusya Federasyonu Silahlı Kuvvetleri",
       "summary": "Donbas'ın ana lojistik merkezi Pokrovsk ve Selidove çevresinde ağır kentsel kuşatma, Kurahove rezervuarı kanat ilerlemeleri, Kursk sınırında yıpratma taarruzları ve karıştırmasız fiber-optik FPV dronların sahayı kilitlemesi.",
       "currentSituation": "Ekim 2026 ortası itibarıyla Pokrovsk ve Selidove demiryolu ve lojistik kavşaklarında kentsel kuşatma çatışmaları kritik eşiğe ulaşmıştır. Ukrayna kuvvetleri Batı menşeili F-16 devriyeleri ve Patriot PAC-3 bataryaları ile hava sahasını savunurken; Rusya UMPK kitli FAB-3000 ağır süzülen bombalarla savunma hatlarını dövmektedir. Sahadaki en büyük taktik devrim, her iki tarafın sinyal kesici jammer'lardan %100 bağışık 10-15 km menzilli fiber-optik makaralı FPV intihar dronlarını kullanmasıdır.",
@@ -54,7 +54,7 @@
         "Patriot PAC-3 & S-400 Füze Kalkanı",
         "Starlink & Taktik Ağ İletişimi"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Any Comparison of the US-Iran Conflict to the Russia-Ukraine War Is Ignorant - American Enterprise Institute - AEI\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Any Comparison of the US-Iran Conflict to the Russia-Ukraine War Is Ignorant - American Enterprise Institute - AEI\"."
     },
     {
       "id": "iran-israil-balistik-fuze-ve-bolgesel-tirmantis",
@@ -67,7 +67,7 @@
       "duration": "Devletler Arası Doğrudan Balistik Füze Düellosu",
       "threatLevel": "KRİTİK BÖLGESEL BALİSTİK & HAVA HARBİ",
       "levelColor": "rose",
-      "frontlineStatus": "Hürmüz Boğazı ve Basra Körfezi Hattında Elektronik GNSS Karartma ve Taktik Devriyeler",
+      "frontlineStatus": "Stratejik Füze Üsleri ve Nükleer Tesisler Çevresinde En Üst Düzey Hava Savunma Alarmı",
       "parties": "İsrail Savunma Kuvvetleri (IDF) & ABD Merkez Komutanlığı (CENTCOM) vs. İran Devrim Muhafızları (IRGC)",
       "summary": "Hipersonik manevra başlıklı katı yakıtlı balistik füzeler ile çok katmanlı atmosfer dışı füze savunma kalkanları (Arrow-3, THAAD, David's Sling) arasında modern harp tarihinin ilk kıtalararası füze savaşı.",
       "currentSituation": "ABD Merkez Komutanlığı (CENTCOM), İsrail savunmasını takviye etmek amacıyla bölgeye gelişmiş THAAD (Terminal High Altitude Area Defense) bataryaları ve operasyonel askeri personel konuşlandırmıştır. İran'ın hipersonik manevra başlıklı Fettah-1 füzeleri ve katı yakıtlı Hayber Şeken balistik cephaneliğine karşı atmosfer dışı (exo-atmospheric) önleme mimarisi en üst alarm seviyesindedir. Hürmüz Boğazı ve Basra Körfezi'nde ticari tanker trafiğinde elektronik sinyal karartmaları yoğunlaşmıştır.",
@@ -78,7 +78,7 @@
         "Erken İhbar Radarları (AN/TPY-2 & Green Pine)",
         "Elektronik GNSS Karartma & Uydu Karıştırma"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"İsrail Türkiye'yi bir \"erken çatışma\"ya çekmek istiyor: İbrahim Karagül yazdı: Acımasız intikam İsrail’e yönelir: Tel Aviv’i yok eder, Kudüs’ü kurtarır. Tarihte bir sayfa daha açılır - TRHaber\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Iran, China threats highlight need for Israel, Australia to rethink defense, experts warn - The Jerusalem Post\"."
     },
     {
       "id": "dogu-akdeniz-libya-mavi-vatan-gerilimi",
@@ -91,7 +91,7 @@
       "duration": "Hukuki, Jeopolitik ve Donanma Güç Mücadelesi",
       "threatLevel": "YÜKSEK STRATEJİK & DONANMA ALARMI",
       "levelColor": "amber",
-      "frontlineStatus": "Doğu Akdeniz Enerji Sahalarında Maksimalist Seville Haritasının Hukuken ve Fiilen Tasfiyesi",
+      "frontlineStatus": "Libya Meclisi Oy Birliği Onayı Sonrası Mavi Vatan Koridorunda Donanma Güvencesi",
       "parties": "Türkiye Cumhuriyeti & Libya Devleti vs. Yunanistan, GKRY ve AB Bloğu",
       "summary": "Libya Temsilciler Meclisi'nin Türkiye ile 2019 Deniz Yetki Alanı Anlaşması'nı oy birliğiyle onaylayıp 2020 vetosunu iptal etmesiyle Doğu Akdeniz'de maksimalist Seville Haritası çöktü; Türk sismik/sondaj filosu ve donanma koruması tescillendi.",
       "currentSituation": "Libya'nın doğusundaki Temsilciler Meclisi'nin (Bingazi) Türkiye ile imzalanan Deniz Yetki Alanlarının Sınırlandırılması Mutabakatı'nı oy birliğiyle onaylaması, Doğu Akdeniz enerji ve güvenlik haritasında tarihi bir dönüm noktası yaratmıştır. Yunanistan ve GKRY'nin Türkiye'yi Antalya Körfezi'ne hapsetmeyi amaçlayan maksimalist Seville Haritası hukuki olarak tamamen hükümsüz kalmıştır. Türk Deniz Kuvvetleri fırkateynleri ve denizaltıları refakatinde Oruç Reis ve Abdülhamid Han gibi sismik ve sondaj gemilerinin ruhsat sahalarındaki faaliyetleri hukuki meşruiyet kazanırken, Atina ve Brüksel'den kınama açıklamaları gelmektedir.",
@@ -102,7 +102,7 @@
         "Denizaltı Savunma Harbi (DSH) & P-72 Deniz Karakol Uçakları",
         "MARLİN & ULAQ Silahlı İnsansız Deniz Araçları (SİDA)"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"TEKNOFEST Mavi Vatan sona erdi: 175 bin kişi katıldı - Haber Aero\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"TEKNOFEST Mavi Vatan sona erdi: 175 bin kişi katıldı - Haber Aero\"."
     },
     {
       "id": "israil-gazze-lubnan-catismasi",
@@ -115,7 +115,7 @@
       "duration": "3. Yılına Giren Çok Cepheli Kriz",
       "threatLevel": "YÜKSEK ŞİDDETLİ ASİMETRİK VE KARA HARBİ",
       "levelColor": "rose",
-      "frontlineStatus": "Litani Nehri Güneyinde Zırhlı Kara Harekâtı & Tanksavar / SİHA Pusuları",
+      "frontlineStatus": "Beyrut ve Sınır Köylerinde Şiddetli Hava Akınları; Karşılıklı Füze Düellosu",
       "parties": "İsrail Savunma Kuvvetleri (IDF) vs. Hizbullah, Hamas & Direniş Ekseni",
       "summary": "Güney Lübnan sınırında Litani Nehri güneyine yönelik zırhlı mekanize sınır ötesi kara operasyonu, Beyrut güney banliyöleri hava taarruzları, Hayfa ve Tel Aviv'e yönelik roket/İHA saldırıları.",
       "currentSituation": "İsrail ordusu, Güney Lübnan'da sınır hattındaki köyleri ve tünel ağlarını temizleyerek Litani Nehri güneyinde kalıcı bir tampon bölge oluşturmak amacıyla tugay seviyesinde kara taarruzlarını sürdürmektedir. Hizbullah güçleri sarp arazide Almas-3 (TV/fiber güdümlü) ve Kornet-EM tanksavar pusuları kurarak Merkava Mk4 tanklarını hedef almakta; Hayfa limanı ve Tel Aviv yönüne günlük Fadi füzeleri ve Ebabil İHA'ları ateşlemektedir. Gazze'de ise Cebaliye mülteci kampında meskun mahal gerilla çatışmaları devam etmektedir.",
@@ -126,7 +126,7 @@
         "Meskun Mahal Tünel Arama Robotları",
         "Hafif Taktik Kamikaze Dronlar"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Türkiye’nin Lübnan Hamlesi: İsrail’le Rekabet ve Bölgesel Güç Mücadelesi - Fokus+\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Displaced Palestinians protest as Israeli air strikes continue in Gaza\"."
     },
     {
       "id": "kizildeniz-yemen-deniz-krizi",
@@ -139,7 +139,7 @@
       "duration": "2+ Yıldır Devam Ediyor",
       "threatLevel": "DENİZ TİCARETİ VE DONANMA ANGAJMANI",
       "levelColor": "amber",
-      "frontlineStatus": "Aegis Muhripleri ve Koalisyon Filoları Tarafından İcra Edilen Karşı Önleme Atışları",
+      "frontlineStatus": "Kızıldeniz Ticari Tanker Geçişlerinde Asimetrik Mayınlama ve Rota Değişiklikleri",
       "parties": "Ensarullah (Husiler / Yemen) vs. Çok Uluslu Görev Gücü (ABD, İngiltere, AB Aspides)",
       "summary": "Babülmendep Boğazı'nda ticari gemilere ve uluslararası donanmalara karşı gemisavar balistik füzeler, kamikaze insansız deniz botları ve karşı hava bombardımanları.",
       "currentSituation": "Husiler, Babülmendep Boğazı ve Aden Körfezi'nde seyir füzeleri, gemisavar balistik füzeler (ASBM) ve patlayıcı yüklü insansız deniz araçları (Tufan USV) ile saldırılarını sürdürmektedir. Küresel konteyner taşımacılığının %60'ından fazlası Ümit Burnu rotasına yönelmiştir. ABD ve müttefik donanmaları Aegis destroyerleri ile SM-2/SM-6 füzelerini kullanarak angajman sağlamaktadır.",
@@ -150,7 +150,7 @@
         "Uzun Menzilli Quds Seyir Füzeleri",
         "Donanma Lazer ve CIWS Yakın Savunma"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Will the Houthis join the Iran war? - Atlantic Council\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Yemen, Bölgede Yeni Bir Türk Varlığının Kapısı Mı? - Fokus+\"."
     },
     {
       "id": "suriye-ic-savasi-bolgesel-dinamikler",
@@ -163,7 +163,7 @@
       "duration": "15+ Yıldır Devam Eden Bölünmüş Kriz",
       "threatLevel": "BÖLGESEL HAREKÂT VE TERÖRLE MÜCADELE",
       "levelColor": "amber",
-      "frontlineStatus": "Bölünmüş Kontrol Hatlarında Taktik Tahkimat ve Elektronik Karıştırma Faaliyetleri",
+      "frontlineStatus": "Fırat’ın Doğusu ve Sınır Hattında Terör Hedeflerine Yönelik Nokta TİHA/SİHA Harekâtları",
       "parties": "Rejim Güçleri, HTŞ & Suriye Milli Ordusu, Terör Örgütü PKK/YPG, TSK/MİT ve Koalisyon",
       "summary": "İdlib temas hattında topçu-drone tacizleri, Fırat'ın doğusunda terör örgütü hedeflerine yönelik nokta SİHA operasyonları ve Deyrizor'da aşiret gerilimleri.",
       "currentSituation": "Türkiye, sınır güvenliğini tehdit eden terör örgütü PKK/YPG'nin Tel Rıfat, Münbiç ve Fırat'ın doğusundaki lojistik merkezleri, sözde komuta kadroları ve tünel ağlarına yönelik Bayraktar TB2 ve AKINCI TİHA ile cerrahi nokta operasyonlarını kararlılıkla sürdürmektedir. İdlib temas hattında ise rejim unsurları ile muhalif gruplar arasında topçu düelloları ve mini FPV dron tacizleri devam etmektedir.",
@@ -173,7 +173,7 @@
         "Elektronik Harp (KORAL Sistemi)",
         "Meskun Mahal Tahkimat ve Tünel Savunması"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Ortadoğu'da yeni düzen kurulurken-II Ι Ortadoğu'da Batı destekli merkezileşme: Suriye örneği - BirGün Gazetesi\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Bölgedeki taktik hatlar ve erken ihbar sensörleri üzerinden teyitli telemetri takibi aktiftir."
     },
     {
       "id": "sudan-ic-savasi",
@@ -186,7 +186,7 @@
       "duration": "3+ Yıldır Devam Ediyor",
       "threatLevel": "AĞIR İÇ SAVAŞ & İNSANİ KRİZ",
       "levelColor": "rose",
-      "frontlineStatus": "Kuzey Darfur’un Son Kalesi El Faşir Kuşatması ve Şiddetli Kentsel Çatışmalar",
+      "frontlineStatus": "Başkent Hartum Köprülerinde Ağır Topçu ve Modifiye Dron Bombardımanları",
       "parties": "Sudan Silahlı Kuvvetleri (SAF - Burhan) vs. Hızlı Destek Kuvvetleri (RSF - Hemeti)",
       "summary": "Dünyanın en derin insani krizlerinden birinde başkent Hartum köprüleri ve Kuzey Darfur'un son kalesi El Faşir çevresinde kilitlenen ağır kentsel kuşatma savaşı.",
       "currentSituation": "Sudan ordusu (SAF) ile paramiliter Hızlı Destek Kuvvetleri (RSF) arasındaki çatışmalar, başkent Hartum'un kontrolü ve Kuzey Darfur eyaletinin başkenti El Faşir çevresinde kilitlenmiştir. RSF birlikleri kenti kuşatma altında tutarken, SAF hava saldırıları ile karşılık vermektedir. 10 milyondan fazla sivil yerinden edilmiş olup, hafif ticari dronların bomba atacak şekilde modifiye edildiği gözlenmektedir.",
@@ -196,7 +196,7 @@
         "Hafif Zırhlı Taktik Araçlar (Technical)",
         "Gezici Keskin Nişancı Timleri"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Sudan’s war will end, but will it be too late?\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Displaced Darfur families face volatile winter as Sudan aid cuts bite\"."
     },
     {
       "id": "myanmar-ic-savasi",
@@ -209,7 +209,7 @@
       "duration": "5+ Yıldır Devam Ediyor",
       "threatLevel": "ÇOK CEPHELİ DİRENİŞ & GERİLLA HARBİ",
       "levelColor": "rose",
-      "frontlineStatus": "Ormanlık Arazide 3D Yazıcı Üretimi Bomba Bırakan Mini İHA Sürüsü Saldırıları",
+      "frontlineStatus": "Çin Sınır Ticaret Kapılarında Direniş Hakimiyeti ve Cunta Hava Bombardımanları",
       "parties": "Myanmar Askeri Cuntası (Tatmadaw) vs. PDF (Halk Savunma Güçleri) & Etnik Silahlı İttifak (Üç Kardeşlik)",
       "summary": "Askeri cuntanın kontrolü kaybetmeye başladığı, etnik orduların kritik Çin sınırı ticaret kapılarını ve cunta üslerini ele geçirdiği yaygın asimetrik halk savaşı.",
       "currentSituation": "1027 Operasyonu ile büyük ivme kazanan etnik direniş ittifakı (MNDAA, TNLA, AA) ve sivil Halk Savunma Güçleri (PDF), Shan ve Rakhine eyaletlerinde cuntanın onlarca tabur karargahını düşürmüştür. Cunta hava bombardımanları ile ayakta kalmaya çalışırken; direniş güçleri ucuz 3D yazıcılarla ürettikleri bomba bırakan FPV dronları sürüler halinde kullanmaktadır.",
@@ -219,7 +219,7 @@
         "Hafif Havan ve Omuzdan Atılan Roketler",
         "Cunta Hava Kuvvetleri Ağır Bombardıman Uçakları"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Bölgedeki taktik hatlar ve erken ihbar sensörleri üzerinden teyitli telemetri takibi aktiftir."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Bölgedeki taktik hatlar ve erken ihbar sensörleri üzerinden teyitli telemetri takibi aktiftir."
     },
     {
       "id": "kore-yarimadasi-dmz-gerilimi",
@@ -232,7 +232,7 @@
       "duration": "70+ Yıldır Donmuş, Yeniden Isınan Kriz",
       "threatLevel": "STRATEJİK NÜKLEER & BALİSTİK TEHDİT",
       "levelColor": "amber",
-      "frontlineStatus": "Sarı Deniz Sınırında Yoğun GPS Karartma ve Taktik Topçu Tatbikatları",
+      "frontlineStatus": "Sınır Yollarının Dinamitlenmesi Sonrası Ağır Beton Tahkimat ve Anti-Tank Hendekleri",
       "parties": "Kore Demokratik Halk Cumhuriyeti (Kuzey) vs. Kore Cumhuriyeti (Güney) & ABD",
       "summary": "Kuzey Kore'nin birleşme politikasını terk etmesi, sınır yollarını dinamitlemesi, Hwasong-19 katı yakıtlı ICBM testleri ve karşılıklı dev tatbikatlar.",
       "currentSituation": "Kuzey Kore liderliği anayasal düzeyde Güney Kore ile barışçıl birleşme maddelerini kaldırarak sınır hattındaki tüm karayolu ve demiryolu bağlantılarını havaya uçurmuştur. Sınır boyunca yoğun beton tahkimatlar ve anti-tank hendekleri kurulurken; Pyongyang katı yakıtlı kıtalararası balistik füzeler (Hwasong-19) denemektedir. Güney Kore ve ABD ise nükleer denizaltılar ve B-52 bombardıman uçaklarıyla caydırıcılık sağlamaktadır.",
@@ -242,7 +242,7 @@
         "THAAD & Patriot Çok Katmanlı Füze Kalkanı",
         "Hipersonik Kayma Araçları (HGV)"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Remarks by Secretary of War Pete Hegseth at the Reagan National Defense Forum (As Delivere - U.S. Department of War (.gov)\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Remarks by Secretary of War Pete Hegseth at the Reagan National Defense Forum (As Delivere - U.S. Department of War (.gov)\"."
     },
     {
       "id": "tayvan-bogazi-guney-cin-denizi",
@@ -255,7 +255,7 @@
       "duration": "Sürekli Yüksek Stratejik Gerilim",
       "threatLevel": "DENİZ VE HAVA ALAN REDDİ (A2/AD)",
       "levelColor": "amber",
-      "frontlineStatus": "Joint Sword Ada Kuşatma Senaryoları Kapsamında Günlük ADIZ İhlalleri ve Jet Sortileri",
+      "frontlineStatus": "Tayvan’ın Kıyı Konuşlu Gemisavar Füzeleri ve Akıllı Deniz Mayınlarıyla \"Kirpi Savunması\"",
       "parties": "Çin Halk Kurtuluş Ordusu (PLA) vs. Tayvan Savunma Kuvvetleri & Müttefikler (ABD, Japonya)",
       "summary": "Çin'in Joint Sword ada kuşatma tatbikatları, Type 055 kruvazörleri, J-20 hayalet filoları ve Tayvan'ın yerli denizaltı ve kıyı savunma füzeleriyle karşı hamleleri.",
       "currentSituation": "Çin ordusu (PLA), Tayvan çevresinde gerçekleştirdiği 'Joint Sword' tatbikatlarıyla adanın dış dünyayla petrol ve enerji tedarikini kesmeye yönelik koordineli deniz ve hava ablukası senaryolarını test etmektedir. Tayvan hava savunma sahası (ADIZ) her gün onlarca Çin savaş uçağı ve İHA'sı tarafından aşılmaktadır. Tayvan ise asimetrik 'kirpi stratejisi' kapsamında karadan atılan Harpoon ve yerli Hsiung Feng III gemisavar füzeleri ve deniz mayınlama kabiliyetleriyle yanıt vermektedir.",
@@ -265,7 +265,7 @@
         "Kıyı Konuşlu Süpersonik Gemisavar Füzeleri",
         "Tip 075 Amfibi Çıkarma Gemileri"
       ],
-      "osintNote": "[Canlı OSINT Doğrulama - 21 Kasım 2026, 13:29 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Iran, China threats highlight need for Israel, Australia to rethink defense, experts warn - The Jerusalem Post\"."
+      "osintNote": "[Canlı OSINT Doğrulama - 22 Kasım 2026, 13:33 TSİ]: Açık kaynak bültenlerde teyit edilen başlık: \"Iran, China threats highlight need for Israel, Australia to rethink defense, experts warn - The Jerusalem Post\"."
     }
   ]
 }
