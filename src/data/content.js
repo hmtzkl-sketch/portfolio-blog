@@ -52,6 +52,51 @@ export const globalConflicts = liveConflictData.conflicts;
 
 export const articles = [
   {
+    id: "kizilelma-envanterde-dunyada-ilk-jet-siha",
+    title: "Bayraktar KIZILELMA Envantere Girdi: Jet Motorlu İnsansız Savaş Uçağına Sahip İlk Ülke Türkiye",
+    category: "Saldırı & Savunma Teknolojileri",
+    readTime: "12 dk okuma",
+    date: "25 Kasım 2026",
+    excerpt: "Baykar tarafından üretilen ilk 3 adet Bayraktar KIZILELMA güvenlik güçlerine teslim edilerek resmen envantere girdi. Türkiye, operasyonel jet motorlu insansız savaş uçağı kullanan dünyadaki ilk ülke olurken; TEI Bulgaristan fabrikası ve TUNA motorlu KİRPİ II'ler sahada.",
+    tags: ["KIZILELMA", "Bayraktar", "İnsansız Savaş Uçağı", "Gök Vatan", "TEI", "BMC TUNA", "KİRPİ II", "Hava Kuvvetleri"],
+    featured: true,
+    likes: 1890,
+    content: `
+### GİRİŞ: HAVACILIK HARP TARİHİNDE YENİ ÇAĞ
+
+25 Kasım 2026 tarihi, Türk savunma ve havacılık sanayii için dünya çapında bir milat olarak kayıtlara geçti. Baykar Teknoloji tarafından tamamen öz kaynaklarla geliştirilen ve üretilen ilk **3 adet seri üretim Bayraktar KIZILELMA İnsansız Savaş Uçağı**, Türk Silahlı Kuvvetleri ve güvenlik güçleri envanterine resmen girdi.
+
+Bu tarihi teslimatla birlikte Türkiye; ABD, Çin ve Rusya gibi küresel havacılık devlerinin benzer projeleri henüz test ve prototip aşamasındayken, **operasyonel envanterinde jet motorlu insansız savaş uçağı bulunduran dünyadaki İLK ülke** unvanını kazandı.
+
+---
+
+### 1. KIZILELMA'NIN ENVANTERDEKİ STRATEJİK ROLÜ
+
+* **Düşük Radar İzi (Stealth) ve Süpersonik Gövde:** KIZILELMA, gövde içi mühimmat istasyonları, dikey kuyruk açısı ve radar soğurucu kompozit kaplamasıyla düşman hava savunma radarlarına neredeyse görünmez bir profil sunar.
+* **ASELSAN MURAD AESA Burun Radarı ve Havadan Havaya Füze Taarruzu:** Yerli MURAD AESA radarı ile yüzlerce kilometre öteden hedefleri teşhis edebilen platform; BOZDOĞAN ve GÖKDOĞAN havadan havaya füzelerini fırlatarak insanlı jetlerle it dalaşı (dogfight) ve BVR (Görüş Ötesi) hava muharebesi icra edebilmektedir.
+* **MUM-T (Manned-Unmanned Teaming):** KAAN ve F-16 Özgür filolarıyla dijital veri bağı üzerinden ortak harekât yapacak olan KIZILELMA, pilotların can güvenliğini tehlikeye atmadan en tehlikeli hava savunma koridorlarını yaracaktır.
+* **TCG Anadolu ve Kısa Pist Entegrasyonu:** Kısa pistli amfibi hücum gemilerinden kalkış-iniş kabiliyeti, Mavi Vatan açıklarında hava üstünlüğü sağlayacaktır.
+
+---
+
+### 2. KASIM 2026 DİĞER DEV ATILIMLARI: TEI VE BMC POWER TUNA MOTORU
+
+* **TEI'den Yurtdışında İlk Fabrika Hamlesi:** TUSAŞ Motor Sanayii (TEI), Türkiye sınırları dışındaki ilk üretim tesisini Bulgaristan'ın Filibe (Plovdiv) kentine kurma kararını resmen açıkladı. Bu hamle, Türk motor teknolojisinin Avrupa'da doğrudan üretim üssü kurması anlamına geliyor.
+* **Yerli Motorlu KİRPİ II Sahada:** BMC Power tarafından geliştirilen 400 beygir gücündeki yerli ve milli **TUNA motoruyla** donatılan KİRPİ II 4x4 zırhlı araçları sahada göreve başladı. Böylece kritik zırhlı platformlarda yabancı motor bağımlılığı sıfırlandı.
+* **ASELSAN & ROKETSAN 1.28 Milyar Euro Dev Sözleşme:** Füze veri bağları ve yeni nesil arayıcı başlık sistemleri için imzalanan rekor sözleşmeyle birlikte; elektromanyetik anti-drone silahı **EJDERHA**, tek bir atımda 51 dronu etkisiz hale getirerek saha testlerini tamamladı.
+
+---
+
+### 3. SSB BÜTÇESİ VE DÜNYA REKORLARI
+
+Savunma Sanayii Başkanlığı'ndan yapılan açıklamaya göre:
+* Türk savunma sanayiinde yerlilik oranı **%80 barajını aştı**.
+* Sektör şu an **1400'den fazla aktif projeyi ve 150 milyar dolarlık portföyü** yönetiyor.
+* Türk tersanelerinde aynı anda **50'den fazla askeri gemi ve bot** inşa edilerek dünya rekoru kırıldı.
+* 185 ülkeye ürün ihraç eden Türkiye, küresel savunma ihracatında ilk 10 basamağına kararlılıkla tırmanıyor.
+`
+  },
+  {
     id: "nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi",
     title: "NATO EDGE 26 İzmir Zirvesi ve Bayraktar TB3'ün TCG Anadolu'da Sonoboy (DSH) Devrimi",
     category: "Saldırı & Savunma Teknolojileri",

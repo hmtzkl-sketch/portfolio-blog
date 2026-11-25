@@ -1,7 +1,21 @@
 {
-  "lastUpdated": "25 Kasım 2026, 14:55 TSİ",
+  "lastUpdated": "25 Kasım 2026, 22:45 TSİ",
   "activeConflictsCount": 10,
   "breakingIntel": [
+    {
+      "id": "kizilelma-envanterde-dunyada-ilk-jet-siha",
+      "badge": "TARİHİ EŞİK: KIZILELMA",
+      "title": "Bayraktar KIZILELMA resmen envanterde: Jet motorlu insansız savaş uçağı kullanan dünyada ilk ülke Türkiye oldu.",
+      "target": "article",
+      "type": "defense"
+    },
+    {
+      "id": "kizilelma-envanterde-dunyada-ilk-jet-siha",
+      "badge": "TEI & YERLİ TUNA",
+      "title": "TEI'den Bulgaristan'da ilk fabrika; BMC Power 400 BG TUNA motorlu KİRPİ II'ler sahada göreve başladı.",
+      "target": "article",
+      "type": "defense"
+    },
     {
       "id": "nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi",
       "badge": "NATO EDGE 26 İZMİR",

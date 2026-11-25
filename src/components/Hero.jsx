@@ -120,6 +120,8 @@ export default function Hero({ onExploreClick, onConflictsClick, onWeaponsClick,
                 CANLI TAKİP:
               </span>
               {[
+                { label: "🚀 KIZILELMA Envanterde (Dünyada İlk)", action: () => onSelectArticleById && onSelectArticleById('kizilelma-envanterde-dunyada-ilk-jet-siha') },
+                { label: "⚡ TUNA Motorlu KİRPİ II & TEI", action: () => onSelectArticleById && onSelectArticleById('kizilelma-envanterde-dunyada-ilk-jet-siha') },
                 { label: "⚡ NATO EDGE 26 İzmir Zirvesi", action: () => onSelectArticleById && onSelectArticleById('nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi') },
                 { label: "⚓ TB3 & Sonoboy Denizaltı Avı", action: () => onSelectArticleById && onSelectArticleById('nato-edge-26-izmir-ve-tb3-tcg-anadolu-dsh-devrimi') },
                 { label: "🌊 Libya'dan Tarihi Mavi Vatan Onayı", action: () => onSelectArticleById && onSelectArticleById('libya-deniz-yetki-alani-mavi-vatan-onay') },
